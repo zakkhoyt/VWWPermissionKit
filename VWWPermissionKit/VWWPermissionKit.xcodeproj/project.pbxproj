@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF1C50591B2CDE64006BE053 /* VWWPermissionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50581B2CDE64006BE053 /* VWWPermissionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF1C50601B2CDE64006BE053 /* VWWPermissionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1C50551B2CDE64006BE053 /* VWWPermissionKit.framework */; };
+		CF1C50651B2CDE64006BE053 /* VWWPermissionKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50641B2CDE64006BE053 /* VWWPermissionKitTests.m */; };
+		CF1C509C1B2CDE8A006BE053 /* VWWAccountsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50701B2CDE8A006BE053 /* VWWAccountsPermission.h */; };
+		CF1C509D1B2CDE8A006BE053 /* VWWAccountsPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50711B2CDE8A006BE053 /* VWWAccountsPermission.m */; };
+		CF1C509E1B2CDE8A006BE053 /* VWWAssetLibraryPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50721B2CDE8A006BE053 /* VWWAssetLibraryPermission.h */; };
+		CF1C509F1B2CDE8A006BE053 /* VWWAssetLibraryPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50731B2CDE8A006BE053 /* VWWAssetLibraryPermission.m */; };
+		CF1C50A01B2CDE8A006BE053 /* VWWBluetoothPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50741B2CDE8A006BE053 /* VWWBluetoothPermission.h */; };
+		CF1C50A11B2CDE8A006BE053 /* VWWBluetoothPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50751B2CDE8A006BE053 /* VWWBluetoothPermission.m */; };
+		CF1C50A21B2CDE8A006BE053 /* VWWCalendarsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50761B2CDE8A006BE053 /* VWWCalendarsPermission.h */; };
+		CF1C50A31B2CDE8A006BE053 /* VWWCalendarsPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50771B2CDE8A006BE053 /* VWWCalendarsPermission.m */; };
+		CF1C50A41B2CDE8A006BE053 /* VWWCameraPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50781B2CDE8A006BE053 /* VWWCameraPermission.h */; };
+		CF1C50A51B2CDE8A006BE053 /* VWWCameraPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50791B2CDE8A006BE053 /* VWWCameraPermission.m */; };
+		CF1C50A61B2CDE8A006BE053 /* VWWContactsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C507A1B2CDE8A006BE053 /* VWWContactsPermission.h */; };
+		CF1C50A71B2CDE8A006BE053 /* VWWContactsPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C507B1B2CDE8A006BE053 /* VWWContactsPermission.m */; };
+		CF1C50A81B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C507C1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h */; };
+		CF1C50A91B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C507D1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.m */; };
+		CF1C50AA1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C507E1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h */; };
+		CF1C50AB1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C507F1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m */; };
+		CF1C50AC1B2CDE8A006BE053 /* VWWCoreMotionPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50801B2CDE8A006BE053 /* VWWCoreMotionPermission.h */; };
+		CF1C50AD1B2CDE8A006BE053 /* VWWCoreMotionPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50811B2CDE8A006BE053 /* VWWCoreMotionPermission.m */; };
+		CF1C50AE1B2CDE8A006BE053 /* VWWHealthPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50821B2CDE8A006BE053 /* VWWHealthPermission.h */; };
+		CF1C50AF1B2CDE8A006BE053 /* VWWHealthPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50831B2CDE8A006BE053 /* VWWHealthPermission.m */; };
+		CF1C50B01B2CDE8A006BE053 /* VWWHomePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50841B2CDE8A006BE053 /* VWWHomePermission.h */; };
+		CF1C50B11B2CDE8A006BE053 /* VWWHomePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50851B2CDE8A006BE053 /* VWWHomePermission.m */; };
+		CF1C50B21B2CDE8A006BE053 /* VWWMicrophonePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50861B2CDE8A006BE053 /* VWWMicrophonePermission.h */; };
+		CF1C50B31B2CDE8A006BE053 /* VWWMicrophonePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50871B2CDE8A006BE053 /* VWWMicrophonePermission.m */; };
+		CF1C50B41B2CDE8A006BE053 /* VWWNotificationsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50881B2CDE8A006BE053 /* VWWNotificationsPermission.h */; };
+		CF1C50B51B2CDE8A006BE053 /* VWWNotificationsPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50891B2CDE8A006BE053 /* VWWNotificationsPermission.m */; };
+		CF1C50B61B2CDE8A006BE053 /* VWWPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508A1B2CDE8A006BE053 /* VWWPermission.h */; };
+		CF1C50B71B2CDE8A006BE053 /* VWWPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C508B1B2CDE8A006BE053 /* VWWPermission.m */; };
+		CF1C50B81B2CDE8A006BE053 /* VWWPermissionNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */; };
+		CF1C50B91B2CDE8A006BE053 /* VWWPermissionsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */; };
+		CF1C50BA1B2CDE8A006BE053 /* VWWPermissionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */; };
+		CF1C50BB1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */; };
+		CF1C50BC1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */; };
+		CF1C50BD1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */; };
+		CF1C50BE1B2CDE8A006BE053 /* VWWPermissionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50921B2CDE8A006BE053 /* VWWPermissionsViewController.h */; };
+		CF1C50BF1B2CDE8A006BE053 /* VWWPermissionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50931B2CDE8A006BE053 /* VWWPermissionsViewController.m */; };
+		CF1C50C01B2CDE8A006BE053 /* VWWPermissionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1C50941B2CDE8A006BE053 /* VWWPermissionsViewController.xib */; };
+		CF1C50C11B2CDE8A006BE053 /* VWWPermissionTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50951B2CDE8A006BE053 /* VWWPermissionTableViewCell.h */; };
+		CF1C50C21B2CDE8A006BE053 /* VWWPermissionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50961B2CDE8A006BE053 /* VWWPermissionTableViewCell.m */; };
+		CF1C50C31B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1C50971B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib */; };
+		CF1C50C41B2CDE8A006BE053 /* VWWPhotosPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50981B2CDE8A006BE053 /* VWWPhotosPermission.h */; };
+		CF1C50C51B2CDE8A006BE053 /* VWWPhotosPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */; };
+		CF1C50C61B2CDE8A006BE053 /* VWWRemindersPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */; };
+		CF1C50C71B2CDE8A006BE053 /* VWWRemindersPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF1C50611B2CDE64006BE053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF1C504C1B2CDE64006BE053 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF1C50541B2CDE64006BE053;
+			remoteInfo = VWWPermissionKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF1C50551B2CDE64006BE053 /* VWWPermissionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VWWPermissionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1C50581B2CDE64006BE053 /* VWWPermissionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWWPermissionKit.h; sourceTree = "<group>"; };
+		CF1C505A1B2CDE64006BE053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1C505F1B2CDE64006BE053 /* VWWPermissionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VWWPermissionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF1C50641B2CDE64006BE053 /* VWWPermissionKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionKitTests.m; sourceTree = "<group>"; };
+		CF1C50661B2CDE64006BE053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1C50701B2CDE8A006BE053 /* VWWAccountsPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWAccountsPermission.h; sourceTree = "<group>"; };
+		CF1C50711B2CDE8A006BE053 /* VWWAccountsPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWAccountsPermission.m; sourceTree = "<group>"; };
+		CF1C50721B2CDE8A006BE053 /* VWWAssetLibraryPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWAssetLibraryPermission.h; sourceTree = "<group>"; };
+		CF1C50731B2CDE8A006BE053 /* VWWAssetLibraryPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWAssetLibraryPermission.m; sourceTree = "<group>"; };
+		CF1C50741B2CDE8A006BE053 /* VWWBluetoothPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWBluetoothPermission.h; sourceTree = "<group>"; };
+		CF1C50751B2CDE8A006BE053 /* VWWBluetoothPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWBluetoothPermission.m; sourceTree = "<group>"; };
+		CF1C50761B2CDE8A006BE053 /* VWWCalendarsPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWCalendarsPermission.h; sourceTree = "<group>"; };
+		CF1C50771B2CDE8A006BE053 /* VWWCalendarsPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWCalendarsPermission.m; sourceTree = "<group>"; };
+		CF1C50781B2CDE8A006BE053 /* VWWCameraPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWCameraPermission.h; sourceTree = "<group>"; };
+		CF1C50791B2CDE8A006BE053 /* VWWCameraPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWCameraPermission.m; sourceTree = "<group>"; };
+		CF1C507A1B2CDE8A006BE053 /* VWWContactsPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWContactsPermission.h; sourceTree = "<group>"; };
+		CF1C507B1B2CDE8A006BE053 /* VWWContactsPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWContactsPermission.m; sourceTree = "<group>"; };
+		CF1C507C1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWCoreLocationAlwaysPermission.h; sourceTree = "<group>"; };
+		CF1C507D1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWCoreLocationAlwaysPermission.m; sourceTree = "<group>"; };
+		CF1C507E1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWCoreLocationWhenInUsePermission.h; sourceTree = "<group>"; };
+		CF1C507F1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWCoreLocationWhenInUsePermission.m; sourceTree = "<group>"; };
+		CF1C50801B2CDE8A006BE053 /* VWWCoreMotionPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWCoreMotionPermission.h; sourceTree = "<group>"; };
+		CF1C50811B2CDE8A006BE053 /* VWWCoreMotionPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWCoreMotionPermission.m; sourceTree = "<group>"; };
+		CF1C50821B2CDE8A006BE053 /* VWWHealthPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHealthPermission.h; sourceTree = "<group>"; };
+		CF1C50831B2CDE8A006BE053 /* VWWHealthPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHealthPermission.m; sourceTree = "<group>"; };
+		CF1C50841B2CDE8A006BE053 /* VWWHomePermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHomePermission.h; sourceTree = "<group>"; };
+		CF1C50851B2CDE8A006BE053 /* VWWHomePermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHomePermission.m; sourceTree = "<group>"; };
+		CF1C50861B2CDE8A006BE053 /* VWWMicrophonePermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWMicrophonePermission.h; sourceTree = "<group>"; };
+		CF1C50871B2CDE8A006BE053 /* VWWMicrophonePermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWMicrophonePermission.m; sourceTree = "<group>"; };
+		CF1C50881B2CDE8A006BE053 /* VWWNotificationsPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWNotificationsPermission.h; sourceTree = "<group>"; };
+		CF1C50891B2CDE8A006BE053 /* VWWNotificationsPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWNotificationsPermission.m; sourceTree = "<group>"; };
+		CF1C508A1B2CDE8A006BE053 /* VWWPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermission.h; sourceTree = "<group>"; };
+		CF1C508B1B2CDE8A006BE053 /* VWWPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermission.m; sourceTree = "<group>"; };
+		CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionNotifications.h; sourceTree = "<group>"; };
+		CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionsManager.h; sourceTree = "<group>"; };
+		CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionsManager.m; sourceTree = "<group>"; };
+		CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionsTableHeaderView.h; sourceTree = "<group>"; };
+		CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionsTableHeaderView.m; sourceTree = "<group>"; };
+		CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWPermissionsTableHeaderView.xib; sourceTree = "<group>"; };
+		CF1C50921B2CDE8A006BE053 /* VWWPermissionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionsViewController.h; sourceTree = "<group>"; };
+		CF1C50931B2CDE8A006BE053 /* VWWPermissionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionsViewController.m; sourceTree = "<group>"; };
+		CF1C50941B2CDE8A006BE053 /* VWWPermissionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWPermissionsViewController.xib; sourceTree = "<group>"; };
+		CF1C50951B2CDE8A006BE053 /* VWWPermissionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionTableViewCell.h; sourceTree = "<group>"; };
+		CF1C50961B2CDE8A006BE053 /* VWWPermissionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionTableViewCell.m; sourceTree = "<group>"; };
+		CF1C50971B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWPermissionTableViewCell.xib; sourceTree = "<group>"; };
+		CF1C50981B2CDE8A006BE053 /* VWWPhotosPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPhotosPermission.h; sourceTree = "<group>"; };
+		CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPhotosPermission.m; sourceTree = "<group>"; };
+		CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRemindersPermission.h; sourceTree = "<group>"; };
+		CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRemindersPermission.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF1C50511B2CDE64006BE053 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF1C505C1B2CDE64006BE053 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1C50601B2CDE64006BE053 /* VWWPermissionKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF1C504B1B2CDE64006BE053 = {
+			isa = PBXGroup;
+			children = (
+				CF1C50571B2CDE64006BE053 /* VWWPermissionKit */,
+				CF1C50631B2CDE64006BE053 /* VWWPermissionKitTests */,
+				CF1C50561B2CDE64006BE053 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF1C50561B2CDE64006BE053 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF1C50551B2CDE64006BE053 /* VWWPermissionKit.framework */,
+				CF1C505F1B2CDE64006BE053 /* VWWPermissionKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1C50571B2CDE64006BE053 /* VWWPermissionKit */ = {
+			isa = PBXGroup;
+			children = (
+				CF1C506F1B2CDE8A006BE053 /* VWWPermissionManager */,
+				CF1C50581B2CDE64006BE053 /* VWWPermissionKit.h */,
+				CF1C505A1B2CDE64006BE053 /* Info.plist */,
+			);
+			path = VWWPermissionKit;
+			sourceTree = "<group>";
+		};
+		CF1C50631B2CDE64006BE053 /* VWWPermissionKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF1C50641B2CDE64006BE053 /* VWWPermissionKitTests.m */,
+				CF1C50661B2CDE64006BE053 /* Info.plist */,
+			);
+			path = VWWPermissionKitTests;
+			sourceTree = "<group>";
+		};
+		CF1C506F1B2CDE8A006BE053 /* VWWPermissionManager */ = {
+			isa = PBXGroup;
+			children = (
+				CF1C50701B2CDE8A006BE053 /* VWWAccountsPermission.h */,
+				CF1C50711B2CDE8A006BE053 /* VWWAccountsPermission.m */,
+				CF1C50721B2CDE8A006BE053 /* VWWAssetLibraryPermission.h */,
+				CF1C50731B2CDE8A006BE053 /* VWWAssetLibraryPermission.m */,
+				CF1C50741B2CDE8A006BE053 /* VWWBluetoothPermission.h */,
+				CF1C50751B2CDE8A006BE053 /* VWWBluetoothPermission.m */,
+				CF1C50761B2CDE8A006BE053 /* VWWCalendarsPermission.h */,
+				CF1C50771B2CDE8A006BE053 /* VWWCalendarsPermission.m */,
+				CF1C50781B2CDE8A006BE053 /* VWWCameraPermission.h */,
+				CF1C50791B2CDE8A006BE053 /* VWWCameraPermission.m */,
+				CF1C507A1B2CDE8A006BE053 /* VWWContactsPermission.h */,
+				CF1C507B1B2CDE8A006BE053 /* VWWContactsPermission.m */,
+				CF1C507C1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h */,
+				CF1C507D1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.m */,
+				CF1C507E1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h */,
+				CF1C507F1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m */,
+				CF1C50801B2CDE8A006BE053 /* VWWCoreMotionPermission.h */,
+				CF1C50811B2CDE8A006BE053 /* VWWCoreMotionPermission.m */,
+				CF1C50821B2CDE8A006BE053 /* VWWHealthPermission.h */,
+				CF1C50831B2CDE8A006BE053 /* VWWHealthPermission.m */,
+				CF1C50841B2CDE8A006BE053 /* VWWHomePermission.h */,
+				CF1C50851B2CDE8A006BE053 /* VWWHomePermission.m */,
+				CF1C50861B2CDE8A006BE053 /* VWWMicrophonePermission.h */,
+				CF1C50871B2CDE8A006BE053 /* VWWMicrophonePermission.m */,
+				CF1C50881B2CDE8A006BE053 /* VWWNotificationsPermission.h */,
+				CF1C50891B2CDE8A006BE053 /* VWWNotificationsPermission.m */,
+				CF1C508A1B2CDE8A006BE053 /* VWWPermission.h */,
+				CF1C508B1B2CDE8A006BE053 /* VWWPermission.m */,
+				CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */,
+				CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */,
+				CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */,
+				CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */,
+				CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */,
+				CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */,
+				CF1C50921B2CDE8A006BE053 /* VWWPermissionsViewController.h */,
+				CF1C50931B2CDE8A006BE053 /* VWWPermissionsViewController.m */,
+				CF1C50941B2CDE8A006BE053 /* VWWPermissionsViewController.xib */,
+				CF1C50951B2CDE8A006BE053 /* VWWPermissionTableViewCell.h */,
+				CF1C50961B2CDE8A006BE053 /* VWWPermissionTableViewCell.m */,
+				CF1C50971B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib */,
+				CF1C50981B2CDE8A006BE053 /* VWWPhotosPermission.h */,
+				CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */,
+				CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */,
+				CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */,
+			);
+			path = VWWPermissionManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CF1C50521B2CDE64006BE053 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1C50B61B2CDE8A006BE053 /* VWWPermission.h in Headers */,
+				CF1C50B21B2CDE8A006BE053 /* VWWMicrophonePermission.h in Headers */,
+				CF1C50C61B2CDE8A006BE053 /* VWWRemindersPermission.h in Headers */,
+				CF1C509E1B2CDE8A006BE053 /* VWWAssetLibraryPermission.h in Headers */,
+				CF1C50AC1B2CDE8A006BE053 /* VWWCoreMotionPermission.h in Headers */,
+				CF1C50B91B2CDE8A006BE053 /* VWWPermissionsManager.h in Headers */,
+				CF1C50A01B2CDE8A006BE053 /* VWWBluetoothPermission.h in Headers */,
+				CF1C509C1B2CDE8A006BE053 /* VWWAccountsPermission.h in Headers */,
+				CF1C50BB1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h in Headers */,
+				CF1C50AE1B2CDE8A006BE053 /* VWWHealthPermission.h in Headers */,
+				CF1C50A41B2CDE8A006BE053 /* VWWCameraPermission.h in Headers */,
+				CF1C50C11B2CDE8A006BE053 /* VWWPermissionTableViewCell.h in Headers */,
+				CF1C50B41B2CDE8A006BE053 /* VWWNotificationsPermission.h in Headers */,
+				CF1C50B81B2CDE8A006BE053 /* VWWPermissionNotifications.h in Headers */,
+				CF1C50591B2CDE64006BE053 /* VWWPermissionKit.h in Headers */,
+				CF1C50BE1B2CDE8A006BE053 /* VWWPermissionsViewController.h in Headers */,
+				CF1C50C41B2CDE8A006BE053 /* VWWPhotosPermission.h in Headers */,
+				CF1C50B01B2CDE8A006BE053 /* VWWHomePermission.h in Headers */,
+				CF1C50A81B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h in Headers */,
+				CF1C50A61B2CDE8A006BE053 /* VWWContactsPermission.h in Headers */,
+				CF1C50AA1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h in Headers */,
+				CF1C50A21B2CDE8A006BE053 /* VWWCalendarsPermission.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CF1C50541B2CDE64006BE053 /* VWWPermissionKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1C50691B2CDE64006BE053 /* Build configuration list for PBXNativeTarget "VWWPermissionKit" */;
+			buildPhases = (
+				CF1C50501B2CDE64006BE053 /* Sources */,
+				CF1C50511B2CDE64006BE053 /* Frameworks */,
+				CF1C50521B2CDE64006BE053 /* Headers */,
+				CF1C50531B2CDE64006BE053 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VWWPermissionKit;
+			productName = VWWPermissionKit;
+			productReference = CF1C50551B2CDE64006BE053 /* VWWPermissionKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CF1C505E1B2CDE64006BE053 /* VWWPermissionKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF1C506C1B2CDE64006BE053 /* Build configuration list for PBXNativeTarget "VWWPermissionKitTests" */;
+			buildPhases = (
+				CF1C505B1B2CDE64006BE053 /* Sources */,
+				CF1C505C1B2CDE64006BE053 /* Frameworks */,
+				CF1C505D1B2CDE64006BE053 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF1C50621B2CDE64006BE053 /* PBXTargetDependency */,
+			);
+			name = VWWPermissionKitTests;
+			productName = VWWPermissionKitTests;
+			productReference = CF1C505F1B2CDE64006BE053 /* VWWPermissionKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF1C504C1B2CDE64006BE053 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Zakk Hoyt";
+				TargetAttributes = {
+					CF1C50541B2CDE64006BE053 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					CF1C505E1B2CDE64006BE053 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = CF1C504F1B2CDE64006BE053 /* Build configuration list for PBXProject "VWWPermissionKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1C504B1B2CDE64006BE053;
+			productRefGroup = CF1C50561B2CDE64006BE053 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF1C50541B2CDE64006BE053 /* VWWPermissionKit */,
+				CF1C505E1B2CDE64006BE053 /* VWWPermissionKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF1C50531B2CDE64006BE053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1C50C31B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib in Resources */,
+				CF1C50C01B2CDE8A006BE053 /* VWWPermissionsViewController.xib in Resources */,
+				CF1C50BD1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF1C505D1B2CDE64006BE053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF1C50501B2CDE64006BE053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1C509F1B2CDE8A006BE053 /* VWWAssetLibraryPermission.m in Sources */,
+				CF1C50C21B2CDE8A006BE053 /* VWWPermissionTableViewCell.m in Sources */,
+				CF1C50B31B2CDE8A006BE053 /* VWWMicrophonePermission.m in Sources */,
+				CF1C50A31B2CDE8A006BE053 /* VWWCalendarsPermission.m in Sources */,
+				CF1C50B71B2CDE8A006BE053 /* VWWPermission.m in Sources */,
+				CF1C50A71B2CDE8A006BE053 /* VWWContactsPermission.m in Sources */,
+				CF1C50B51B2CDE8A006BE053 /* VWWNotificationsPermission.m in Sources */,
+				CF1C50C51B2CDE8A006BE053 /* VWWPhotosPermission.m in Sources */,
+				CF1C50BC1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m in Sources */,
+				CF1C50A51B2CDE8A006BE053 /* VWWCameraPermission.m in Sources */,
+				CF1C50BA1B2CDE8A006BE053 /* VWWPermissionsManager.m in Sources */,
+				CF1C50AB1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m in Sources */,
+				CF1C50AD1B2CDE8A006BE053 /* VWWCoreMotionPermission.m in Sources */,
+				CF1C50C71B2CDE8A006BE053 /* VWWRemindersPermission.m in Sources */,
+				CF1C50B11B2CDE8A006BE053 /* VWWHomePermission.m in Sources */,
+				CF1C50BF1B2CDE8A006BE053 /* VWWPermissionsViewController.m in Sources */,
+				CF1C50A11B2CDE8A006BE053 /* VWWBluetoothPermission.m in Sources */,
+				CF1C509D1B2CDE8A006BE053 /* VWWAccountsPermission.m in Sources */,
+				CF1C50A91B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.m in Sources */,
+				CF1C50AF1B2CDE8A006BE053 /* VWWHealthPermission.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF1C505B1B2CDE64006BE053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF1C50651B2CDE64006BE053 /* VWWPermissionKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF1C50621B2CDE64006BE053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF1C50541B2CDE64006BE053 /* VWWPermissionKit */;
+			targetProxy = CF1C50611B2CDE64006BE053 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CF1C50671B2CDE64006BE053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CF1C50681B2CDE64006BE053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CF1C506A1B2CDE64006BE053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = VWWPermissionKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.VWWPermissionKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CF1C506B1B2CDE64006BE053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = VWWPermissionKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.VWWPermissionKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CF1C506D1B2CDE64006BE053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VWWPermissionKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.VWWPermissionKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CF1C506E1B2CDE64006BE053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VWWPermissionKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.VWWPermissionKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF1C504F1B2CDE64006BE053 /* Build configuration list for PBXProject "VWWPermissionKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1C50671B2CDE64006BE053 /* Debug */,
+				CF1C50681B2CDE64006BE053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF1C50691B2CDE64006BE053 /* Build configuration list for PBXNativeTarget "VWWPermissionKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1C506A1B2CDE64006BE053 /* Debug */,
+				CF1C506B1B2CDE64006BE053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF1C506C1B2CDE64006BE053 /* Build configuration list for PBXNativeTarget "VWWPermissionKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF1C506D1B2CDE64006BE053 /* Debug */,
+				CF1C506E1B2CDE64006BE053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF1C504C1B2CDE64006BE053 /* Project object */;
+}

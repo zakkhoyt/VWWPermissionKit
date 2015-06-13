@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.17" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VWWPermissionTableViewCell" rowHeight="76" id="Zdr-Zx-c5C" customClass="VWWPermissionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zdr-Zx-c5C" id="0SG-Qf-B17">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgm-Gk-kiM">
+                        <rect key="frame" x="8" y="8" width="584" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRc-1Z-jbo">
+                        <rect key="frame" x="57" y="37" width="486" height="30"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="NpR-cW-dBO"/>
+                        </constraints>
+                        <state key="normal" title="Button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="promptButtonTouchUpInside:" destination="Zdr-Zx-c5C" eventType="touchUpInside" id="fiI-En-B7F"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="cgm-Gk-kiM" firstAttribute="top" secondItem="0SG-Qf-B17" secondAttribute="top" constant="8" id="966-q3-eld"/>
+                    <constraint firstAttribute="bottom" secondItem="SRc-1Z-jbo" secondAttribute="bottom" constant="8" id="Omu-0m-a10"/>
+                    <constraint firstItem="cgm-Gk-kiM" firstAttribute="leading" secondItem="0SG-Qf-B17" secondAttribute="leading" constant="8" id="U7c-Fa-LoJ"/>
+                    <constraint firstItem="SRc-1Z-jbo" firstAttribute="top" secondItem="cgm-Gk-kiM" secondAttribute="bottom" constant="8" id="ZkT-JD-nwx"/>
+                    <constraint firstItem="cgm-Gk-kiM" firstAttribute="width" secondItem="SRc-1Z-jbo" secondAttribute="width" multiplier="1.2" id="whe-lE-zS1"/>
+                    <constraint firstAttribute="trailing" secondItem="cgm-Gk-kiM" secondAttribute="trailing" constant="8" id="yHn-Fk-97C"/>
+                    <constraint firstAttribute="centerX" secondItem="SRc-1Z-jbo" secondAttribute="centerX" id="zR1-og-Omt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="permissionButton" destination="SRc-1Z-jbo" id="9Mn-5f-gd8"/>
+                <outlet property="permissionLabel" destination="cgm-Gk-kiM" id="2EC-fS-Z0P"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

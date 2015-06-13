@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController storyboardIdentifier="VWWPermissionsViewController" id="VRw-OT-WWn" customClass="VWWPermissionsViewController">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="Yf6-iV-4R4"/>
+                <viewControllerLayoutGuide type="bottom" id="3fE-ZG-PL7"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="Y2s-mI-Axb">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Et-Hn-eg8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                        <items>
+                            <navigationItem title="Title" id="T60-MQ-94x">
+                                <barButtonItem key="leftBarButtonItem" title="Settings" id="7ay-2d-5JZ">
+                                    <connections>
+                                        <action selector="settingsBarButtonAction:" destination="VRw-OT-WWn" id="Ybm-OE-bZP"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem key="rightBarButtonItem" title="Done" id="Gfu-lD-5Tp">
+                                    <connections>
+                                        <action selector="closeBarButtonAction:" destination="VRw-OT-WWn" id="VFz-tG-EVI"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                        </items>
+                    </navigationBar>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0p9-kl-2Re">
+                        <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                        <animations/>
+                        <connections>
+                            <outlet property="dataSource" destination="VRw-OT-WWn" id="VvC-7Z-P1h"/>
+                            <outlet property="delegate" destination="VRw-OT-WWn" id="aWV-Rf-yoC"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="3fE-ZG-PL7" firstAttribute="top" secondItem="0p9-kl-2Re" secondAttribute="bottom" id="3tK-nZ-xZD"/>
+                    <constraint firstItem="0p9-kl-2Re" firstAttribute="top" secondItem="Y2s-mI-Axb" secondAttribute="top" constant="44" id="LRf-80-ekF"/>
+                    <constraint firstItem="0p9-kl-2Re" firstAttribute="leading" secondItem="Y2s-mI-Axb" secondAttribute="leading" id="QSe-Kt-2Oe"/>
+                    <constraint firstItem="2Et-Hn-eg8" firstAttribute="leading" secondItem="Y2s-mI-Axb" secondAttribute="leading" id="i6J-Xs-ZTp"/>
+                    <constraint firstItem="2Et-Hn-eg8" firstAttribute="top" secondItem="Y2s-mI-Axb" secondAttribute="top" id="jhh-6S-Pww"/>
+                    <constraint firstAttribute="trailing" secondItem="0p9-kl-2Re" secondAttribute="trailing" id="l2b-no-5lF"/>
+                    <constraint firstAttribute="trailing" secondItem="2Et-Hn-eg8" secondAttribute="trailing" id="qrU-rl-lL6"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="navBar" destination="2Et-Hn-eg8" id="iiR-ks-J1r"/>
+                <outlet property="tableView" destination="0p9-kl-2Re" id="ENN-JY-Wtb"/>
+            </connections>
+        </viewController>
+    </objects>
+</document>
