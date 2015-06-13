@@ -55,9 +55,40 @@ typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
 
 @interface VWWPermissionsManager : NSObject
 
-+(void)enforcePermissions:(NSArray*)permissions                                      // An array of VWWPermissions objects
-                   title:(NSString*)title                                           // Decriptive text for the header label
-      fromViewController:(UIViewController*)viewController                   // The view controller to present from
-            resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock;    // A block of VWWPermissions with the types set
+/*!
+    @method     requirePermissions:title:fromViewController:resultsBlock:
+    @abstract
+    @discussion Display the permission sheet. User cannot exit the form until all permission requirements have been satisfied
+ 
+    @param      permissions         An array of VWW(xxx)Permission instances. VWWPhotosPermission for example.
+    @param      title               The title to display at the top of the presentation window.
+    @param      fromViewController  The presenting view controller
+    @param      resultsBlock        This block returns an array of VWW(xxx)Permission objects for inspection. 
+                                    This block is fired when the user taps close or all permissions are satisfied
+ */
++(void)requirePermissions:(NSArray*)permissions
+                    title:(NSString*)title
+       fromViewController:(UIViewController*)viewController
+             resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock;
+
+/*!
+ @method     requirePermissions:title:fromViewController:resultsBlock:
+ @abstract
+ @discussion Display the permission sheet but let the user close it without satisfying their respective required properties
+ 
+ @param      permissions         An array of VWW(xxx)Permission instances. VWWPhotosPermission for example.
+ @param      title               The title to display at the top of the presentation window.
+ @param      fromViewController  The presenting view controller
+ @param      resultsBlock        This block returns an array of VWW(xxx)Permission objects for inspection.
+ This block is fired when the user taps close or all permissions are satisfied
+ 
+*/
+
++(void)optionPermissions:(NSArray*)permissions
+                    title:(NSString*)title
+       fromViewController:(UIViewController*)viewController
+             resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock;
+
+
 
 @end

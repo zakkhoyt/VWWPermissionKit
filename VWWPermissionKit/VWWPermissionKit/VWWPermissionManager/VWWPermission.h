@@ -1,4 +1,4 @@
-    //
+//
 //  VWWPermission.h
 //  
 //
@@ -7,11 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
-
-//#define VWW_PERMISSION_ADVANCED 1
-
 
 typedef enum {
     VWWPermissionStatusUninitialized = 0,
@@ -36,7 +31,7 @@ typedef void (^VWWPermissionEmptyBlock)();
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *labelText;
 @property (nonatomic) VWWPermissionStatus status;
-
+@property (nonatomic) BOOL required;
 -(instancetype)initWithType:(NSString*)type labelText:(NSString*)labelText;
 -(NSString*)stringForStatus;
 @end

@@ -1,6 +1,6 @@
 //
 //  VWWPermissionsManager.m
-//  
+//
 //
 //  Created by Zakk Hoyt on 6/11/15.
 //
@@ -17,18 +17,28 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
 @property (nonatomic, strong) VWWPermissionsManagerResultsBlock resultsBlock;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) VWWPermissionsViewController *permissionsViewController;
+@property (nonatomic) BOOL required;
 @end
 
 @implementation VWWPermissionsManager
 
 #pragma mark Public methods
 
-+(void)enforcePermissions:(NSArray*)permissions                                      // An array of VWWPermissions objects
-                    title:(NSString*)title                                           // Decriptive text for the header label
-       fromViewController:(UIViewController*)viewController                   // The view controller to present from
-             resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock{
++(void)optionPermissions:(NSArray*)permissions
+                   title:(NSString*)title
+      fromViewController:(UIViewController*)viewController
+            resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock {
     VWWPermissionsManager *permissionsManager = [[self alloc]init];
-    [permissionsManager ensurePermissions:permissions title:title fromViewController:viewController resultsBlock:resultsBlock];
+    [permissionsManager displayPermissions:permissions required:NO title:title fromViewController:viewController resultsBlock:resultsBlock];
+}
+
+
++(void)requirePermissions:(NSArray*)permissions
+                    title:(NSString*)title
+       fromViewController:(UIViewController*)viewController
+             resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock {
+    VWWPermissionsManager *permissionsManager = [[self alloc]init];
+    [permissionsManager displayPermissions:permissions required:YES title:title fromViewController:viewController resultsBlock:resultsBlock];
 }
 
 #pragma mark Private methods
@@ -52,7 +62,7 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
                 [self readPermissions];
             });
         }];
-
+        
     }
     return self;
 }
@@ -79,15 +89,7 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
 }
 
 -(void)showPermissionsViewControllerFromViewController:(UIViewController*)viewController{
-//    NSString *i = [[NSBundle mainBundle] bundleIdentifier];
-//    NSArray *bundles = [NSBundle allBundles];
-//    [bundles enumerateObjectsUsingBlock:^(NSBundle *bundle, NSUInteger idx, BOOL *stop) {
-//        NSLog(@"%@", bundle.description);
-//    }];
-
     NSBundle* resourcesBundle = [NSBundle bundleForClass:[VWWPermissionsManager class]];
-//    NSString *frameworkBundleID = @"VWWPermissionKitBundle.bundle";
-//    NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:frameworkBundleID];
     self.permissionsViewController = [[resourcesBundle loadNibNamed:VWWPermissionsViewControllerIdentifier owner:self options:nil] firstObject];
     self.permissionsViewController.permissions = self.permissions;
     self.permissionsViewController.headerText = self.title;
@@ -98,15 +100,16 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
         }
     }];
     [viewController presentViewController:self.permissionsViewController animated:YES completion:NULL];
-    
 }
 
--(void)ensurePermissions:(NSArray*)permissions
-                   title:(NSString*)title
-             fromViewController:(UIViewController*)viewController
-                   resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock{
-
+-(void)displayPermissions:(NSArray*)permissions
+                 required:(BOOL)required
+                    title:(NSString*)title
+       fromViewController:(UIViewController*)viewController
+             resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock{
+    
     _permissions = [permissions copy];
+    _required = required;
     _title = title;
     _resultsBlock = resultsBlock;
     

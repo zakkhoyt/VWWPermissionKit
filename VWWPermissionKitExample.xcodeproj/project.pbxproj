@@ -507,6 +507,7 @@
 				CFD5DE241B2CE80300AB1C56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFD5DE251B2CE80300AB1C56 /* Build configuration list for PBXNativeTarget "VWWPermissionKitExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +516,7 @@
 				CFD5DE271B2CE80300AB1C56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
