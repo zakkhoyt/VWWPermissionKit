@@ -29,7 +29,7 @@
                              [VWWRemindersPermission permissionWithLabelText:@"reminders"],
                              ];
     
-    [VWWPermissionsManager enforcePermissions:permissions
+    [VWWPermissionsManager requirePermissions:permissions
                                         title:@"We'll need some things from you before we get running"
                            fromViewController:self
                                  resultsBlock:^(NSArray *permissions) {
