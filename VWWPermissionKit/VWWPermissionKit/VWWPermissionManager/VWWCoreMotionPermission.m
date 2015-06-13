@@ -31,7 +31,7 @@
         self.motionManager = [[CMMotionActivityManager alloc]init];
     }
     
-    [self.motionManager startActivityUpdatesToQueue:[NSOperationQueue new] withHandler:^(CMMotionActivity * __nullable activity) {
+    [self.motionManager startActivityUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMMotionActivity * __nullable activity) {
         
         completionBlock();
         [self.motionManager stopActivityUpdates];

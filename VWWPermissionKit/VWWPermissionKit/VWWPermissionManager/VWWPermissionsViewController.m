@@ -11,8 +11,7 @@
 #import "VWWPermissionsTableHeaderView.h"
 @interface VWWPermissionsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) UIBarButtonItem *closeButton;
-@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, strong) VWWPermissionsViewControllerEmptyBlock completionBlock;
 
 @end
@@ -22,7 +21,6 @@
 #pragma mark Private methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 76.0;
     NSBundle* bundle = [NSBundle bundleForClass:[VWWPermissionTableViewCell class]];
@@ -37,11 +35,11 @@
     [self.tableView reloadData];
 }
 
-- (IBAction)settingsBarButtonAction:(id)sender {
+- (IBAction)privacyBarButtonAction:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
 
-- (IBAction)closeBarButtonAction:(id)sender {
+- (IBAction)doneBarButtonAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
     if(_completionBlock){
         _completionBlock();
@@ -50,7 +48,11 @@
 
 #pragma mark Public methods
 -(void)setCloseButtonTitle:(NSString*)title{
-    self.closeButton.title = title;
+    if(title == nil){
+        [self.navigationItem setRightBarButtonItem:nil];
+    } else {
+        [self.navigationItem setRightBarButtonItem:self.doneButton];
+    }
 }
 
 -(void)setCompletionBlock:(VWWPermissionsViewControllerEmptyBlock)completionBlock{

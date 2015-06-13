@@ -13,7 +13,7 @@
 typedef void (^VWWPermissionsManagerEmptyBlock)();
 
 @interface VWWPermissionsManager ()
-@property (nonatomic, strong) NSMutableArray *permissions;
+@property (nonatomic, strong) NSArray *permissions;
 @property (nonatomic, strong) VWWPermissionsManagerResultsBlock resultsBlock;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) VWWPermissionsViewController *permissionsViewController;
@@ -39,6 +39,11 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
              resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock {
     VWWPermissionsManager *permissionsManager = [[self alloc]init];
     [permissionsManager displayPermissions:permissions required:YES title:title fromViewController:viewController resultsBlock:resultsBlock];
+}
+
++(void)readPermissions:(NSArray*)permissions resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock{
+    VWWPermissionsManager *permissionsManager = [[self alloc]init];
+    [permissionsManager readPermissions:permissions resultsBlock:resultsBlock];
 }
 
 #pragma mark Private methods
@@ -99,8 +104,10 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
             welf.resultsBlock(welf.permissions);
         }
     }];
-    [viewController presentViewController:self.permissionsViewController animated:YES completion:NULL];
+    UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:self.permissionsViewController];
+    [viewController presentViewController:nc animated:YES completion:NULL];
 }
+
 
 -(void)displayPermissions:(NSArray*)permissions
                  required:(BOOL)required
@@ -116,6 +123,18 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
     
     [self readPermissions];
     [self showPermissionsViewControllerFromViewController:viewController];
+    [self checkAllPermissionsSatisfied];
+}
+
+-(void)readPermissions:(NSArray*)permissions resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock{
+    _permissions = permissions;
+    [self readPermissions];
+    
+    // TODO: This is a quick workaround but it not a good permanent solution.
+    // We coul change updatePermissionStatus to use a synchronous implementation, or add a callback to it.
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        resultsBlock(_permissions);
+    });
 }
 
 @end

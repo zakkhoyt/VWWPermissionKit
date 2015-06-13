@@ -80,7 +80,7 @@ typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
  @param      title               The title to display at the top of the presentation window.
  @param      fromViewController  The presenting view controller
  @param      resultsBlock        This block returns an array of VWW(xxx)Permission objects for inspection.
- This block is fired when the user taps close or all permissions are satisfied
+                                 This block is fired when the user taps close or all permissions are satisfied
  
 */
 
@@ -89,6 +89,19 @@ typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
        fromViewController:(UIViewController*)viewController
              resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock;
 
+
+
+/*!
+ @method     readPermissions:resultsBlock:
+ @abstract
+ @discussion Read the permission status of each permission type
+ 
+ @param      permissions         An array of VWW(xxx)Permission instances. VWWPhotosPermission for example.
+ @param      resultsBlock        This block returns an array of VWW(xxx)Permission objects for inspection.
+                                 This block is fired after all permission values have been read.
+ 
+*/
++(void)readPermissions:(NSArray*)permissions resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock;
 
 
 @end
