@@ -39,7 +39,7 @@ There is a permissions readonly function which shows no GUI. It simply reads eac
 }];
 ```
 
-Tapping on the "Privacy" button will navigate the user to your iOS app's privacy settings where they can change permissions. Once the user switches back to your app, the permissions are re-read and the screen is updated.
+Tapping on the "Privacy" button will navigate the user to your iOS app's privacy settings where they can change permissions. The user is also navigated here if they tap a red button. Once the user switches back to your app, the permissions are re-read and the screen is updated.
 
 ## Sample images ##
 ![](http://i.imgur.com/8viPrQS.png)
