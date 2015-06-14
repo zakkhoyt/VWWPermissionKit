@@ -20,19 +20,16 @@
 }
 
 -(void)updatePermissionStatus{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
-        if(status == kABAuthorizationStatusNotDetermined){
-            self.status = VWWPermissionStatusNotDetermined;
-        } else if(status == kABAuthorizationStatusAuthorized){
-            self.status = VWWPermissionStatusAuthorized;
-        } else if(status == kABAuthorizationStatusDenied){
-            self.status = VWWPermissionStatusDenied;
-        } else if(status == kABAuthorizationStatusRestricted){
-            self.status = VWWPermissionStatusRestricted;
-        }
-    });
-    
+    ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
+    if(status == kABAuthorizationStatusNotDetermined){
+        self.status = VWWPermissionStatusNotDetermined;
+    } else if(status == kABAuthorizationStatusAuthorized){
+        self.status = VWWPermissionStatusAuthorized;
+    } else if(status == kABAuthorizationStatusDenied){
+        self.status = VWWPermissionStatusDenied;
+    } else if(status == kABAuthorizationStatusRestricted){
+        self.status = VWWPermissionStatusRestricted;
+    }
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{

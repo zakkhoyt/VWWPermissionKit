@@ -49,7 +49,7 @@
     switch (self.permission.status) {
         case VWWPermissionStatusAuthorized:{
 //            [self.permissionButton setBackgroundColor:self.tintColor];
-            [self.permissionButton setBackgroundColor:[UIColor greenColor]];
+            [self.permissionButton setBackgroundColor:[UIColor colorWithRed:0 green:0.7 blue:0 alpha:1]];
             [self.permissionButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             NSString *buttonTitle = [[NSString stringWithFormat:@"%@ allowed", self.permission.type] uppercaseString];
             [self.permissionButton setTitle:buttonTitle forState:UIControlStateNormal];
@@ -97,6 +97,9 @@
         NSDictionary *userInfo = @{VWWPermissionNotificationsPermissionKey : self.permission};
         [[NSNotificationCenter defaultCenter] postNotificationName:VWWPermissionNotificationsPromptAction object:nil userInfo:userInfo];
     }
+    
+    
+
     
 }
 

@@ -15,7 +15,8 @@
     return NO;
 }
 
-- (IBAction)permissionButtonTouchUpInside:(id)sender {
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     NSArray *permissions =
     @[
       [VWWCameraPermission permissionWithLabelText:@"In order to access your camera to record video."],
@@ -23,33 +24,37 @@
       [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"To calculate your heading, altitude, speed, distance home, etc..."],
       [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library."],
       ];
-
     
-//    NSArray *permissions = @[
-//                             [VWWAccountsPermission permissionWithLabelText:@"accounts"],
-//                             [VWWBluetoothPermission permissionWithLabelText:@"bluetooth"],
-//                             [VWWHealthPermission permissionWithLabelText:@"health"],
-//                             [VWWHomePermission permissionWithLabelText:@"home"],
-//                             [VWWCoreMotionPermission permissionWithLabelText:@"motion"],
-//                             [VWWAssetLibraryPermission permissionWithLabelText:@"assets library"],
-//                             [VWWCameraPermission permissionWithLabelText:@"camera"],
-//                             [VWWCalendarsPermission permissionWithLabelText:@"calendar"],
-//                             [VWWContactsPermission permissionWithLabelText:@"contacts"],
-//                             [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"location always"],
-//                             [VWWNotificationsPermission  permissionWithLabelText:@"notification"],
-//                             [VWWMicrophonePermission permissionWithLabelText:@"microphone"],
-//                             [VWWPhotosPermission permissionWithLabelText:@"photos"],
-//                             [VWWRemindersPermission permissionWithLabelText:@"reminders"],
-//                             ];
+    
+    //    NSArray *permissions = @[
+    //                             [VWWAccountsPermission permissionWithLabelText:@"accounts"],
+    //                             [VWWBluetoothPermission permissionWithLabelText:@"bluetooth"],
+    //                             [VWWHealthPermission permissionWithLabelText:@"health"],
+    //                             [VWWHomePermission permissionWithLabelText:@"home"],
+    //                             [VWWCoreMotionPermission permissionWithLabelText:@"motion"],
+    //                             [VWWAssetLibraryPermission permissionWithLabelText:@"assets library"],
+    //                             [VWWCameraPermission permissionWithLabelText:@"camera"],
+    //                             [VWWCalendarsPermission permissionWithLabelText:@"calendar"],
+    //                             [VWWContactsPermission permissionWithLabelText:@"contacts"],
+    //                             [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"location always"],
+    //                             [VWWNotificationsPermission  permissionWithLabelText:@"notification"],
+    //                             [VWWMicrophonePermission permissionWithLabelText:@"microphone"],
+    //                             [VWWPhotosPermission permissionWithLabelText:@"photos"],
+    //                             [VWWRemindersPermission permissionWithLabelText:@"reminders"],
+    //                             ];
     
     [VWWPermissionsManager requirePermissions:permissions
-                                        title:@"We'll need some things from you before we get running"
+                                        title:@"We need your approvoal before we get running"
                            fromViewController:self
                                  resultsBlock:^(NSArray *permissions) {
                                      [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
                                          NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
                                      }];
                                  }];
+    
+}
+
+- (IBAction)permissionButtonTouchUpInside:(id)sender {
 
 }
 

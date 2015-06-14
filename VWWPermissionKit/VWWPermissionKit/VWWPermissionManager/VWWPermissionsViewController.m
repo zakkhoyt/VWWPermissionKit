@@ -9,6 +9,8 @@
 #import "VWWPermissionsViewController.h"
 #import "VWWPermissionTableViewCell.h"
 #import "VWWPermissionsTableHeaderView.h"
+#import "VWWPermission.h"
+
 @interface VWWPermissionsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
@@ -25,10 +27,8 @@
     self.tableView.estimatedRowHeight = 76.0;
     NSBundle* bundle = [NSBundle bundleForClass:[VWWPermissionTableViewCell class]];
     [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTableViewCellIdentifier];
-}
-
--(BOOL)prefersStatusBarHidden{
-    return YES;
+    
+    
 }
 
 -(void)refresh{
@@ -57,6 +57,20 @@
 
 -(void)setCompletionBlock:(VWWPermissionsViewControllerEmptyBlock)completionBlock{
     _completionBlock = completionBlock;
+}
+
+-(void)displayDeniedAlertForPermission:(VWWPermission*)permission{
+    NSString *message = [NSString stringWithFormat:@"It looks like you denied access to %@. Please approve it in iOS Settings", permission.type];
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:message preferredStyle:UIAlertControllerStyleAlert];
+    [ac addAction:[UIAlertAction actionWithTitle:@"Later" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+    }]];
+    [ac addAction:[UIAlertAction actionWithTitle:@"Now" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+    }]];
+    
+    [self presentViewController:ac animated:YES completion:NULL];
+
 }
 
 #pragma mark UITableViewDataSource

@@ -22,20 +22,18 @@
 }
 
 -(void)updatePermissionStatus{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-        if(status == kCLAuthorizationStatusAuthorizedWhenInUse){
-            self.status = VWWPermissionStatusDenied;
-        } else if(status == kCLAuthorizationStatusAuthorizedAlways){
-            self.status = VWWPermissionStatusAuthorized;
-        } else if(status == kCLAuthorizationStatusNotDetermined) {
-            self.status = VWWPermissionStatusNotDetermined;
-        } else if(status == kCLAuthorizationStatusDenied) {
-            self.status = VWWPermissionStatusDenied;
-        } else if(status == kCLAuthorizationStatusRestricted) {
-            self.status = VWWPermissionStatusRestricted;
-        }
-    });
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if(status == kCLAuthorizationStatusAuthorizedWhenInUse){
+        self.status = VWWPermissionStatusDenied;
+    } else if(status == kCLAuthorizationStatusAuthorizedAlways){
+        self.status = VWWPermissionStatusAuthorized;
+    } else if(status == kCLAuthorizationStatusNotDetermined) {
+        self.status = VWWPermissionStatusNotDetermined;
+    } else if(status == kCLAuthorizationStatusDenied) {
+        self.status = VWWPermissionStatusDenied;
+    } else if(status == kCLAuthorizationStatusRestricted) {
+        self.status = VWWPermissionStatusRestricted;
+    }
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{
@@ -46,15 +44,20 @@
     }
     
     [self.locationManager requestAlwaysAuthorization];
-    
+    [self.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [self.locationManager startUpdatingHeading];
+    [self.locationManager startUpdatingLocation];
+
 }
 
 #pragma mark CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
-    if(status == kCLAuthorizationStatusAuthorizedAlways){
-        self.locationStatusChangeBlock();
-    }
+    self.locationStatusChangeBlock();
 }
 
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations{
+    NSLog(@"");
+}
 
 @end

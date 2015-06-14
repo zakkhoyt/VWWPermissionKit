@@ -21,20 +21,16 @@
 
 
 -(void)updatePermissionStatus{
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        //    HKObjectType *type = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBloodType];
-        HKObjectType *type = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodAlcoholContent];
-        HKAuthorizationStatus status = [self.healthStore authorizationStatusForType:type];
-        if(status == HKAuthorizationStatusNotDetermined){
-            self.status = VWWPermissionStatusNotDetermined;
-        } else if(status == HKAuthorizationStatusSharingAuthorized){
-            self.status = VWWPermissionStatusAuthorized;
-        } else if(status == HKAuthorizationStatusSharingDenied){
-            self.status = VWWPermissionStatusDenied;
-        }
-    });
+    //    HKObjectType *type = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBloodType];
+    HKObjectType *type = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodAlcoholContent];
+    HKAuthorizationStatus status = [self.healthStore authorizationStatusForType:type];
+    if(status == HKAuthorizationStatusNotDetermined){
+        self.status = VWWPermissionStatusNotDetermined;
+    } else if(status == HKAuthorizationStatusSharingAuthorized){
+        self.status = VWWPermissionStatusAuthorized;
+    } else if(status == HKAuthorizationStatusSharingDenied){
+        self.status = VWWPermissionStatusDenied;
+    }
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{

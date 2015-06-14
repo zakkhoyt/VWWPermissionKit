@@ -21,8 +21,6 @@
 
 
 -(void)updatePermissionStatus{
-    dispatch_async(dispatch_get_main_queue(), ^{
-    });
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{

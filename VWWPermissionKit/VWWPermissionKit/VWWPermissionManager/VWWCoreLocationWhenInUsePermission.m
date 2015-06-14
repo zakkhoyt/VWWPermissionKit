@@ -22,39 +22,34 @@
 
 
 -(void)updatePermissionStatus{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-        if(status == kCLAuthorizationStatusAuthorizedWhenInUse){
-            self.status = VWWPermissionStatusAuthorized;
-        } else if(status == kCLAuthorizationStatusAuthorizedAlways){
-            self.status = VWWPermissionStatusDenied;
-        } else if(status == kCLAuthorizationStatusNotDetermined) {
-            self.status = VWWPermissionStatusNotDetermined;
-        } else if(status == kCLAuthorizationStatusDenied) {
-            self.status = VWWPermissionStatusDenied;
-        } else if(status == kCLAuthorizationStatusRestricted) {
-            self.status = VWWPermissionStatusRestricted;
-        }
-    });
-    
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    if(status == kCLAuthorizationStatusAuthorizedWhenInUse){
+        self.status = VWWPermissionStatusAuthorized;
+    } else if(status == kCLAuthorizationStatusAuthorizedAlways){
+        self.status = VWWPermissionStatusDenied;
+    } else if(status == kCLAuthorizationStatusNotDetermined) {
+        self.status = VWWPermissionStatusNotDetermined;
+    } else if(status == kCLAuthorizationStatusDenied) {
+        self.status = VWWPermissionStatusDenied;
+    } else if(status == kCLAuthorizationStatusRestricted) {
+        self.status = VWWPermissionStatusRestricted;
+    }
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{
     self.locationStatusChangeBlock = completionBlock;
     if(self.locationManager == nil){
-        self.locationManager = [CLLocationManager new];
+        self.locationManager = [[CLLocationManager alloc]init];
         self.locationManager.delegate = self;
     }
     
-    [self.locationManager requestWhenInUseAuthorization];
     
+    [self.locationManager requestWhenInUseAuthorization];
 }
 
 #pragma mark CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
-    if(status == kCLAuthorizationStatusAuthorizedWhenInUse){
-        self.locationStatusChangeBlock();
-    }
+    self.locationStatusChangeBlock();
 }
 
 

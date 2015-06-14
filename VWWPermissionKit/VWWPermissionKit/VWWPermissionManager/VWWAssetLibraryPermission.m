@@ -19,18 +19,16 @@
 }
 
 -(void)updatePermissionStatus{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
-        if(status == ALAuthorizationStatusNotDetermined){
-            self.status = VWWPermissionStatusNotDetermined;
-        } else if(status == ALAuthorizationStatusAuthorized) {
-            self.status = VWWPermissionStatusAuthorized;
-        } else if(status == ALAuthorizationStatusDenied) {
-            self.status = VWWPermissionStatusDenied;
-        } else if(status == ALAuthorizationStatusRestricted) {
-            self.status = VWWPermissionStatusRestricted;
-        }
-    });
+    ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
+    if(status == ALAuthorizationStatusNotDetermined){
+        self.status = VWWPermissionStatusNotDetermined;
+    } else if(status == ALAuthorizationStatusAuthorized) {
+        self.status = VWWPermissionStatusAuthorized;
+    } else if(status == ALAuthorizationStatusDenied) {
+        self.status = VWWPermissionStatusDenied;
+    } else if(status == ALAuthorizationStatusRestricted) {
+        self.status = VWWPermissionStatusRestricted;
+    }
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{

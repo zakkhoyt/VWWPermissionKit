@@ -55,9 +55,17 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
             dispatch_async(dispatch_get_main_queue(), ^{
                 VWWPermission *permission = note.userInfo[VWWPermissionNotificationsPermissionKey];
                 [permission presentSystemPromtWithCompletionBlock:^{
-                    permission.status = VWWPermissionStatusUninitialized;
-                    [permission updatePermissionStatus];
-                    [self checkAllPermissionsSatisfied];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [permission updatePermissionStatus];
+                        
+                        if(permission.status == VWWPermissionStatusDenied){
+                            [self.permissionsViewController displayDeniedAlertForPermission:permission];
+                        }
+                        
+                        
+                        
+                        [self checkAllPermissionsSatisfied];    
+                    });
                 }];
             });
         }];
@@ -122,19 +130,19 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
     
     
     [self readPermissions];
-    [self showPermissionsViewControllerFromViewController:viewController];
-    [self checkAllPermissionsSatisfied];
+    if([self checkAllPermissionsSatisfied] == YES){
+        // Return if all permissions are all authorized
+        return resultsBlock(self.permissions);
+    } else {
+        [self showPermissionsViewControllerFromViewController:viewController];
+        [self checkAllPermissionsSatisfied];
+    }
 }
 
 -(void)readPermissions:(NSArray*)permissions resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock{
     _permissions = permissions;
     [self readPermissions];
-    
-    // TODO: This is a quick workaround but it not a good permanent solution.
-    // We coul change updatePermissionStatus to use a synchronous implementation, or add a callback to it.
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        resultsBlock(_permissions);
-    });
+    resultsBlock(_permissions);
 }
 
 @end

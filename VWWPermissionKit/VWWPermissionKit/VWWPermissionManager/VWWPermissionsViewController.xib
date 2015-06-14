@@ -34,7 +34,7 @@
                 </constraints>
             </view>
             <toolbarItems/>
-            <navigationItem key="navigationItem" id="hQG-vX-hqI">
+            <navigationItem key="navigationItem" title="Permission" id="hQG-vX-hqI">
                 <barButtonItem key="leftBarButtonItem" title="Privacy" id="Fbx-zf-c0m">
                     <connections>
                         <action selector="privacyBarButtonAction:" destination="VRw-OT-WWn" id="Bav-Jc-w8b"/>

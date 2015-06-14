@@ -22,24 +22,21 @@ static NSString *VWWPermissionsManagerNotificationsPromptedKey = @"notifications
 }
 
 -(void)updatePermissionStatus{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIUserNotificationSettings *settings = [UIApplication sharedApplication].currentUserNotificationSettings;
-        if(settings.types == UIUserNotificationTypeNone){
-            NSNumber *promptedNumber = [[NSUserDefaults standardUserDefaults] objectForKey:VWWPermissionsManagerNotificationsPromptedKey];
-            if(promptedNumber == nil){
-                self.status = VWWPermissionStatusNotDetermined;
-            } else {
-                if(promptedNumber.unsignedIntegerValue == 0){
-                    self.status = VWWPermissionStatusDenied;
-                } else {
-                    self.status = VWWPermissionStatusDenied;
-                }
-            }
+    UIUserNotificationSettings *settings = [UIApplication sharedApplication].currentUserNotificationSettings;
+    if(settings.types == UIUserNotificationTypeNone){
+        NSNumber *promptedNumber = [[NSUserDefaults standardUserDefaults] objectForKey:VWWPermissionsManagerNotificationsPromptedKey];
+        if(promptedNumber == nil){
+            self.status = VWWPermissionStatusNotDetermined;
         } else {
-            self.status = VWWPermissionStatusAuthorized;
+            if(promptedNumber.unsignedIntegerValue == 0){
+                self.status = VWWPermissionStatusDenied;
+            } else {
+                self.status = VWWPermissionStatusDenied;
+            }
         }
-    });
-    
+    } else {
+        self.status = VWWPermissionStatusAuthorized;
+    }
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{

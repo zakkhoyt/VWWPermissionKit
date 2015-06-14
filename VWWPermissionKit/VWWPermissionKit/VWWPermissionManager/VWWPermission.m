@@ -43,6 +43,9 @@
     NSAssert(NO, @"Child class must impelment");
 }
 
+-(NSString*)description{
+    return [NSString stringWithFormat:@"%@ - %@", NSStringFromClass([self class]), [self stringForStatus]];
+}
 
 -(NSString*)stringForStatus{
     switch (self.status) {

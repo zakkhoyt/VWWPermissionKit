@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VWWPermission;
 
 static NSString *VWWPermissionsViewControllerIdentifier = @"VWWPermissionsViewController";
 
@@ -18,4 +19,5 @@ typedef void (^VWWPermissionsViewControllerEmptyBlock)();
 -(void)refresh;
 -(void)setCloseButtonTitle:(NSString*)title;
 -(void)setCompletionBlock:(VWWPermissionsViewControllerEmptyBlock)completionBlock;
+-(void)displayDeniedAlertForPermission:(VWWPermission*)permission;
 @end
