@@ -4,7 +4,13 @@ We've all been there. You get started on your latest and greatest app when you h
 
 VWWPermissionKit solves these problems. VWWPermissionKit allows you to inform your user exactly what they will be prompted for before presentation. Buttons trigger the prompts one at a time. All from one central screen. 
 
-First create an array of VWWPermission types
+First, import VWWPermissionKit
+
+```
+#import "VWWPermissionKit.h"
+```
+
+Next create an array of VWWPermission types
 
 ```
 @[
@@ -16,7 +22,7 @@ First create an array of VWWPermission types
 
 ```
 
-Next display the permissions window. Once that all the permissions are authorized the form is dimissed and the resultsBlock is called. You can inspect each permission here. 
+Finally display the permissions window. Once that all the permissions are authorized the form is dimissed and the resultsBlock is called. You can inspect each permission here. 
 
 ```
 [VWWPermissionsManager requirePermissions:permissions
@@ -30,7 +36,8 @@ Next display the permissions window. Once that all the permissions are authorize
 ```
 
 
-There is a permissions readonly function which shows no GUI. It simply reads each permission type and returns with the benefit that all permissions share the same datatype. 
+Alternatively, there is a permissions readonly function which shows no GUI. It simply reads each permission type and returns with the benefit that all permissions share the same datatype. 
+
 ```
 [VWWPermissionsManager readPermissions:permissions resultsBlock:^(NSArray *permissions) {
     [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
@@ -55,6 +62,21 @@ Next tell XCode to embed VWWPermissionKit into your app. Go to your app's target
 
 Next you'll need to tell it where to find the headers. Go to the Build Settings tab. Type "header " in the search bar. The go to the section "Search Paths" and add an entry to "Header Search Paths"
 
+## Functional Permission classes ##
+- **VWWAssetLibraryPermission**: AssetsLibrary
+- **VWWCameraPermission**: AVFoundation and UIImagePickerController
+- **VWWCalendarsPermission**: EventKit framework
+- **VWWCoreLocationAlwaysPermission**: CoreLocation framework
+- **VWWCoreLocationWhenInUsePermission**: CoreLocatoin framework
+- **VWWMicrophonePermission**: AVFoundation framework
+- **VWWNotificationsPermission**: UIApplication (remote, user, and local)
+- **VWWRemindersPermission**: EventKit framework
+- **VWWPhotosPermission**: Photos framework
 
-
+## In-Development Permission classes ##
+- **VWWAccountsPermission**: Accounts framework
+- **VWWBluetoothPermission**: CoreBluetooth framework
+- **VWWCoreMotionPermission**: CoreMotion framework
+- **VWWHealthPermission**: HealthKit framework
+- **VWWHomePermission**: HomeKit framework
 
