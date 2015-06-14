@@ -35,12 +35,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "VWWAccountsPermission.h"
 #import "VWWAssetLibraryPermission.h"
-#import "VWWBluetoothPermission.h"
-#import "VWWHealthPermission.h"
-#import "VWWHomePermission.h"
-#import "VWWCoreMotionPermission.h"
 #import "VWWCameraPermission.h"
 #import "VWWCalendarsPermission.h"
 #import "VWWContactsPermission.h"
@@ -50,6 +45,12 @@
 #import "VWWMicrophonePermission.h"
 #import "VWWRemindersPermission.h"
 #import "VWWPhotosPermission.h"
+
+//#import "VWWAccountsPermission.h"
+//#import "VWWBluetoothPermission.h"
+//#import "VWWHealthPermission.h"
+//#import "VWWHomePermission.h"
+//#import "VWWCoreMotionPermission.h"
 
 typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
 
