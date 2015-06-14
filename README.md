@@ -49,7 +49,7 @@ Tapping on the "Privacy" button will navigate the user to your iOS app's privacy
 
 
 ## Adding the cocoa framework to your iOS project ##
-To add VWWPermissionKit to your application, drag the VWWPermissionKit.xcodeproj project file into your application's project (as you would in the static library target).
+To add VWWPermissionKit to your application, drag the VWWPermissionKit.xcodeproj project file into your application's project. XCode will add the VWWPermissionKit project and source files.
 
 Next tell XCode to embed VWWPermissionKit into your app. Go to your app's target build settings and choose the "General" tab. Under the "Embedded Binaries" grouping, add VWWPermissionKit. XCode should automatically add link references for you.
 
