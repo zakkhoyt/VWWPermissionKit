@@ -6,18 +6,17 @@
 //  Copyright (c) 2015 Zakk Hoyt. All rights reserved.
 //
 
-#import "VWWBluetoothPermission.h"
+#import "VWWCoreBluetoothPermission.h"
 @import CoreBluetooth;
-@interface VWWBluetoothPermission ()
+@interface VWWCoreBluetoothPermission ()
 @property (nonatomic, strong) CBPeripheralManager *bluetoothManager;
 @end
 
-@implementation VWWBluetoothPermission
+@implementation VWWCoreBluetoothPermission
 
 +(instancetype)permissionWithLabelText:(NSString*)labelText{
     return [[super alloc] initWithType:VWWBluetoothPermissionType labelText:labelText];
 }
-
 
 
 -(void)updatePermissionStatus{

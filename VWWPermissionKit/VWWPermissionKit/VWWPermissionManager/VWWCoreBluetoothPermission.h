@@ -7,9 +7,10 @@
 //
 
 #import "VWWPermission.h"
+
 // NSBluetoothPeripheralUsageDescription
 static NSString *VWWBluetoothPermissionType = @"Bluetooth";
 
-@interface VWWBluetoothPermission : VWWPermission
+@interface VWWCoreBluetoothPermission : VWWPermission
 
 @end
