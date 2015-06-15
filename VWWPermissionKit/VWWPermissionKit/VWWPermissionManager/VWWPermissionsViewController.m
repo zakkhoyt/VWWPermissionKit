@@ -23,12 +23,28 @@
 #pragma mark Private methods
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+    NSString *prodName = [info objectForKey:(NSString*)kCFBundleNameKey];
+    self.title = prodName;
+    self.navigationController.title = prodName;
+    
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 76.0;
     NSBundle* bundle = [NSBundle bundleForClass:[VWWPermissionTableViewCell class]];
     [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTableViewCellIdentifier];
     
+    [self willTransitionToTraitCollection:self.traitCollection withTransitionCoordinator:self.transitionCoordinator];
     
+}
+
+-(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+    
+    if(newCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact){
+        [UIApplication sharedApplication].statusBarHidden = YES;
+    } else {
+        [UIApplication sharedApplication].statusBarHidden = NO;
+    }
 }
 
 -(void)refresh{
