@@ -81,7 +81,7 @@ To add VWWPermissionKit to your application, drag the VWWPermissionKit.xcodeproj
 
 Next tell XCode to embed VWWPermissionKit into your app. Go to your app's target build settings and choose the "General" tab. Under the "Embedded Binaries" grouping, add VWWPermissionKit. XCode should automatically add link references for you.
 
-Next MAY need to tell it where to find the headers. Go to the Build Settings tab. Type "header " in the search bar. The go to the section "Search Paths" and add an entry to "Header Search Paths"
+Finally you'll need to tell XCode where to find the proper headers. Go to the Build Settings tab. Type "header " in the search bar. The go to the section "Search Paths" and add an the VWWPermissionKit file path to "Header Search Paths" (recursive: YES)
 
 ## Functional Permission classes ##
 - **VWWAssetLibraryPermission**: AssetsLibrary
