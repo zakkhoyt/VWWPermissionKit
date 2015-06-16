@@ -19,6 +19,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CF1F28C31B2FC3960052F881 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF1C50551B2CDE64006BE053;
+			remoteInfo = VWWPermissionKit;
+		};
+		CF1F28C51B2FC3960052F881 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CF1C505F1B2CDE64006BE053;
+			remoteInfo = VWWPermissionKitTests;
+		};
 		CFD5DE191B2CE80300AB1C56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CFD5DDF71B2CE80300AB1C56 /* Project object */;
@@ -64,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VWWPermissionKit.xcodeproj; path = VWWPermissionKit/VWWPermissionKit.xcodeproj; sourceTree = "<group>"; };
 		CFD5DDFF1B2CE80300AB1C56 /* VWWPermissionKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VWWPermissionKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD5DE031B2CE80300AB1C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFD5DE041B2CE80300AB1C56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,9 +114,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1F28BE1B2FC3960052F881 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF1F28C41B2FC3960052F881 /* VWWPermissionKit.framework */,
+				CF1F28C61B2FC3960052F881 /* VWWPermissionKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CFD5DDF61B2CE80300AB1C56 = {
 			isa = PBXGroup;
 			children = (
+				CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */,
 				CFD5DE011B2CE80300AB1C56 /* VWWPermissionKitExample */,
 				CFD5DE1B1B2CE80300AB1C56 /* VWWPermissionKitExampleTests */,
 				CFD5DE001B2CE80300AB1C56 /* Products */,
@@ -242,6 +267,10 @@
 					ProductGroup = CFD5DE291B2CE82000AB1C56 /* Products */;
 					ProjectRef = CFD5DE281B2CE82000AB1C56 /* VWWPermissionKit.xcodeproj */;
 				},
+				{
+					ProductGroup = CF1F28BE1B2FC3960052F881 /* Products */;
+					ProjectRef = CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -252,6 +281,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		CF1F28C41B2FC3960052F881 /* VWWPermissionKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VWWPermissionKit.framework;
+			remoteRef = CF1F28C31B2FC3960052F881 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CF1F28C61B2FC3960052F881 /* VWWPermissionKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VWWPermissionKitTests.xctest;
+			remoteRef = CF1F28C51B2FC3960052F881 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		CFD5DE2E1B2CE82100AB1C56 /* VWWPermissionKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;

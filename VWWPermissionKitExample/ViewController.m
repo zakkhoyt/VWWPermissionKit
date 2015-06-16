@@ -25,24 +25,6 @@
       [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library."],
       ];
     
-    
-    //    NSArray *permissions = @[
-    //                             [VWWAccountsPermission permissionWithLabelText:@"accounts"],
-    //                             [VWWBluetoothPermission permissionWithLabelText:@"bluetooth"],
-    //                             [VWWHealthPermission permissionWithLabelText:@"health"],
-    //                             [VWWHomePermission permissionWithLabelText:@"home"],
-    //                             [VWWCoreMotionPermission permissionWithLabelText:@"motion"],
-    //                             [VWWAssetLibraryPermission permissionWithLabelText:@"assets library"],
-    //                             [VWWCameraPermission permissionWithLabelText:@"camera"],
-    //                             [VWWCalendarsPermission permissionWithLabelText:@"calendar"],
-    //                             [VWWContactsPermission permissionWithLabelText:@"contacts"],
-    //                             [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"location always"],
-    //                             [VWWNotificationsPermission  permissionWithLabelText:@"notification"],
-    //                             [VWWMicrophonePermission permissionWithLabelText:@"microphone"],
-    //                             [VWWPhotosPermission permissionWithLabelText:@"photos"],
-    //                             [VWWRemindersPermission permissionWithLabelText:@"reminders"],
-    //                             ];
-    
     [VWWPermissionsManager requirePermissions:permissions
                                         title:@"We need your approvoal before we get running"
                            fromViewController:self
@@ -53,6 +35,20 @@
                                  }];
     
 }
+
+////************ Swift example
+//override func viewDidAppear(animated: Bool) {
+//    super.viewDidAppear(animated)
+//    let photos = VWWPhotosPermission.permissionWithLabelText("In order to write to your Camera Roll")
+//    let camera = VWWCameraPermission.permissionWithLabelText("In order to access your camera to record video.")
+//    let microphone = VWWMicrophonePermission.permissionWithLabelText("In order to access your microphone to add audio to videos")
+//    let coreLocationAlways = VWWCoreLocationAlwaysPermission.permissionWithLabelText("To calculate your heading, altitude, speed, distance home, etc...")
+//    let permissions = [photos, camera, microphone, coreLocationAlways]
+//    VWWPermissionsManager.requirePermissions(permissions, title: "Swift Test", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
+//        println("permission")
+//    }
+//}
+
 
 - (IBAction)permissionButtonTouchUpInside:(id)sender {
 
