@@ -1,4 +1,4 @@
-## VWWPermissionKit ##
+## VWWPermissionKit
 
 We've all been there. You get started on your latest and greatest app when you have to add logic to prompt the user for permissions before you can perform any actions. These permissions use many different classes and frameworks, and they don't share the same data type regarding status. 
 
@@ -12,7 +12,7 @@ First, import VWWPermissionKit to your file if using Obj-C or your Bridging Head
 
 Next create an array of VWWPermission types
 
-ObjC
+###ObjC
 ```
 @[
   [VWWCameraPermission permissionWithLabelText:@"We need to access your camera to record video."],
@@ -23,7 +23,7 @@ ObjC
 
 ```
 
-Swift
+###Swift
 ```
 let photos = VWWPhotosPermission.permissionWithLabelText("In order to write to your Camera Roll")
     let camera = VWWCameraPermission.permissionWithLabelText("In order to access your camera to record video.")
@@ -35,7 +35,7 @@ let photos = VWWPhotosPermission.permissionWithLabelText("In order to write to y
 
 Finally display the permissions window. Once that all the permissions are authorized the form is dimissed and the resultsBlock is called. You can inspect each permission here. 
 
-ObjC
+###ObjC
 ```
 [VWWPermissionsManager requirePermissions:permissions
                                     title:@"We'll need some things from you before we get started."
@@ -47,7 +47,7 @@ ObjC
                              }];
 ```
 
-Swift
+###Swift
 ```
     VWWPermissionsManager.requirePermissions(permissions, title: "Swift Test", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
         println("permission")
