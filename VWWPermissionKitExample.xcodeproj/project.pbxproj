@@ -13,7 +13,6 @@
 		CFD5DE0E1B2CE80300AB1C56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD5DE0C1B2CE80300AB1C56 /* Main.storyboard */; };
 		CFD5DE101B2CE80300AB1C56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD5DE0F1B2CE80300AB1C56 /* Images.xcassets */; };
 		CFD5DE131B2CE80300AB1C56 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD5DE111B2CE80300AB1C56 /* LaunchScreen.xib */; };
-		CFD5DE1F1B2CE80300AB1C56 /* VWWPermissionKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD5DE1E1B2CE80300AB1C56 /* VWWPermissionKitExampleTests.m */; };
 		CFD5DE311B2CE82A00AB1C56 /* VWWPermissionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD5DE2E1B2CE82100AB1C56 /* VWWPermissionKit.framework */; };
 		CFD5DE321B2CE82A00AB1C56 /* VWWPermissionKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFD5DE2E1B2CE82100AB1C56 /* VWWPermissionKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -26,33 +25,12 @@
 			remoteGlobalIDString = CF1C50551B2CDE64006BE053;
 			remoteInfo = VWWPermissionKit;
 		};
-		CF1F28C51B2FC3960052F881 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CF1C505F1B2CDE64006BE053;
-			remoteInfo = VWWPermissionKitTests;
-		};
-		CFD5DE191B2CE80300AB1C56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CFD5DDF71B2CE80300AB1C56 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFD5DDFE1B2CE80300AB1C56;
-			remoteInfo = VWWPermissionKitExample;
-		};
 		CFD5DE2D1B2CE82100AB1C56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CFD5DE281B2CE82000AB1C56 /* VWWPermissionKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CF1C50551B2CDE64006BE053;
 			remoteInfo = VWWPermissionKit;
-		};
-		CFD5DE2F1B2CE82100AB1C56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CFD5DE281B2CE82000AB1C56 /* VWWPermissionKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CF1C505F1B2CDE64006BE053;
-			remoteInfo = VWWPermissionKitTests;
 		};
 		CFD5DE331B2CE82A00AB1C56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -89,9 +67,6 @@
 		CFD5DE0D1B2CE80300AB1C56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFD5DE0F1B2CE80300AB1C56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CFD5DE121B2CE80300AB1C56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CFD5DE181B2CE80300AB1C56 /* VWWPermissionKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VWWPermissionKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFD5DE1D1B2CE80300AB1C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFD5DE1E1B2CE80300AB1C56 /* VWWPermissionKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionKitExampleTests.m; sourceTree = "<group>"; };
 		CFD5DE281B2CE82000AB1C56 /* VWWPermissionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VWWPermissionKit.xcodeproj; path = VWWPermissionKit/VWWPermissionKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -104,13 +79,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFD5DE151B2CE80300AB1C56 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				CF1F28C41B2FC3960052F881 /* VWWPermissionKit.framework */,
-				CF1F28C61B2FC3960052F881 /* VWWPermissionKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +95,6 @@
 			children = (
 				CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */,
 				CFD5DE011B2CE80300AB1C56 /* VWWPermissionKitExample */,
-				CFD5DE1B1B2CE80300AB1C56 /* VWWPermissionKitExampleTests */,
 				CFD5DE001B2CE80300AB1C56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				CFD5DDFF1B2CE80300AB1C56 /* VWWPermissionKitExample.app */,
-				CFD5DE181B2CE80300AB1C56 /* VWWPermissionKitExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,28 +132,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CFD5DE1B1B2CE80300AB1C56 /* VWWPermissionKitExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				CFD5DE1E1B2CE80300AB1C56 /* VWWPermissionKitExampleTests.m */,
-				CFD5DE1C1B2CE80300AB1C56 /* Supporting Files */,
-			);
-			path = VWWPermissionKitExampleTests;
-			sourceTree = "<group>";
-		};
-		CFD5DE1C1B2CE80300AB1C56 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CFD5DE1D1B2CE80300AB1C56 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		CFD5DE291B2CE82000AB1C56 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				CFD5DE2E1B2CE82100AB1C56 /* VWWPermissionKit.framework */,
-				CFD5DE301B2CE82100AB1C56 /* VWWPermissionKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,24 +162,6 @@
 			productReference = CFD5DDFF1B2CE80300AB1C56 /* VWWPermissionKitExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CFD5DE171B2CE80300AB1C56 /* VWWPermissionKitExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFD5DE251B2CE80300AB1C56 /* Build configuration list for PBXNativeTarget "VWWPermissionKitExampleTests" */;
-			buildPhases = (
-				CFD5DE141B2CE80300AB1C56 /* Sources */,
-				CFD5DE151B2CE80300AB1C56 /* Frameworks */,
-				CFD5DE161B2CE80300AB1C56 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CFD5DE1A1B2CE80300AB1C56 /* PBXTargetDependency */,
-			);
-			name = VWWPermissionKitExampleTests;
-			productName = VWWPermissionKitExampleTests;
-			productReference = CFD5DE181B2CE80300AB1C56 /* VWWPermissionKitExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,10 +173,6 @@
 				TargetAttributes = {
 					CFD5DDFE1B2CE80300AB1C56 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					CFD5DE171B2CE80300AB1C56 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = CFD5DDFE1B2CE80300AB1C56;
 					};
 				};
 			};
@@ -275,7 +200,6 @@
 			projectRoot = "";
 			targets = (
 				CFD5DDFE1B2CE80300AB1C56 /* VWWPermissionKitExample */,
-				CFD5DE171B2CE80300AB1C56 /* VWWPermissionKitExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,25 +212,11 @@
 			remoteRef = CF1F28C31B2FC3960052F881 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		CF1F28C61B2FC3960052F881 /* VWWPermissionKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = VWWPermissionKitTests.xctest;
-			remoteRef = CF1F28C51B2FC3960052F881 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		CFD5DE2E1B2CE82100AB1C56 /* VWWPermissionKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VWWPermissionKit.framework;
 			remoteRef = CFD5DE2D1B2CE82100AB1C56 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CFD5DE301B2CE82100AB1C56 /* VWWPermissionKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = VWWPermissionKitTests.xctest;
-			remoteRef = CFD5DE2F1B2CE82100AB1C56 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -319,13 +229,6 @@
 				CFD5DE0E1B2CE80300AB1C56 /* Main.storyboard in Resources */,
 				CFD5DE131B2CE80300AB1C56 /* LaunchScreen.xib in Resources */,
 				CFD5DE101B2CE80300AB1C56 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFD5DE161B2CE80300AB1C56 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,22 +245,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFD5DE141B2CE80300AB1C56 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFD5DE1F1B2CE80300AB1C56 /* VWWPermissionKitExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CFD5DE1A1B2CE80300AB1C56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CFD5DDFE1B2CE80300AB1C56 /* VWWPermissionKitExample */;
-			targetProxy = CFD5DE191B2CE80300AB1C56 /* PBXContainerItemProxy */;
-		};
 		CFD5DE341B2CE82A00AB1C56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VWWPermissionKit;
@@ -497,40 +387,6 @@
 			};
 			name = Release;
 		};
-		CFD5DE261B2CE80300AB1C56 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = VWWPermissionKitExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VWWPermissionKitExample.app/VWWPermissionKitExample";
-			};
-			name = Debug;
-		};
-		CFD5DE271B2CE80300AB1C56 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = VWWPermissionKitExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VWWPermissionKitExample.app/VWWPermissionKitExample";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,15 +404,6 @@
 			buildConfigurations = (
 				CFD5DE231B2CE80300AB1C56 /* Debug */,
 				CFD5DE241B2CE80300AB1C56 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CFD5DE251B2CE80300AB1C56 /* Build configuration list for PBXNativeTarget "VWWPermissionKitExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFD5DE261B2CE80300AB1C56 /* Debug */,
-				CFD5DE271B2CE80300AB1C56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CF1C50591B2CDE64006BE053 /* VWWPermissionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50581B2CDE64006BE053 /* VWWPermissionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF1C50601B2CDE64006BE053 /* VWWPermissionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1C50551B2CDE64006BE053 /* VWWPermissionKit.framework */; };
-		CF1C50651B2CDE64006BE053 /* VWWPermissionKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50641B2CDE64006BE053 /* VWWPermissionKitTests.m */; };
 		CF1C509C1B2CDE8A006BE053 /* VWWAccountsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50701B2CDE8A006BE053 /* VWWAccountsPermission.h */; };
 		CF1C509D1B2CDE8A006BE053 /* VWWAccountsPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50711B2CDE8A006BE053 /* VWWAccountsPermission.m */; };
 		CF1C509E1B2CDE8A006BE053 /* VWWAssetLibraryPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50721B2CDE8A006BE053 /* VWWAssetLibraryPermission.h */; };
@@ -57,23 +55,10 @@
 		CFD5DED31B2D34CC00AB1C56 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CFD5DED21B2D34CC00AB1C56 /* README.md */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CF1C50611B2CDE64006BE053 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF1C504C1B2CDE64006BE053 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CF1C50541B2CDE64006BE053;
-			remoteInfo = VWWPermissionKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		CF1C50551B2CDE64006BE053 /* VWWPermissionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VWWPermissionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1C50581B2CDE64006BE053 /* VWWPermissionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWWPermissionKit.h; sourceTree = "<group>"; };
 		CF1C505A1B2CDE64006BE053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF1C505F1B2CDE64006BE053 /* VWWPermissionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VWWPermissionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF1C50641B2CDE64006BE053 /* VWWPermissionKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionKitTests.m; sourceTree = "<group>"; };
-		CF1C50661B2CDE64006BE053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1C50701B2CDE8A006BE053 /* VWWAccountsPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWAccountsPermission.h; sourceTree = "<group>"; };
 		CF1C50711B2CDE8A006BE053 /* VWWAccountsPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWAccountsPermission.m; sourceTree = "<group>"; };
 		CF1C50721B2CDE8A006BE053 /* VWWAssetLibraryPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWAssetLibraryPermission.h; sourceTree = "<group>"; };
@@ -129,14 +114,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF1C505C1B2CDE64006BE053 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF1C50601B2CDE64006BE053 /* VWWPermissionKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -144,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				CF1C50571B2CDE64006BE053 /* VWWPermissionKit */,
-				CF1C50631B2CDE64006BE053 /* VWWPermissionKitTests */,
 				CF1C50561B2CDE64006BE053 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				CF1C50551B2CDE64006BE053 /* VWWPermissionKit.framework */,
-				CF1C505F1B2CDE64006BE053 /* VWWPermissionKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,15 +142,6 @@
 				CF1C505A1B2CDE64006BE053 /* Info.plist */,
 			);
 			path = VWWPermissionKit;
-			sourceTree = "<group>";
-		};
-		CF1C50631B2CDE64006BE053 /* VWWPermissionKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				CF1C50641B2CDE64006BE053 /* VWWPermissionKitTests.m */,
-				CF1C50661B2CDE64006BE053 /* Info.plist */,
-			);
-			path = VWWPermissionKitTests;
 			sourceTree = "<group>";
 		};
 		CF1C506F1B2CDE8A006BE053 /* VWWPermissionManager */ = {
@@ -282,24 +248,6 @@
 			productReference = CF1C50551B2CDE64006BE053 /* VWWPermissionKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CF1C505E1B2CDE64006BE053 /* VWWPermissionKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CF1C506C1B2CDE64006BE053 /* Build configuration list for PBXNativeTarget "VWWPermissionKitTests" */;
-			buildPhases = (
-				CF1C505B1B2CDE64006BE053 /* Sources */,
-				CF1C505C1B2CDE64006BE053 /* Frameworks */,
-				CF1C505D1B2CDE64006BE053 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CF1C50621B2CDE64006BE053 /* PBXTargetDependency */,
-			);
-			name = VWWPermissionKitTests;
-			productName = VWWPermissionKitTests;
-			productReference = CF1C505F1B2CDE64006BE053 /* VWWPermissionKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -310,9 +258,6 @@
 				ORGANIZATIONNAME = "Zakk Hoyt";
 				TargetAttributes = {
 					CF1C50541B2CDE64006BE053 = {
-						CreatedOnToolsVersion = 7.0;
-					};
-					CF1C505E1B2CDE64006BE053 = {
 						CreatedOnToolsVersion = 7.0;
 					};
 				};
@@ -330,7 +275,6 @@
 			projectRoot = "";
 			targets = (
 				CF1C50541B2CDE64006BE053 /* VWWPermissionKit */,
-				CF1C505E1B2CDE64006BE053 /* VWWPermissionKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -343,13 +287,6 @@
 				CF1C50C31B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib in Resources */,
 				CF1C50C01B2CDE8A006BE053 /* VWWPermissionsViewController.xib in Resources */,
 				CF1C50BD1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF1C505D1B2CDE64006BE053 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,23 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF1C505B1B2CDE64006BE053 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF1C50651B2CDE64006BE053 /* VWWPermissionKitTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CF1C50621B2CDE64006BE053 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CF1C50541B2CDE64006BE053 /* VWWPermissionKit */;
-			targetProxy = CF1C50611B2CDE64006BE053 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CF1C50671B2CDE64006BE053 /* Debug */ = {
@@ -523,26 +444,6 @@
 			};
 			name = Release;
 		};
-		CF1C506D1B2CDE64006BE053 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = VWWPermissionKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.VWWPermissionKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		CF1C506E1B2CDE64006BE053 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = VWWPermissionKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.VWWPermissionKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -560,15 +461,6 @@
 			buildConfigurations = (
 				CF1C506A1B2CDE64006BE053 /* Debug */,
 				CF1C506B1B2CDE64006BE053 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CF1C506C1B2CDE64006BE053 /* Build configuration list for PBXNativeTarget "VWWPermissionKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CF1C506D1B2CDE64006BE053 /* Debug */,
-				CF1C506E1B2CDE64006BE053 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

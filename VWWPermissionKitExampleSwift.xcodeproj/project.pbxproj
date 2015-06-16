@@ -12,19 +12,11 @@
 		CF1F28961B2FC20E0052F881 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1F28941B2FC20E0052F881 /* Main.storyboard */; };
 		CF1F28981B2FC20E0052F881 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1F28971B2FC20E0052F881 /* Images.xcassets */; };
 		CF1F289B1B2FC20E0052F881 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1F28991B2FC20E0052F881 /* LaunchScreen.xib */; };
-		CF1F28A71B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1F28A61B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests.swift */; };
 		CF1F28D01B2FC3AB0052F881 /* VWWPermissionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1F28CD1B2FC39C0052F881 /* VWWPermissionKit.framework */; };
 		CF1F28D11B2FC3AB0052F881 /* VWWPermissionKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF1F28CD1B2FC39C0052F881 /* VWWPermissionKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CF1F28A11B2FC20F0052F881 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF1F28831B2FC20E0052F881 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CF1F288A1B2FC20E0052F881;
-			remoteInfo = VWWPermissionKitExampleSwift;
-		};
 		CF1F28B51B2FC2880052F881 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CF1F28B01B2FC2880052F881 /* VWWPermissionKitExample.xcodeproj */;
@@ -84,9 +76,6 @@
 		CF1F28951B2FC20E0052F881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF1F28971B2FC20E0052F881 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF1F289A1B2FC20E0052F881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CF1F28A01B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VWWPermissionKitExampleSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF1F28A51B2FC20F0052F881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF1F28A61B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VWWPermissionKitExampleSwiftTests.swift; sourceTree = "<group>"; };
 		CF1F28B01B2FC2880052F881 /* VWWPermissionKitExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VWWPermissionKitExample.xcodeproj; sourceTree = "<group>"; };
 		CF1F28B91B2FC3120052F881 /* VWWPermissionKitExampleSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VWWPermissionKitExampleSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CF1F28C71B2FC39C0052F881 /* VWWPermissionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VWWPermissionKit.xcodeproj; path = VWWPermissionKit/VWWPermissionKit.xcodeproj; sourceTree = "<group>"; };
@@ -101,13 +90,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF1F289D1B2FC20F0052F881 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -116,7 +98,6 @@
 			children = (
 				CF1F28C71B2FC39C0052F881 /* VWWPermissionKit.xcodeproj */,
 				CF1F288D1B2FC20E0052F881 /* VWWPermissionKitExampleSwift */,
-				CF1F28A31B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests */,
 				CF1F288C1B2FC20E0052F881 /* Products */,
 				CF1F28B01B2FC2880052F881 /* VWWPermissionKitExample.xcodeproj */,
 			);
@@ -126,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				CF1F288B1B2FC20E0052F881 /* VWWPermissionKitExampleSwift.app */,
-				CF1F28A01B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,23 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				CF1F288F1B2FC20E0052F881 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CF1F28A31B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				CF1F28A61B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests.swift */,
-				CF1F28A41B2FC20F0052F881 /* Supporting Files */,
-			);
-			path = VWWPermissionKitExampleSwiftTests;
-			sourceTree = "<group>";
-		};
-		CF1F28A41B2FC20F0052F881 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CF1F28A51B2FC20F0052F881 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -210,24 +173,6 @@
 			productReference = CF1F288B1B2FC20E0052F881 /* VWWPermissionKitExampleSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CF1F289F1B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CF1F28AD1B2FC20F0052F881 /* Build configuration list for PBXNativeTarget "VWWPermissionKitExampleSwiftTests" */;
-			buildPhases = (
-				CF1F289C1B2FC20F0052F881 /* Sources */,
-				CF1F289D1B2FC20F0052F881 /* Frameworks */,
-				CF1F289E1B2FC20F0052F881 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CF1F28A21B2FC20F0052F881 /* PBXTargetDependency */,
-			);
-			name = VWWPermissionKitExampleSwiftTests;
-			productName = VWWPermissionKitExampleSwiftTests;
-			productReference = CF1F28A01B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,10 +184,6 @@
 				TargetAttributes = {
 					CF1F288A1B2FC20E0052F881 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					CF1F289F1B2FC20F0052F881 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = CF1F288A1B2FC20E0052F881;
 					};
 				};
 			};
@@ -270,7 +211,6 @@
 			projectRoot = "";
 			targets = (
 				CF1F288A1B2FC20E0052F881 /* VWWPermissionKitExampleSwift */,
-				CF1F289F1B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -317,13 +257,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF1F289E1B2FC20F0052F881 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -336,22 +269,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF1F289C1B2FC20F0052F881 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF1F28A71B2FC20F0052F881 /* VWWPermissionKitExampleSwiftTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CF1F28A21B2FC20F0052F881 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CF1F288A1B2FC20E0052F881 /* VWWPermissionKitExampleSwift */;
-			targetProxy = CF1F28A11B2FC20F0052F881 /* PBXContainerItemProxy */;
-		};
 		CF1F28D31B2FC3AB0052F881 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VWWPermissionKit;
@@ -497,40 +417,6 @@
 			};
 			name = Release;
 		};
-		CF1F28AE1B2FC20F0052F881 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = VWWPermissionKitExampleSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VWWPermissionKitExampleSwift.app/VWWPermissionKitExampleSwift";
-			};
-			name = Debug;
-		};
-		CF1F28AF1B2FC20F0052F881 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = VWWPermissionKitExampleSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VWWPermissionKitExampleSwift.app/VWWPermissionKitExampleSwift";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,15 +434,6 @@
 			buildConfigurations = (
 				CF1F28AB1B2FC20F0052F881 /* Debug */,
 				CF1F28AC1B2FC20F0052F881 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CF1F28AD1B2FC20F0052F881 /* Build configuration list for PBXNativeTarget "VWWPermissionKitExampleSwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CF1F28AE1B2FC20F0052F881 /* Debug */,
-				CF1F28AF1B2FC20F0052F881 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
