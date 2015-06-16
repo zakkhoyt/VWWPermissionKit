@@ -1,10 +1,10 @@
 ## VWWPermissionKit
 
-We've all been there. You get started on your latest and greatest app when you have to add logic to prompt the user for permissions before your app can access any of these resources. Many users will deny access unless you convince them that your app can be trusted. If they deny access, you must then try to convince them to go to iOS Privacy Settings, find your app, enable those permissions. 
+We've all been there. You get started on your latest and greatest app when you have to add logic to prompt the user for permissions before your app can access any of these resources. Many users will deny access unless you convince them that your app can be trusted. If they deny access, you must then try to convince them to go to iOS Privacy Settings, find your app, enable those permissions, switch back to your app, read permissions again, etc...
 
-The permissions from Apple's frameworks use many different classes, and they don't share the same data type regarding status. 
+Another difficulty: The permissions from Apple's frameworks use many different classes, and they don't share the same data type regarding status. PhotoKit uses PHAuthorizationStatus, EventKit uses EKAuthorizationStatus, Core Location uses CLAuthorizationStatus, and so on.
 
-VWWPermissionKit solves these problems by presenting your user with an easy to read list of permissions that they need to approve before being prompted. This makes it simple for a user to allow permissions. Buttons trigger the prompts one at a time, all from one central screen. VWWPermissionKit will also detect changes if the user does go to your app's privacy settings.
+VWWPermissionKit solves these problems by presenting your user with an easy to read list of permissions that they need to approve before iOS prompts them. This makes it simple for a user to understand why they should approve permissions. Each button triggers an iOS prompt one at a time all from one central view. VWWPermissionKit will also automatically detect changes if the user changes a setting in your app's privacy settings.
 
 ## How to use VWWPermissionKit
 
