@@ -17,14 +17,9 @@ class ViewController: UIViewController {
         let microphone = VWWMicrophonePermission.permissionWithLabelText("In order to access your microphone to add audio to videos")
         let coreLocationAlways = VWWCoreLocationAlwaysPermission.permissionWithLabelText("To calculate your heading, altitude, speed, distance home, etc...")
         let permissions = [photos, camera, microphone, coreLocationAlways]
-        VWWPermissionsManager.requirePermissions(permissions, title: "Swift Test Required", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
+        VWWPermissionsManager.requirePermissions(permissions, title: "We need your approvoal before we get running", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
             println("permission")
         }
-
-        VWWPermissionsManager.optionPermissions(permissions, title: "Swift Test Required", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
-            println("permission")
-        }
-
     }
 }
 
