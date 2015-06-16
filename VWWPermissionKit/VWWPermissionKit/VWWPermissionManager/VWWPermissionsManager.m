@@ -85,14 +85,25 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
 }
 
 -(BOOL)checkAllPermissionsSatisfied{
-    for(VWWPermission *permission in self.permissions) {
-        if(permission.status != VWWPermissionStatusAuthorized){
-            [self.permissionsViewController setCloseButtonTitle:nil];
-            return NO;
+    if(self.required){
+        for(VWWPermission *permission in self.permissions) {
+            if(permission.status != VWWPermissionStatusAuthorized){
+                [self.permissionsViewController setCloseButtonTitle:nil];
+                return NO;
+            }
         }
+        [self.permissionsViewController setCloseButtonTitle:@"Done"];
+        return YES;
+
+    } else {
+        [self.permissionsViewController setCloseButtonTitle:@"Done"];
+        for(VWWPermission *permission in self.permissions) {
+            if(permission.status != VWWPermissionStatusAuthorized){
+                return NO;
+            }
+        }
+        return YES;
     }
-    [self.permissionsViewController setCloseButtonTitle:@"Done"];
-    return YES;
 }
 
 -(void)readPermissions{

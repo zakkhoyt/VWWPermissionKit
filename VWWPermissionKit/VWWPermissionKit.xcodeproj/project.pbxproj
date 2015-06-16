@@ -147,18 +147,30 @@
 		CF1C506F1B2CDE8A006BE053 /* VWWPermissionManager */ = {
 			isa = PBXGroup;
 			children = (
+				CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */,
+				CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */,
+				CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */,
+				CF7DD7CC1B2FCDB000149232 /* UserInterface */,
+				CF7DD7CB1B2FCD8800149232 /* Permissions */,
+			);
+			path = VWWPermissionManager;
+			sourceTree = "<group>";
+		};
+		CF7DD7CB1B2FCD8800149232 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
 				CF1C50701B2CDE8A006BE053 /* VWWAccountsPermission.h */,
 				CF1C50711B2CDE8A006BE053 /* VWWAccountsPermission.m */,
 				CF1C50721B2CDE8A006BE053 /* VWWAssetLibraryPermission.h */,
 				CF1C50731B2CDE8A006BE053 /* VWWAssetLibraryPermission.m */,
-				CF1C50741B2CDE8A006BE053 /* VWWCoreBluetoothPermission.h */,
-				CF1C50751B2CDE8A006BE053 /* VWWCoreBluetoothPermission.m */,
 				CF1C50761B2CDE8A006BE053 /* VWWCalendarsPermission.h */,
 				CF1C50771B2CDE8A006BE053 /* VWWCalendarsPermission.m */,
 				CF1C50781B2CDE8A006BE053 /* VWWCameraPermission.h */,
 				CF1C50791B2CDE8A006BE053 /* VWWCameraPermission.m */,
 				CF1C507A1B2CDE8A006BE053 /* VWWContactsPermission.h */,
 				CF1C507B1B2CDE8A006BE053 /* VWWContactsPermission.m */,
+				CF1C50741B2CDE8A006BE053 /* VWWCoreBluetoothPermission.h */,
+				CF1C50751B2CDE8A006BE053 /* VWWCoreBluetoothPermission.m */,
 				CF1C507C1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h */,
 				CF1C507D1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.m */,
 				CF1C507E1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h */,
@@ -175,9 +187,17 @@
 				CF1C50891B2CDE8A006BE053 /* VWWNotificationsPermission.m */,
 				CF1C508A1B2CDE8A006BE053 /* VWWPermission.h */,
 				CF1C508B1B2CDE8A006BE053 /* VWWPermission.m */,
-				CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */,
-				CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */,
-				CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */,
+				CF1C50981B2CDE8A006BE053 /* VWWPhotosPermission.h */,
+				CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */,
+				CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */,
+				CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */,
+			);
+			name = Permissions;
+			sourceTree = "<group>";
+		};
+		CF7DD7CC1B2FCDB000149232 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
 				CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */,
 				CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */,
 				CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */,
@@ -187,12 +207,8 @@
 				CF1C50951B2CDE8A006BE053 /* VWWPermissionTableViewCell.h */,
 				CF1C50961B2CDE8A006BE053 /* VWWPermissionTableViewCell.m */,
 				CF1C50971B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib */,
-				CF1C50981B2CDE8A006BE053 /* VWWPhotosPermission.h */,
-				CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */,
-				CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */,
-				CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */,
 			);
-			path = VWWPermissionManager;
+			name = UserInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
