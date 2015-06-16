@@ -20,7 +20,6 @@
     NSArray *permissions =
     @[
       [VWWCameraPermission permissionWithLabelText:@"In order to access your camera to record video."],
-      [VWWMicrophonePermission permissionWithLabelText:@"In order to access your microphone to add audio to videos"],
       [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"To calculate your heading, altitude, speed, distance home, etc..."],
       [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library."],
       ];
