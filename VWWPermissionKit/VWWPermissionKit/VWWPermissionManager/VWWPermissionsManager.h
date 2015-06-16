@@ -73,7 +73,7 @@ typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
              resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock;
 
 /*!
- @method     requirePermissions:title:fromViewController:resultsBlock:
+ @method     optionPermissions:title:fromViewController:resultsBlock:
  @abstract
  @discussion Display the permission sheet but let the user close it without satisfying their respective required properties
  
