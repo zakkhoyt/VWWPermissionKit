@@ -1,10 +1,16 @@
 ## VWWPermissionKit
 
-We've all been there. You get started on your latest and greatest app when you have to add logic to prompt the user for permissions before you can perform any actions. These permissions use many different classes and frameworks, and they don't share the same data type regarding status. 
+We've all been there. You get started on your latest and greatest app when you have to add logic to prompt the user for permissions before your app can access any of these resources. Many users will deny access unless you convince them that your app can be trusted. If they deny access, you must then try to convince them to go to iOS Privacy Settings, find your app, enable those permissions. 
 
-VWWPermissionKit solves these problems. VWWPermissionKit allows you to inform your user exactly what they will be prompted for before presentation. Buttons trigger the prompts one at a time. All from one central screen. 
+The permissions from Apple's frameworks use many different classes, and they don't share the same data type regarding status. 
 
-First, import VWWPermissionKit to your file if using Obj-C or your Bridging Header if using Swift.
+VWWPermissionKit solves these problems by presenting your user with an easy to read list of permissions that they need to approve before being prompted. This makes it simple for a user to allow permissions. Buttons trigger the prompts one at a time, all from one central screen. VWWPermissionKit will also detect changes if the user does go to your app's privacy settings.
+
+## How to use VWWPermissionKit
+
+Although written in Obj-C, it is easy to use VWWPermissionKit from both Obj-C and Swift. An example project is included for each language. 
+
+To get started, first import VWWPermissionKit to your file if using Obj-C or your Bridging Header if using Swift.
 
 ```
 #import "VWWPermissionKit.h"
