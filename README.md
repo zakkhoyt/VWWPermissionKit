@@ -35,6 +35,22 @@ Finally display the permissions window. Once that all the permissions are author
                              }];
 ```
 
+Swift example: 
+```
+override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    let photos = VWWPhotosPermission.permissionWithLabelText("In order to write to your Camera Roll")
+    let camera = VWWCameraPermission.permissionWithLabelText("In order to access your camera to record video.")
+    let microphone = VWWMicrophonePermission.permissionWithLabelText("In order to access your microphone to add audio to videos")
+    let coreLocationAlways = VWWCoreLocationAlwaysPermission.permissionWithLabelText("To calculate your heading, altitude, speed, distance home, etc...")
+    let permissions = [photos, camera, microphone, coreLocationAlways]
+    VWWPermissionsManager.requirePermissions(permissions, title: "Swift Test", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
+        println("permission")
+    }
+}
+```
+
+
 
 Alternatively, there is a permissions readonly function which shows no GUI. It simply reads each permission type and returns with the benefit that all permissions share the same datatype. 
 
