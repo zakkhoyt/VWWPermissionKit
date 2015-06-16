@@ -17,33 +17,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CF1F28B51B2FC2880052F881 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF1F28B01B2FC2880052F881 /* VWWPermissionKitExample.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CFD5DDFF1B2CE80300AB1C56;
-			remoteInfo = VWWPermissionKitExample;
-		};
-		CF1F28B71B2FC2880052F881 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF1F28B01B2FC2880052F881 /* VWWPermissionKitExample.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CFD5DE181B2CE80300AB1C56;
-			remoteInfo = VWWPermissionKitExampleTests;
-		};
 		CF1F28CC1B2FC39C0052F881 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CF1F28C71B2FC39C0052F881 /* VWWPermissionKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CF1C50551B2CDE64006BE053;
 			remoteInfo = VWWPermissionKit;
-		};
-		CF1F28CE1B2FC39C0052F881 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CF1F28C71B2FC39C0052F881 /* VWWPermissionKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CF1C505F1B2CDE64006BE053;
-			remoteInfo = VWWPermissionKitTests;
 		};
 		CF1F28D21B2FC3AB0052F881 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -76,7 +55,6 @@
 		CF1F28951B2FC20E0052F881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF1F28971B2FC20E0052F881 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF1F289A1B2FC20E0052F881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CF1F28B01B2FC2880052F881 /* VWWPermissionKitExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VWWPermissionKitExample.xcodeproj; sourceTree = "<group>"; };
 		CF1F28B91B2FC3120052F881 /* VWWPermissionKitExampleSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VWWPermissionKitExampleSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		CF1F28C71B2FC39C0052F881 /* VWWPermissionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VWWPermissionKit.xcodeproj; path = VWWPermissionKit/VWWPermissionKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +77,6 @@
 				CF1F28C71B2FC39C0052F881 /* VWWPermissionKit.xcodeproj */,
 				CF1F288D1B2FC20E0052F881 /* VWWPermissionKitExampleSwift */,
 				CF1F288C1B2FC20E0052F881 /* Products */,
-				CF1F28B01B2FC2880052F881 /* VWWPermissionKitExample.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,20 +110,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CF1F28B11B2FC2880052F881 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CF1F28B61B2FC2880052F881 /* VWWPermissionKitExample.app */,
-				CF1F28B81B2FC2880052F881 /* VWWPermissionKitExampleTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CF1F28C81B2FC39C0052F881 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				CF1F28CD1B2FC39C0052F881 /* VWWPermissionKit.framework */,
-				CF1F28CF1B2FC39C0052F881 /* VWWPermissionKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,10 +170,6 @@
 					ProductGroup = CF1F28C81B2FC39C0052F881 /* Products */;
 					ProjectRef = CF1F28C71B2FC39C0052F881 /* VWWPermissionKit.xcodeproj */;
 				},
-				{
-					ProductGroup = CF1F28B11B2FC2880052F881 /* Products */;
-					ProjectRef = CF1F28B01B2FC2880052F881 /* VWWPermissionKitExample.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -216,32 +179,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		CF1F28B61B2FC2880052F881 /* VWWPermissionKitExample.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = VWWPermissionKitExample.app;
-			remoteRef = CF1F28B51B2FC2880052F881 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CF1F28B81B2FC2880052F881 /* VWWPermissionKitExampleTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = VWWPermissionKitExampleTests.xctest;
-			remoteRef = CF1F28B71B2FC2880052F881 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		CF1F28CD1B2FC39C0052F881 /* VWWPermissionKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VWWPermissionKit.framework;
 			remoteRef = CF1F28CC1B2FC39C0052F881 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CF1F28CF1B2FC39C0052F881 /* VWWPermissionKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = VWWPermissionKitTests.xctest;
-			remoteRef = CF1F28CE1B2FC39C0052F881 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
