@@ -23,7 +23,7 @@ class ViewController: UIViewController {
             println("permission")
         }
         
-//        // Using optionPermissions, a done button will always appear regardless of authorization status
+//        // Using optionPermissions:permissions, a done button will always appear regardless of authorization status
 //        VWWPermissionsManager.optionPermissions(permissions, title: "We need your approvoal before we get running", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
 //            println("permission")
 //        }
