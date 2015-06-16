@@ -7,18 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>A66F55F7-1362-40FB-9663-853229FF28C7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>VWWPermissionKitExampleSwift</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A9788885F6902694E4A8AFC66ED4851D59409038</key>
 		<string>github.com:zakkhoyt/VWWPermissionKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>VWWPermissionKitExampleSwift/VWWPermissionKitExampleSwift.xcodeproj/project.xcworkspace</string>
+	<string>VWWPermissionKitExampleSwift.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A9788885F6902694E4A8AFC66ED4851D59409038</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:zakkhoyt/VWWPermissionKit.git</string>
