@@ -75,6 +75,7 @@ Alternatively, there is a permissions readonly function which shows no GUI. It s
 
 Tapping on the "Privacy" button will navigate the user to your iOS app's privacy settings where they can change permissions. The user is also navigated here if they tap a red button. Once the user switches back to your app, the permissions are re-read and the screen is updated.
 
+
 ## Sample images ##
 ![](http://i.imgur.com/ZT9rl3b.png)
 ![](http://i.imgur.com/n8FSXnn.png)
@@ -110,4 +111,8 @@ Finally you'll need to tell XCode where to find the proper headers. Go to the Bu
 - **VWWCoreMotionPermission**: CoreMotion framework
 - **VWWHealthPermission**: HealthKit framework
 - **VWWHomePermission**: HomeKit framework
+
+## YSK ##
+- Not all permissions types are supported in the iOS Simulator
+- iOS 9b1 does not detect changes to permission status from iOS Privacy Settings without restarting the app. I expect this will be fixed in the near future. 
 
