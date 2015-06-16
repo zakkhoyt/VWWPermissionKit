@@ -17,7 +17,14 @@ class ViewController: UIViewController {
         let microphone = VWWMicrophonePermission.permissionWithLabelText("In order to access your microphone to add audio to videos")
         let coreLocationAlways = VWWCoreLocationAlwaysPermission.permissionWithLabelText("To calculate your heading, altitude, speed, distance home, etc...")
         let permissions = [photos, camera, microphone, coreLocationAlways]
+        
+        // Using requirePermissions:permissions, the user cannot proceed until all permissions are authorized
         VWWPermissionsManager.requirePermissions(permissions, title: "We need your approvoal before we get running", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
+            println("permission")
+        }
+        
+        // Using optionPermissions, a done button will always appear regardless of authorization status
+        VWWPermissionsManager.optionPermissions(permissions, title: "We need your approvoal before we get running", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
             println("permission")
         }
     }
