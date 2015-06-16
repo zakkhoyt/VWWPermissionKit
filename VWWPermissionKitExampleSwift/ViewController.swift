@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         let photos = VWWPhotosPermission.permissionWithLabelText("In order to write to your Camera Roll")
         let camera = VWWCameraPermission.permissionWithLabelText("In order to access your camera to record video.")
         let coreLocationAlways = VWWCoreLocationAlwaysPermission.permissionWithLabelText("To calculate your heading, altitude, speed, distance home, etc...")
-        let permissions = [photos, camera, microphone, coreLocationAlways]
+        let permissions = [photos, camera, coreLocationAlways]
         
         // Using requirePermissions:permissions, the user cannot proceed until all permissions are authorized
         VWWPermissionsManager.requirePermissions(permissions, title: "We need your approvoal before we get running", fromViewController: self) { (permissions: [AnyObject]!) -> Void in

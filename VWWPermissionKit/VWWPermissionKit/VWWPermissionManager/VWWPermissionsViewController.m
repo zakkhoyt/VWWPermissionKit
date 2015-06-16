@@ -76,12 +76,12 @@
 }
 
 -(void)displayDeniedAlertForPermission:(VWWPermission*)permission{
-    NSString *message = [NSString stringWithFormat:@"It looks like you denied access to %@. Please approve it in iOS Settings", permission.type];
+    NSString *message = [NSString stringWithFormat:@"It looks like you denied access to %@. We will take you to iOS Settings.", permission.type];
     UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Uh oh!" message:message preferredStyle:UIAlertControllerStyleAlert];
-    [ac addAction:[UIAlertAction actionWithTitle:@"Later" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [ac addAction:[UIAlertAction actionWithTitle:@"Not now" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
     }]];
-    [ac addAction:[UIAlertAction actionWithTitle:@"Now" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [ac addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     }]];
     
