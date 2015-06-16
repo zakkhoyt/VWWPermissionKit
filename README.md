@@ -81,7 +81,7 @@ Tapping on the "Privacy" button will navigate the user to your iOS app's privacy
 ![](http://i.imgur.com/n8FSXnn.png)
 ![](http://i.imgur.com/ir28YCI.png)
 ![](http://i.imgur.com/CHBr4vO.png)
-![](http://i.imgur.com/WKugIoX.png)
+![](http://i.imgur.com/SOjz5v0.png)
 ![](http://i.imgur.com/tz6k6eL.png)
 ![](http://i.imgur.com/2UjjAgu.png)
 ![](http://i.imgur.com/T3G6Rkb.png)
