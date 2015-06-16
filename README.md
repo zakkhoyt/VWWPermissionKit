@@ -76,10 +76,12 @@ Alternatively, there is a permissions readonly function which shows no GUI. It s
 Tapping on the "Privacy" button will navigate the user to your iOS app's privacy settings where they can change permissions. The user is also navigated here if they tap a red button. Once the user switches back to your app, the permissions are re-read and the screen is updated.
 
 ## Sample images ##
-![](http://i.imgur.com/8viPrQS.png)
-![](http://i.imgur.com/rcF8DOb.png)
-![](http://i.imgur.com/kv52xTy.png)
-![](http://i.imgur.com/mwPoOYv.png)
+![](http://i.imgur.com/ZT9rl3b.png)
+![](http://i.imgur.com/n8FSXnn.png)
+![](http://i.imgur.com/ir28YCI.png)
+![](http://i.imgur.com/WKugIoX.png)
+![](http://i.imgur.com/2UjjAgu.png)
+![](http://i.imgur.com/T3G6Rkb.png)
 
 
 ## Adding the cocoa framework to your iOS project ##
