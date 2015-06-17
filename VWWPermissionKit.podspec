@@ -8,6 +8,7 @@
 # This pod is not published on trunk yet. You can use it by adding this to your podfile:
 # pod 'VWWPermissionKit', :podspec => "https://raw.githubusercontent.com/zakkhoyt/VWWPermissionKit/master/VWWPermissionKit.podspec"
 
+ xcodeproj 'VWWPermissionKit.xcodeproj'
 Pod::Spec.new do |s|
   s.name         = "VWWPermissionKit"
   s.version      = "0.0.1"
@@ -24,6 +25,6 @@ Pod::Spec.new do |s|
   s.source_files  = 'VWWPermissionKit/**/*.{h,m}'
   s.requires_arc = true
   s.ios.deployment_target = '8.0'
-  s.xcodeproj 'VWWPermissionKit.xcodeproj'
+  xcodeproj 'VWWPermissionKit.xcodeproj'
 
 end
