@@ -16,33 +16,15 @@ To get started, first import VWWPermissionKit to your file if using Obj-C or you
 #import "VWWPermissionKit.h"
 ```
 
-Next create an array of VWWPermission types
+Next create an array of VWWPermission types and display the permissions window. Once that all the permissions are authorized the form is dimissed and the resultsBlock is called. You can inspect each permission here. 
 
 ###ObjC
 ```
-@[
-  [VWWCameraPermission permissionWithLabelText:@"We need to access your camera to record video."],
-  [VWWMicrophonePermission permissionWithLabelText:@"We need to access your microphone to add audio to videos"],
-  [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For rendering your heading, altitude, speed, distance home, etc..."],
-  [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library."],
-];
+VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"We need to access your camera to record video."];
+VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc..."];
+VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library."];
+NSArray *permissions = @[camera, locationAlways, photos];
 
-```
-
-###Swift
-```
-let photos = VWWPhotosPermission.permissionWithLabelText("In order to write to your Camera Roll")
-let camera = VWWCameraPermission.permissionWithLabelText("In order to access your camera to record video.")
-let microphone = VWWMicrophonePermission.permissionWithLabelText("In order to access your microphone to add audio to videos")
-let coreLocationAlways = VWWCoreLocationAlwaysPermission.permissionWithLabelText("To calculate your heading, altitude, speed, distance home, etc...")
-let permissions = [photos, camera, microphone, coreLocationAlways]
-```
-
-
-Finally display the permissions window. Once that all the permissions are authorized the form is dimissed and the resultsBlock is called. You can inspect each permission here. 
-
-###ObjC
-```
 [VWWPermissionsManager requirePermissions:permissions
                                     title:@"We'll need some things from you before we get started."
                        fromViewController:self
@@ -55,23 +37,50 @@ Finally display the permissions window. Once that all the permissions are author
 
 ###Swift
 ```
+let photos = VWWPhotosPermission.permissionWithLabelText("In order to write to your Camera Roll")
+let camera = VWWCameraPermission.permissionWithLabelText("In order to access your camera to record video.")
+let coreLocationAlways = VWWCoreLocationAlwaysPermission.permissionWithLabelText("To calculate your heading, altitude, speed, distance home, etc...")
+let permissions = [photos, camera, coreLocationAlways]
+
 VWWPermissionsManager.requirePermissions(permissions, title: "Swift Test", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
-        println("permission")
+    print("permission")
 }
 
 ```
 
 
 
+
 Alternatively, there is a permissions readonly function which shows no GUI. It simply reads each permission type and returns with the benefit that all permissions share the same datatype. 
 
+###ObjC
 ```
-[VWWPermissionsManager readPermissions:permissions resultsBlock:^(NSArray *permissions) {
-    [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
-        NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
-    }];
-}];
+[VWWPermissionsManager requirePermissions:permissions
+                                    title:@"We'll need some things from you before we get started."
+                       fromViewController:self
+                             resultsBlock:^(NSArray *permissions) {
+                                 [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
+                                     if(permission.status != VWWPermissionStatusAuthorized){
+                                         // user didn't authorize this one
+                                     }
+                                 }];
+                             }];
+
 ```
+
+
+###Swift
+```
+VWWPermissionsManager.readPermissions(permissions) { (permissions:[AnyObject]!) -> Void in
+    for (_, permission) in permissions.enumerate(){
+        if permission.status != VWWPermissionStatusAuthorized {
+            // User didn't authorize this one
+        }
+    }
+}
+```
+
+
 
 Tapping on the "Privacy" button will navigate the user to your iOS app's privacy settings where they can change permissions. The user is also navigated here if they tap a red button. Once the user switches back to your app, the permissions are re-read and the screen is updated.
 
@@ -93,6 +102,12 @@ To add VWWPermissionKit to your application, drag the VWWPermissionKit.xcodeproj
 Next tell XCode to embed VWWPermissionKit into your app. Go to your app's target build settings and choose the "General" tab. Under the "Embedded Binaries" grouping, add VWWPermissionKit. XCode should automatically add link references for you.
 
 Finally you'll need to tell XCode where to find the proper headers. Go to the Build Settings tab. Type "header " in the search bar. The go to the section "Search Paths" and add an the VWWPermissionKit file path to "Header Search Paths" (recursive: YES)
+
+## CocoaPods integration
+VWWPermissionKit has not yet been published to the Cocoapods trunk. You can still use it with Cocoapods though. Add this to your podfile:
+```
+pod 'VWWPermissionKit', :podspec => "https://raw.githubusercontent.com/zakkhoyt/VWWPermissionKit/1.0.2/VWWPermissionKit.podspec"
+```
 
 ## Functional Permission classes ##
 - **VWWAssetLibraryPermission**: AssetsLibrary
