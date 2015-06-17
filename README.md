@@ -20,7 +20,7 @@ Next create an array of VWWPermission types
 
 ###ObjC
 ```
-@[
+NSArray *permissions = @[
   [VWWCameraPermission permissionWithLabelText:@"We need to access your camera to record video."],
   [VWWMicrophonePermission permissionWithLabelText:@"We need to access your microphone to add audio to videos"],
   [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For rendering your heading, altitude, speed, distance home, etc..."],
