@@ -55,16 +55,11 @@ Alternatively, there is a permissions readonly function which shows no GUI. It s
 
 ###ObjC
 ```
-[VWWPermissionsManager requirePermissions:permissions
-                                    title:@"We'll need some things from you before we get started."
-                       fromViewController:self
-                             resultsBlock:^(NSArray *permissions) {
-                                 [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
-                                     if(permission.status != VWWPermissionStatusAuthorized){
-                                         // user didn't authorize this one
-                                     }
-                                 }];
-                             }];
+[VWWPermissionsManager readPermissions:permissions resultsBlock:^(NSArray *permissions) {
+    [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
+        NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
+    }];
+}];
 
 ```
 
