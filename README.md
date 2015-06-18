@@ -99,9 +99,9 @@ Next tell XCode to embed VWWPermissionKit into your app. Go to your app's target
 Finally you'll need to tell XCode where to find the proper headers. Go to the Build Settings tab. Type "header " in the search bar. The go to the section "Search Paths" and add an the VWWPermissionKit file path to "Header Search Paths" (recursive: YES)
 
 ## CocoaPods integration
-VWWPermissionKit has not yet been published to the Cocoapods trunk. You can still use it with Cocoapods though. Add this to your podfile:
+Add this to your Podfile:
 ```
-pod 'VWWPermissionKit', :podspec => "https://raw.githubusercontent.com/zakkhoyt/VWWPermissionKit/1.0.3/VWWPermissionKit.podspec"
+pod 'VWWPermissionKit', '~> 1.0.3'
 ```
 
 ## Functional Permission classes ##
