@@ -1,6 +1,7 @@
 ## VWWPermissionKit
 
- 	https://img.shields.io/packagist/l/doctrine/orm.svg
+ 	
+ 	
 We've all been there. You get started on your latest and greatest app when you have to add logic to prompt the user for permissions before your app can access any of these resources. Many users will deny access unless you convince them that your app can be trusted. If they deny access, you must then try to convince them to go to iOS Privacy Settings, find your app, enable those permissions, switch back to your app, read permissions again, etc...
 
 Another difficulty: The permissions from Apple's frameworks use many different classes, and they don't share the same data type regarding status. PhotoKit uses PHAuthorizationStatus, EventKit uses EKAuthorizationStatus, Core Location uses CLAuthorizationStatus, and so on.
