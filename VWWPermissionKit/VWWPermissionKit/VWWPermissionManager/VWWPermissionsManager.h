@@ -46,11 +46,11 @@
 #import "VWWRemindersPermission.h"
 #import "VWWPhotosPermission.h"
 
-//#import "VWWAccountsPermission.h"
-//#import "VWWBluetoothPermission.h"
-//#import "VWWHealthPermission.h"
-//#import "VWWHomePermission.h"
-//#import "VWWCoreMotionPermission.h"
+#import "VWWAccountsPermission.h"
+#import "VWWCoreBluetoothPermission.h"
+#import "VWWHealthPermission.h"
+#import "VWWHomePermission.h"
+#import "VWWCoreMotionPermission.h"
 
 typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
 

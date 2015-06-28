@@ -19,9 +19,12 @@
     [super viewDidAppear:animated];
     NSArray *permissions =
     @[
-      [VWWCameraPermission permissionWithLabelText:@"In order to access your camera to record video."],
-      [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"To calculate your heading, altitude, speed, distance home, etc..."],
-      [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library."],
+      [VWWAccountsPermission permissionWithLabelText:@"accounts"],
+      [VWWCoreMotionPermission permissionWithLabelText:@"core motion"],
+      [VWWCoreBluetoothPermission permissionWithLabelText:@"core bluetooth"],
+      [VWWHealthPermission permissionWithLabelText:@"healthKit"],
+      [VWWHomePermission permissionWithLabelText:@"homeKit"],
+      
       ];
     
     // Using requirePermissions:permissions, the user cannot proceed until all permissions are authorized
@@ -34,16 +37,16 @@
                                      }];
                                  }];
     
-//    // Using optionPermissions, a done button will always appear regardless of authorization status
-//    [VWWPermissionsManager optionPermissions:permissions
-//                                        title:@"We need your approvoal before we get running"
-//                           fromViewController:self
-//                                 resultsBlock:^(NSArray *permissions) {
-//                                     [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
-//                                         NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
-//                                     }];
-//                                 }];
-
+    //    // Using optionPermissions, a done button will always appear regardless of authorization status
+    //    [VWWPermissionsManager optionPermissions:permissions
+    //                                        title:@"We need your approvoal before we get running"
+    //                           fromViewController:self
+    //                                 resultsBlock:^(NSArray *permissions) {
+    //                                     [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
+    //                                         NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
+    //                                     }];
+    //                                 }];
+    
     
 }
 

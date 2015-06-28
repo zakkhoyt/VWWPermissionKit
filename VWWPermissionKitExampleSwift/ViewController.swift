@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         // Using requirePermissions:permissions, the user cannot proceed until all permissions are authorized
         VWWPermissionsManager.requirePermissions(permissions, title: "We need your approvoal before we get running", fromViewController: self) { (permissions: [AnyObject]!) -> Void in
-            println("permission")
+            print("permission")
         }
         
 //        // Using optionPermissions:permissions, a done button will always appear regardless of authorization status

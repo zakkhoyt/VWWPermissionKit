@@ -52,6 +52,8 @@
 		CF1C50C51B2CDE8A006BE053 /* VWWPhotosPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */; };
 		CF1C50C61B2CDE8A006BE053 /* VWWRemindersPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */; };
 		CF1C50C71B2CDE8A006BE053 /* VWWRemindersPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */; };
+		CF8C9BB71B4068E700BC213F /* VWWUnreadablePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF8C9BB51B4068E700BC213F /* VWWUnreadablePermission.h */; };
+		CF8C9BB81B4068E700BC213F /* VWWUnreadablePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8C9BB61B4068E700BC213F /* VWWUnreadablePermission.m */; };
 		CFD5DED31B2D34CC00AB1C56 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CFD5DED21B2D34CC00AB1C56 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPhotosPermission.m; sourceTree = "<group>"; };
 		CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRemindersPermission.h; sourceTree = "<group>"; };
 		CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRemindersPermission.m; sourceTree = "<group>"; };
+		CF8C9BB51B4068E700BC213F /* VWWUnreadablePermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWUnreadablePermission.h; sourceTree = "<group>"; };
+		CF8C9BB61B4068E700BC213F /* VWWUnreadablePermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWUnreadablePermission.m; sourceTree = "<group>"; };
 		CFD5DED21B2D34CC00AB1C56 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +195,8 @@
 				CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */,
 				CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */,
 				CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */,
+				CF8C9BB51B4068E700BC213F /* VWWUnreadablePermission.h */,
+				CF8C9BB61B4068E700BC213F /* VWWUnreadablePermission.m */,
 			);
 			name = Permissions;
 			sourceTree = "<group>";
@@ -228,6 +234,7 @@
 				CF1C509C1B2CDE8A006BE053 /* VWWAccountsPermission.h in Headers */,
 				CF1C50BB1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h in Headers */,
 				CF1C50AE1B2CDE8A006BE053 /* VWWHealthPermission.h in Headers */,
+				CF8C9BB71B4068E700BC213F /* VWWUnreadablePermission.h in Headers */,
 				CF1C50A41B2CDE8A006BE053 /* VWWCameraPermission.h in Headers */,
 				CF1C50C11B2CDE8A006BE053 /* VWWPermissionTableViewCell.h in Headers */,
 				CF1C50B41B2CDE8A006BE053 /* VWWNotificationsPermission.h in Headers */,
@@ -327,6 +334,7 @@
 				CF1C50BA1B2CDE8A006BE053 /* VWWPermissionsManager.m in Sources */,
 				CF1C50AB1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m in Sources */,
 				CF1C50AD1B2CDE8A006BE053 /* VWWCoreMotionPermission.m in Sources */,
+				CF8C9BB81B4068E700BC213F /* VWWUnreadablePermission.m in Sources */,
 				CF1C50C71B2CDE8A006BE053 /* VWWRemindersPermission.m in Sources */,
 				CF1C50B11B2CDE8A006BE053 /* VWWHomePermission.m in Sources */,
 				CF1C50BF1B2CDE8A006BE053 /* VWWPermissionsViewController.m in Sources */,
