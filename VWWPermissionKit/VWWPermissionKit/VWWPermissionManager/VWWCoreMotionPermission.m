@@ -9,6 +9,9 @@
 #import "VWWCoreMotionPermission.h"
 @import  CoreMotion;
 
+static NSString *VWWCoreMotionPermissionPromptedKey = @"VWWCoreMotionPermissionPromptedKey";
+static NSString *VWWCoreMotionPermissionMotionReceivedKey = @"VWWCoreMotionPermissionMotionReceivedKey";
+
 @interface VWWCoreMotionPermission ()
 @property (nonatomic, strong) CMMotionActivityManager *motionManager;
 @end
@@ -20,7 +23,21 @@
 }
 
 -(void)updatePermissionStatus{
-    self.status = VWWPermissionStatusNotDetermined;
+    if([CMMotionActivityManager isActivityAvailable] == NO){
+        self.status = VWWPermissionStatusServiceNotAvailable;
+    } else {
+        if([[NSUserDefaults standardUserDefaults] objectForKey:NSStringFromClass([self class])] == nil){
+            // Prompt has never been presented
+            self.status = VWWPermissionStatusNotDetermined;
+        } else {
+            // Prompt has been presented in the past
+            if([[NSUserDefaults standardUserDefaults] objectForKey:VWWCoreMotionPermissionMotionReceivedKey] == nil){
+                self.status = VWWPermissionStatusDenied;
+            } else {
+                self.status = VWWPermissionStatusAuthorized;
+            }
+        }
+    }
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{
@@ -28,13 +45,24 @@
         self.motionManager = [[CMMotionActivityManager alloc]init];
     }
     
+    // Mark permission as been prompted
+    [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:NSStringFromClass([self class])];
+    
+    // Clear reading key
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:VWWCoreMotionPermissionMotionReceivedKey];
+    
     [self.motionManager startActivityUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMMotionActivity * __nullable activity) {
-        
-        completionBlock();
+        // Now that we've recieved a reading, mark it as such and stop reading.
         [self.motionManager stopActivityUpdates];
-        NSLog(@"motion");
+        [[NSUserDefaults standardUserDefaults] setObject:@(1) forKey:VWWCoreMotionPermissionMotionReceivedKey];
+        return completionBlock();
     }];
+    
+//    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerAction:) userInfo:nil repeats:NO];
 
 }
 
+//-(void)timerAction:(NSTimer*)sender{
+//    
+//}
 @end

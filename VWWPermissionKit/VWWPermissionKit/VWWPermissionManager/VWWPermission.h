@@ -14,6 +14,7 @@ typedef enum {
     VWWPermissionStatusAuthorized,
     VWWPermissionStatusDenied,
     VWWPermissionStatusRestricted,
+    VWWPermissionStatusServiceNotAvailable = 0xFF
 } VWWPermissionStatus;
 
 typedef void (^VWWPermissionEmptyBlock)();
