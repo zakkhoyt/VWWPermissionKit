@@ -7,16 +7,28 @@
 //
 
 #import "VWWHealthPermission.h"
-@import  HealthKit;
+
 
 @interface VWWHealthPermission ()
 @property (nonatomic, strong) HKHealthStore *healthStore;
+@property (nonatomic, strong) NSSet *shareTypes;
+@property (nonatomic, strong) NSSet *readTypes;
 @end
 
 @implementation VWWHealthPermission
 
++(instancetype)permissionWithLabelText:(NSString*)labelText
+                            shareTypes:(NSSet*)shareTypes
+                             readTypes:(NSSet*)readTypes{
+    VWWHealthPermission *healthPermission = [[super alloc] initWithType:VWWHealthPermissionType labelText:labelText];
+    healthPermission.shareTypes = shareTypes;
+    healthPermission.readTypes = readTypes;
+    return healthPermission;
+}
+
 +(instancetype)permissionWithLabelText:(NSString*)labelText{
-    return [[super alloc] initWithType:VWWHealthPermissionType labelText:labelText];
+    NSAssert(NO, @"VWWHealthPermission requires the use of permissionWithLabelText:labelText:shareTypes:readTypes");
+    return nil;
 }
 
 

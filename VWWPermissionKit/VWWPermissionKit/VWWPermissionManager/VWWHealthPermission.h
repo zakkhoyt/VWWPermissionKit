@@ -7,11 +7,14 @@
 //
 
 #import "VWWPermission.h"
+@import  HealthKit;
 
 // NSHealthShareUsageDescription
 // NSHealthUpdateUsageDescription
 static NSString *VWWHealthPermissionType = @"Health";
 
 @interface VWWHealthPermission : VWWPermission
-
++(instancetype)permissionWithLabelText:(NSString*)labelText
+                            shareTypes:(NSSet*)shareTypes
+                             readTypes:(NSSet*)readTypes;
 @end
