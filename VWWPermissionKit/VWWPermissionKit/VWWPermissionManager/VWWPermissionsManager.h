@@ -41,15 +41,15 @@
 #import "VWWContactsPermission.h"
 #import "VWWCoreLocationAlwaysPermission.h"
 #import "VWWCoreLocationWhenInUsePermission.h"
+#import "VWWHealthPermission.h"
 #import "VWWNotificationsPermission.h"
 #import "VWWMicrophonePermission.h"
 #import "VWWRemindersPermission.h"
 #import "VWWPhotosPermission.h"
 
-#import "VWWAccountsPermission.h"
-#import "VWWCoreBluetoothPermission.h"
-#import "VWWHealthPermission.h"
-#import "VWWHomePermission.h"
+//#import "VWWAccountsPermission.h"
+//#import "VWWCoreBluetoothPermission.h"
+//#import "VWWHomePermission.h"
 #import "VWWCoreMotionPermission.h"
 
 typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);

@@ -18,12 +18,13 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    NSSet *shareTypes = [NSSet setWithObject:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodAlcoholContent]];
-    NSSet *readTypes = shareTypes;
+//    NSSet *shareTypes = [NSSet setWithObject:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodAlcoholContent]];
+//    NSSet *readTypes = shareTypes;
     
     NSArray *permissions =
     @[
-      [VWWHealthPermission permissionWithLabelText:@"healthKit" shareTypes:shareTypes readTypes:readTypes]
+//      [VWWHealthPermission permissionWithLabelText:@"healthKit" shareTypes:shareTypes readTypes:readTypes]
+      [VWWCoreMotionPermission permissionWithLabelText:@"Core Motion"],
       ];
     
     // Using requirePermissions:permissions, the user cannot proceed until all permissions are authorized
