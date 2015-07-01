@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C69188BB1B4453D600D7EFD6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69188BA1B4453D600D7EFD6 /* HealthKit.framework */; };
 		CF7DD7CD1B2FCDF200149232 /* VWWPermissionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1F28C41B2FC3960052F881 /* VWWPermissionKit.framework */; };
 		CF7DD7CE1B2FCDF200149232 /* VWWPermissionKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF1F28C41B2FC3960052F881 /* VWWPermissionKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFD5DE051B2CE80300AB1C56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD5DE041B2CE80300AB1C56 /* main.m */; };
@@ -49,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C69188BA1B4453D600D7EFD6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		C69188BC1B4453D600D7EFD6 /* VWWPermissionKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VWWPermissionKitExample.entitlements; sourceTree = "<group>"; };
 		CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VWWPermissionKit.xcodeproj; path = VWWPermissionKit/VWWPermissionKit.xcodeproj; sourceTree = "<group>"; };
 		CFD5DDFF1B2CE80300AB1C56 /* VWWPermissionKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VWWPermissionKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD5DE031B2CE80300AB1C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF7DD7CD1B2FCDF200149232 /* VWWPermissionKit.framework in Frameworks */,
+				C69188BB1B4453D600D7EFD6 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 		CFD5DDF61B2CE80300AB1C56 = {
 			isa = PBXGroup;
 			children = (
+				C69188BA1B4453D600D7EFD6 /* HealthKit.framework */,
 				CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */,
 				CFD5DE011B2CE80300AB1C56 /* VWWPermissionKitExample */,
 				CFD5DE001B2CE80300AB1C56 /* Products */,
@@ -102,6 +107,7 @@
 		CFD5DE011B2CE80300AB1C56 /* VWWPermissionKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				C69188BC1B4453D600D7EFD6 /* VWWPermissionKitExample.entitlements */,
 				CFD5DE061B2CE80300AB1C56 /* AppDelegate.h */,
 				CFD5DE071B2CE80300AB1C56 /* AppDelegate.m */,
 				CFD5DE091B2CE80300AB1C56 /* ViewController.h */,
@@ -156,6 +162,12 @@
 				TargetAttributes = {
 					CFD5DDFE1B2CE80300AB1C56 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = F2M6E998ZE;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -333,6 +345,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VWWPermissionKitExample/VWWPermissionKitExample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -342,6 +357,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -349,6 +365,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = VWWPermissionKitExample/VWWPermissionKitExample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -358,6 +377,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

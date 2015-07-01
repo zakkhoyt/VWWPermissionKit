@@ -22,6 +22,30 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>My custom bluetooth prompt</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>My custom calendars prompt</string>
+	<key>NSCameraUsageDescription</key>
+	<string>My custom camera prompt</string>
+	<key>NSContactsUsageDescription</key>
+	<string>My custom contacts prompt</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>My custom health share prompt</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>My custom health usage promt</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>My custom location always prompt</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>My custom location when in use prompt</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>My custom microphone prompt</string>
+	<key>NSMotionUsageDescription</key>
+	<string>My custom motion prompt</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>My custom photos prompt</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>My custom reminders prompt</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -29,6 +53,7 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>healthkit</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
@@ -43,30 +68,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSBluetoothPeripheralUsageDescription</key>
-    <string>My custom bluetooth prompt</string>
-    <key>NSHealthShareUsageDescription</key>
-    <string>My custom health share prompt</string>
-    <key>NSHealthUpdateUsageDescription</key>
-    <string>My custom health usage promt</string>
-    <key>NSMotionUsageDescription</key>
-    <string>My custom motion prompt</string>
-    <key>NSCameraUsageDescription</key>
-    <string>My custom camera prompt</string>
-    <key>NSContactsUsageDescription</key>
-    <string>My custom contacts prompt</string>
-    <key>NSCalendarsUsageDescription</key>
-    <string>My custom calendars prompt</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>My custom location always prompt</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>My custom location when in use prompt</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>My custom microphone prompt</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>My custom photos prompt</string>
-    <key>NSRemindersUsageDescription</key>
-    <string>My custom reminders prompt</string>
-
 </dict>
 </plist>

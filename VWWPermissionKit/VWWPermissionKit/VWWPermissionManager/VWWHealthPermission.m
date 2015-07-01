@@ -9,6 +9,7 @@
 #import "VWWHealthPermission.h"
 
 
+
 @interface VWWHealthPermission ()
 @property (nonatomic, strong) HKHealthStore *healthStore;
 @property (nonatomic, strong) NSSet *shareTypes;
@@ -33,8 +34,12 @@
 
 
 -(void)updatePermissionStatus{
-    //    HKObjectType *type = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBloodType];
-    HKObjectType *type = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodAlcoholContent];
+    // We really only care about the permission prompt in general, not each share and read type. Use first available type
+    HKObjectType *type = [self.shareTypes anyObject];
+    if(type == nil) {
+        type = [self.readTypes anyObject];
+    }
+    
     HKAuthorizationStatus status = [self.healthStore authorizationStatusForType:type];
     if(status == HKAuthorizationStatusNotDetermined){
         self.status = VWWPermissionStatusNotDetermined;
@@ -48,22 +53,14 @@
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{
     if(self.healthStore == nil){
         self.healthStore = [[HKHealthStore alloc]init];
-        
     }
     
-    HKObjectType *type = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodAlcoholContent];
-    NSSet *readTypes = [NSSet setWithObject:type];
-    
-    //    HKObjectType *bacType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierDateOfBirth];
-    //    NSSet *writeTypes = [NSSet setWithObject:bacType];
-    
-    [self.healthStore requestAuthorizationToShareTypes:readTypes readTypes:readTypes completion:^(BOOL success, NSError * __nullable error) {
+    [self.healthStore requestAuthorizationToShareTypes:self.shareTypes readTypes:self.readTypes completion:^(BOOL success, NSError * __nullable error) {
         if(error){
             NSLog(@"HealthKit permission error: %@", error.localizedDescription);
         }
         completionBlock();
     }];
-    
 }
 
 @end
