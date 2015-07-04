@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,22 +13,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgm-Gk-kiM">
-                        <rect key="frame" x="8" y="8" width="584" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgm-Gk-kiM">
+                        <rect key="frame" x="8" y="8" width="584" height="17"/>
                         <animations/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRc-1Z-jbo">
-                        <rect key="frame" x="57" y="37" width="486" height="30"/>
+                        <rect key="frame" x="8" y="33" width="584" height="34"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="NpR-cW-dBO"/>
-                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                        <state key="normal" title="Button">
+                        <state key="normal" title="Permission Button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
@@ -39,18 +35,17 @@
                 </subviews>
                 <animations/>
                 <constraints>
+                    <constraint firstItem="SRc-1Z-jbo" firstAttribute="leading" secondItem="0SG-Qf-B17" secondAttribute="leading" constant="8" id="2Kq-R6-Lj7"/>
                     <constraint firstItem="cgm-Gk-kiM" firstAttribute="top" secondItem="0SG-Qf-B17" secondAttribute="top" constant="8" id="966-q3-eld"/>
-                    <constraint firstAttribute="bottom" secondItem="SRc-1Z-jbo" secondAttribute="bottom" constant="8" id="Omu-0m-a10"/>
+                    <constraint firstAttribute="trailing" secondItem="SRc-1Z-jbo" secondAttribute="trailing" constant="8" id="QcI-2G-vmS"/>
                     <constraint firstItem="cgm-Gk-kiM" firstAttribute="leading" secondItem="0SG-Qf-B17" secondAttribute="leading" constant="8" id="U7c-Fa-LoJ"/>
-                    <constraint firstItem="SRc-1Z-jbo" firstAttribute="top" secondItem="cgm-Gk-kiM" secondAttribute="bottom" constant="8" id="ZkT-JD-nwx"/>
-                    <constraint firstItem="cgm-Gk-kiM" firstAttribute="width" secondItem="SRc-1Z-jbo" secondAttribute="width" multiplier="1.2" id="whe-lE-zS1"/>
+                    <constraint firstItem="SRc-1Z-jbo" firstAttribute="top" secondItem="cgm-Gk-kiM" secondAttribute="bottom" constant="8" id="rOU-Ea-OrU"/>
+                    <constraint firstAttribute="bottom" secondItem="SRc-1Z-jbo" secondAttribute="bottom" constant="8" id="s8o-kY-Q4J"/>
                     <constraint firstAttribute="trailing" secondItem="cgm-Gk-kiM" secondAttribute="trailing" constant="8" id="yHn-Fk-97C"/>
-                    <constraint firstAttribute="centerX" secondItem="SRc-1Z-jbo" secondAttribute="centerX" id="zR1-og-Omt"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="buttonHeightConstraint" destination="NpR-cW-dBO" id="s8W-N3-hzz"/>
                 <outlet property="permissionButton" destination="SRc-1Z-jbo" id="9Mn-5f-gd8"/>
                 <outlet property="permissionLabel" destination="cgm-Gk-kiM" id="2EC-fS-Z0P"/>
             </connections>

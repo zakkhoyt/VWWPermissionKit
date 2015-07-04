@@ -41,15 +41,17 @@
     self.permissionButton.layer.cornerRadius = 4.0;
     self.permissionButton.layer.masksToBounds = YES;
     
+    self.permissionButton.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    
     [[NSNotificationCenter defaultCenter] addObserverForName:UIContentSizeCategoryDidChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
         self.permissionButton.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
         self.permissionLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-                
-        // On iOS8 and iPhone5s, Body size ranges from 14-23. Use this to scale the button height
-        UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-        CGFloat factor = font.pointSize - 14.0;
-        factor *= 5;
-        self.buttonHeightConstraint.constant = 30 + factor;
+        
+//        // On iOS8 and iPhone5s, Body size ranges from 14-23. Use this to scale the button height
+//        UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+//        CGFloat factor = font.pointSize - 14.0;
+//        factor *= 5;
+//        self.buttonHeightConstraint.constant = 30 + factor;
     }];
 }
 
