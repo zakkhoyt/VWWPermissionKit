@@ -34,19 +34,23 @@
 
 
 -(void)updatePermissionStatus{
-    // We really only care about the permission prompt in general, not each share and read type. Use first available type
-    HKObjectType *type = [self.shareTypes anyObject];
-    if(type == nil) {
-        type = [self.readTypes anyObject];
-    }
-    
-    HKAuthorizationStatus status = [self.healthStore authorizationStatusForType:type];
-    if(status == HKAuthorizationStatusNotDetermined){
-        self.status = VWWPermissionStatusNotDetermined;
-    } else if(status == HKAuthorizationStatusSharingAuthorized){
-        self.status = VWWPermissionStatusAuthorized;
-    } else if(status == HKAuthorizationStatusSharingDenied){
-        self.status = VWWPermissionStatusDenied;
+    if([HKHealthStore isHealthDataAvailable] == NO){
+        self.status = VWWPermissionStatusServiceNotAvailable;
+    } else {
+        // We really only care about the permission prompt in general, not each share and read type. Use first available type
+        HKObjectType *type = [self.shareTypes anyObject];
+        if(type == nil) {
+            type = [self.readTypes anyObject];
+        }
+        
+        HKAuthorizationStatus status = [self.healthStore authorizationStatusForType:type];
+        if(status == HKAuthorizationStatusNotDetermined){
+            self.status = VWWPermissionStatusNotDetermined;
+        } else if(status == HKAuthorizationStatusSharingAuthorized){
+            self.status = VWWPermissionStatusAuthorized;
+        } else if(status == HKAuthorizationStatusSharingDenied){
+            self.status = VWWPermissionStatusDenied;
+        }
     }
 }
 
