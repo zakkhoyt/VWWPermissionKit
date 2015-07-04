@@ -17,7 +17,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgm-Gk-kiM">
                         <rect key="frame" x="8" y="8" width="584" height="21"/>
                         <animations/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -28,7 +28,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="NpR-cW-dBO"/>
                         </constraints>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <state key="normal" title="Button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -50,6 +50,7 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="buttonHeightConstraint" destination="NpR-cW-dBO" id="s8W-N3-hzz"/>
                 <outlet property="permissionButton" destination="SRc-1Z-jbo" id="9Mn-5f-gd8"/>
                 <outlet property="permissionLabel" destination="cgm-Gk-kiM" id="2EC-fS-Z0P"/>
             </connections>

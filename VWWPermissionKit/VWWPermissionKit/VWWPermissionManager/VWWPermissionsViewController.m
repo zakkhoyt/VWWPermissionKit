@@ -20,9 +20,13 @@ typedef enum {
 @interface VWWPermissionsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *privacyButton;
 @property (nonatomic, strong) VWWPermissionsViewControllerEmptyBlock completionBlock;
-
 @end
+
+@interface VWWPermissionsViewController (UITableView) <UITableViewDataSource, UITableViewDelegate>
+@end
+
 
 @implementation VWWPermissionsViewController
 
@@ -31,19 +35,15 @@ typedef enum {
     [super viewDidLoad];
     
     self.tableView.backgroundColor = self.appearance.backgroundColor;
-    //    self.view.tintColor = self.appearance.tintColor;
     
-    self.navigationController.navigationBar.tintColor = self.appearance.tintColor;
-    [self.navigationController.navigationBar.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if([obj respondsToSelector:@selector(setTintColor:)]){
-            [obj setTintColor:self.appearance.tintColor];
-        }
-    }];
+    self.doneButton.tintColor = self.appearance.tintColor;
+    self.privacyButton.tintColor = self.appearance.tintColor;
     
-    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
-    NSString *prodName = [info objectForKey:(NSString*)kCFBundleNameKey];
-    self.title = prodName;
-    self.navigationController.title = prodName;
+//    // Set Title
+//    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+//    NSString *prodName = [info objectForKey:(NSString*)kCFBundleNameKey];
+//    self.title = prodName;
+//    self.navigationController.title = prodName;
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 76.0;
@@ -52,22 +52,25 @@ typedef enum {
     [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTitleTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTitleTableViewCellIdentifier];
     [self willTransitionToTraitCollection:self.traitCollection withTransitionCoordinator:self.transitionCoordinator];
     
+//    [[NSNotificationCenter defaultCenter] addObserverForName:UIContentSizeCategoryDidChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+//        [self.tableView reloadData];
+//    }];
+}
+
+-(void)dealloc{
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
     [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
-    
-    if(newCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact){
-        [UIApplication sharedApplication].statusBarHidden = YES;
-    } else {
-        [UIApplication sharedApplication].statusBarHidden = NO;
-    }
+    [UIApplication sharedApplication].statusBarHidden = newCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact ? YES : NO;
 }
 
 -(void)refresh{
     [self.tableView reloadData];
 }
 
+#pragma mark IBActions
 - (IBAction)privacyBarButtonAction:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
@@ -106,7 +109,10 @@ typedef enum {
     
 }
 
-#pragma mark UITableViewDataSource
+@end
+
+@implementation VWWPermissionsViewController (UITableViewDataSource)
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     // First section is one cell, the titleText
     // Second section is the permissions

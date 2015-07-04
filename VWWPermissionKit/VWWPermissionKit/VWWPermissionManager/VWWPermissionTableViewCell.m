@@ -14,6 +14,7 @@
 @interface VWWPermissionTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *permissionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *permissionButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonHeightConstraint;
 @end
 
 @implementation VWWPermissionTableViewCell
@@ -39,10 +40,22 @@
     self.permissionButton.layer.borderWidth = 1.0;
     self.permissionButton.layer.cornerRadius = 4.0;
     self.permissionButton.layer.masksToBounds = YES;
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIContentSizeCategoryDidChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        self.permissionButton.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+        self.permissionLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+                
+        // On iOS8 and iPhone5s, Body size ranges from 14-23. Use this to scale the button height
+        UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+        CGFloat factor = font.pointSize - 14.0;
+        factor *= 5;
+        self.buttonHeightConstraint.constant = 30 + factor;
+    }];
 }
 
 -(void)dealloc{
     [self removeObserver:self forKeyPath:@"permission.status"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{

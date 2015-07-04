@@ -17,12 +17,20 @@
 @implementation VWWPermissionTitleTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIContentSizeCategoryDidChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        self.titleTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+    }];
+}
+
+-(void)dealloc{
+    [self removeObserver:self forKeyPath:@"permission.status"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)setTitleText:(NSString *)titleText{
     self.titleTextLabel.text = titleText;
 }
+
 -(void)setAppearance:(VWWPermissionAppearance *)appearance{
     _appearance = appearance;
     self.backgroundColor = self.appearance.backgroundColor;
