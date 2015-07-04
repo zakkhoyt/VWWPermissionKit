@@ -9,7 +9,6 @@
 #import "VWWCoreMotionPermission.h"
 @import  CoreMotion;
 
-static NSString *VWWCoreMotionPermissionPromptedKey = @"VWWCoreMotionPermissionPromptedKey";
 static NSString *VWWCoreMotionPermissionMotionReceivedKey = @"VWWCoreMotionPermissionMotionReceivedKey";
 
 @interface VWWCoreMotionPermission ()
@@ -58,11 +57,8 @@ static NSString *VWWCoreMotionPermissionMotionReceivedKey = @"VWWCoreMotionPermi
         return completionBlock();
     }];
     
-//    [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerAction:) userInfo:nil repeats:NO];
-
+    // TODO: Figure out a way to capture denied permission
+    //    return completionBlock();
 }
 
-//-(void)timerAction:(NSTimer*)sender{
-//    
-//}
 @end
