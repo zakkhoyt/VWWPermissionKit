@@ -40,6 +40,8 @@ static NSString *VWWCoreMotionPermissionMotionReceivedKey = @"VWWCoreMotionPermi
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{
+    [super presentSystemPromtWithCompletionBlock:completionBlock];
+    
     if(self.motionManager == nil){
         self.motionManager = [[CMMotionActivityManager alloc]init];
     }

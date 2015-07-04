@@ -18,36 +18,67 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-//    NSSet *shareTypes = [NSSet setWithObject:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodAlcoholContent]];
-//    NSSet *readTypes = shareTypes;
+////    NSSet *shareTypes = [NSSet setWithObject:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodAlcoholContent]];
+////    NSSet *readTypes = shareTypes;
+//    
+//    NSArray *permissions =
+//    @[
+////      [VWWHealthPermission permissionWithLabelText:@"healthKit" shareTypes:shareTypes readTypes:readTypes]
+//      [VWWCoreMotionPermission permissionWithLabelText:@"Core Motion"],
+//      ];
+//    
+//    // Using requirePermissions:permissions, the user cannot proceed until all permissions are authorized
+//    [VWWPermissionsManager requirePermissions:permissions
+//                                        title:@"We need your approvoal before we get running"
+//                           fromViewController:self
+//                                 resultsBlock:^(NSArray *permissions) {
+//                                     [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
+//                                         NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
+//                                     }];
+//                                 }];
+//    
+//    //    // Using optionPermissions, a done button will always appear regardless of authorization status
+//    //    [VWWPermissionsManager optionPermissions:permissions
+//    //                                        title:@"We need your approvoal before we get running"
+//    //                           fromViewController:self
+//    //                                 resultsBlock:^(NSArray *permissions) {
+//    //                                     [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
+//    //                                         NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
+//    //                                     }];
+//    //                                 }];
+//    
     
-    NSArray *permissions =
-    @[
-//      [VWWHealthPermission permissionWithLabelText:@"healthKit" shareTypes:shareTypes readTypes:readTypes]
-      [VWWCoreMotionPermission permissionWithLabelText:@"Core Motion"],
-      ];
+    VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"We need to access your camera to record video."];
+    VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc..."];
+    VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library."];
+    NSArray *permissions = @[camera, locationAlways, photos];
     
-    // Using requirePermissions:permissions, the user cannot proceed until all permissions are authorized
-    [VWWPermissionsManager requirePermissions:permissions
-                                        title:@"We need your approvoal before we get running"
+    VWWPermissionAppearance *appearance = [VWWPermissionAppearance new];
+    
+    appearance.backgroundColor = [UIColor orangeColor];
+    appearance.tintColor = [UIColor purpleColor];
+    
+    appearance.authorizedColor = [UIColor blueColor];
+    appearance.authorizedTextColor = [UIColor orangeColor];
+    
+    appearance.deniedColor = [UIColor yellowColor];
+    appearance.deniedTextColor = [UIColor blackColor];
+    
+    appearance.restrictedColor = [UIColor blackColor];
+    appearance.restrictedTextColor = [UIColor blackColor];
+    
+    appearance.notDeterminedColor = [UIColor cyanColor];
+    appearance.notDeterminedTextColor = [UIColor magentaColor];
+    
+    [VWWPermissionsManager optionPermissions:permissions
+                                        title:@"We'll need some things from you before we get started."
                            fromViewController:self
+                                  appearance:appearance
                                  resultsBlock:^(NSArray *permissions) {
                                      [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
                                          NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
                                      }];
                                  }];
-    
-    //    // Using optionPermissions, a done button will always appear regardless of authorization status
-    //    [VWWPermissionsManager optionPermissions:permissions
-    //                                        title:@"We need your approvoal before we get running"
-    //                           fromViewController:self
-    //                                 resultsBlock:^(NSArray *permissions) {
-    //                                     [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
-    //                                         NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
-    //                                     }];
-    //                                 }];
-    
-    
 }
 
 @end

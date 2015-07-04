@@ -10,6 +10,7 @@
 #import "VWWPermissionTableViewCell.h"
 #import "VWWPermissionsTableHeaderView.h"
 #import "VWWPermission.h"
+#import "VWWPermissionAppearance.h"
 
 @interface VWWPermissionsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -23,6 +24,17 @@
 #pragma mark Private methods
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.backgroundColor = self.appearance.backgroundColor;
+//    self.view.tintColor = self.appearance.tintColor;
+    
+    self.navigationController.navigationBar.tintColor = self.appearance.tintColor;
+    [self.navigationController.navigationBar.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if([obj respondsToSelector:@selector(setTintColor:)]){
+            [obj setTintColor:self.appearance.tintColor];
+        }
+    }];
+    
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     NSString *prodName = [info objectForKey:(NSString*)kCFBundleNameKey];
     self.title = prodName;
@@ -100,6 +112,7 @@
     if(cell == nil){
         cell = [[VWWPermissionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:VWWPermissionTableViewCellIdentifier];
     }
+    cell.appearance = self.appearance;
     cell.permission = self.permissions[indexPath.row];
     return cell;
 }
@@ -110,6 +123,8 @@
     NSBundle* bundle = [NSBundle bundleForClass:[VWWPermissionsTableHeaderView class]];
     VWWPermissionsTableHeaderView *view = [[bundle loadNibNamed:@"VWWPermissionsTableHeaderView" owner:self options:nil]firstObject];
     view.titleLabel.text = self.headerText;
+    view.backgroundColor = [UIColor clearColor];
+//    view.backgroundColor = self.appearance.backgroundColor;
     return view;
 }
 

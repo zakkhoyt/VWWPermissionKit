@@ -18,28 +18,67 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) VWWPermissionsViewController *permissionsViewController;
 @property (nonatomic) BOOL required;
+@property (nonatomic, strong) VWWPermissionAppearance *appearance;
 @end
 
 @implementation VWWPermissionsManager
 
 #pragma mark Public methods
 
-+(void)optionPermissions:(NSArray*)permissions
-                   title:(NSString*)title
-      fromViewController:(UIViewController*)viewController
-            resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock {
-    VWWPermissionsManager *permissionsManager = [[self alloc]init];
-    [permissionsManager displayPermissions:permissions required:NO title:title fromViewController:viewController resultsBlock:resultsBlock];
-}
-
-
 +(void)requirePermissions:(NSArray*)permissions
                     title:(NSString*)title
        fromViewController:(UIViewController*)viewController
              resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock {
-    VWWPermissionsManager *permissionsManager = [[self alloc]init];
-    [permissionsManager displayPermissions:permissions required:YES title:title fromViewController:viewController resultsBlock:resultsBlock];
+    [VWWPermissionsManager requirePermissions:permissions
+                                        title:title
+                           fromViewController:viewController
+                                   appearance:nil
+                                 resultsBlock:resultsBlock];
 }
+
++(void)requirePermissions:(NSArray*)permissions
+                    title:(NSString*)title
+       fromViewController:(UIViewController*)viewController
+               appearance:(VWWPermissionAppearance*)appearance
+             resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock{
+    VWWPermissionsManager *permissionsManager = [[self alloc]init];
+    
+    if(appearance == nil){
+        permissionsManager.appearance = [VWWPermissionAppearance appearanceFromViewController:viewController];
+    } else {
+        permissionsManager.appearance = appearance;
+    }
+    [permissionsManager displayPermissions:permissions
+                                  required:YES title:title
+                        fromViewController:viewController
+                              resultsBlock:resultsBlock];
+}
+
++(void)optionPermissions:(NSArray*)permissions
+                   title:(NSString*)title
+      fromViewController:(UIViewController*)viewController
+            resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock {
+    [VWWPermissionsManager optionPermissions:permissions
+                                       title:title
+                          fromViewController:viewController
+                                  appearance:nil
+                                resultsBlock:resultsBlock];
+}
+
++(void)optionPermissions:(NSArray*)permissions
+                   title:(NSString*)title
+      fromViewController:(UIViewController*)viewController
+              appearance:(VWWPermissionAppearance*)appearance
+            resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock {
+    VWWPermissionsManager *permissionsManager = [[self alloc]init];
+    if(appearance == nil){
+        permissionsManager.appearance = [VWWPermissionAppearance appearanceFromViewController:viewController];
+    } else {
+        permissionsManager.appearance = appearance;
+    }
+    [permissionsManager displayPermissions:permissions required:NO title:title fromViewController:viewController resultsBlock:resultsBlock];
+}
+
 
 +(void)readPermissions:(NSArray*)permissions resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock{
     VWWPermissionsManager *permissionsManager = [[self alloc]init];
@@ -64,7 +103,7 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
                         
                         
                         
-                        [self checkAllPermissionsSatisfied];    
+                        [self checkAllPermissionsSatisfied];
                     });
                 }];
             });
@@ -94,7 +133,7 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
         }
         [self.permissionsViewController setCloseButtonTitle:@"Done"];
         return YES;
-
+        
     } else {
         [self.permissionsViewController setCloseButtonTitle:@"Done"];
         for(VWWPermission *permission in self.permissions) {
@@ -116,6 +155,7 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
     NSBundle* resourcesBundle = [NSBundle bundleForClass:[VWWPermissionsManager class]];
     self.permissionsViewController = [[resourcesBundle loadNibNamed:VWWPermissionsViewControllerIdentifier owner:self options:nil] firstObject];
     self.permissionsViewController.permissions = self.permissions;
+    self.permissionsViewController.appearance = self.appearance;
     self.permissionsViewController.headerText = self.title;
     __weak VWWPermissionsManager *welf = self;
     [self.permissionsViewController setCompletionBlock:^{

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class VWWPermission;
+@class VWWPermissionAppearance;
 
 static NSString *VWWPermissionsViewControllerIdentifier = @"VWWPermissionsViewController";
 
@@ -15,6 +16,7 @@ typedef void (^VWWPermissionsViewControllerEmptyBlock)();
 
 @interface VWWPermissionsViewController : UIViewController
 @property (nonatomic, strong) NSArray *permissions;
+@property (nonatomic, strong) VWWPermissionAppearance *appearance;
 @property (nonatomic, strong) NSString *headerText;
 -(void)refresh;
 -(void)setCloseButtonTitle:(NSString*)title;
