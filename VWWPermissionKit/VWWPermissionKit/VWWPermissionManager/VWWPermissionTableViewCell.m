@@ -52,6 +52,9 @@
 }
 
 -(void)skinButton{
+    
+    self.permissionButton.enabled = YES;
+    
     switch (self.permission.status) {
         case VWWPermissionStatusAuthorized:{
             [self.permissionButton setBackgroundColor:self.appearance.authorizedColor];
@@ -89,6 +92,7 @@
         }
             break;
         case VWWPermissionStatusServiceNotAvailable:{
+            self.permissionButton.enabled = NO;
             [self.permissionButton setBackgroundColor:self.appearance.serviceNotAvailableColor];
             [self.permissionButton setTitleColor:self.appearance.serviceNotAvailableTextColor forState:UIControlStateNormal];
             NSString *buttonTitle = [[NSString stringWithFormat:@"%@ (not available)", self.permission.type] uppercaseString];

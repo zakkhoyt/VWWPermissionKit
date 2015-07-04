@@ -156,7 +156,7 @@ typedef void (^VWWPermissionsManagerEmptyBlock)();
     self.permissionsViewController = [[resourcesBundle loadNibNamed:VWWPermissionsViewControllerIdentifier owner:self options:nil] firstObject];
     self.permissionsViewController.permissions = self.permissions;
     self.permissionsViewController.appearance = self.appearance;
-    self.permissionsViewController.headerText = self.title;
+    self.permissionsViewController.titleText = self.title;
     __weak VWWPermissionsManager *welf = self;
     [self.permissionsViewController setCompletionBlock:^{
         if(welf.resultsBlock){

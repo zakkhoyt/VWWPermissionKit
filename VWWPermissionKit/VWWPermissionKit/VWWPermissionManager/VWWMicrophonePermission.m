@@ -19,7 +19,6 @@
     return [[super alloc] initWithType:VWWMicrophonePermissionType labelText:labelText];
 }
 
-
 -(void)updatePermissionStatus{
     // Check for availablity
     NSArray *audioDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeAudio];
@@ -27,8 +26,6 @@
         self.status = VWWPermissionStatusServiceNotAvailable;
     } else {
         AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
-        //    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
-        //    AVAudioSessionRecordPermission status = [AVAudioSession sharedInstance].recordPermission;
         if(status == AVAuthorizationStatusNotDetermined){
             self.status = VWWPermissionStatusNotDetermined;
         } else if(status == AVAuthorizationStatusAuthorized){
@@ -42,15 +39,12 @@
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{
-    //    AVAudioSession *session = [AVAudioSession sharedInstance];
     if(self.audioSession == nil){
         self.audioSession = [[AVAudioSession alloc]init];
     }
-    //    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
     [self.audioSession requestRecordPermission:^(BOOL granted) {
         completionBlock();
     }];
-    
 }
 
 @end

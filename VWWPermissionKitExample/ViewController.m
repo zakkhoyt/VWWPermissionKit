@@ -48,9 +48,9 @@
 //    //                                 }];
 //    
     
-    VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"We need to access your camera to record video."];
-    VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc..."];
-    VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library."];
+    VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"We need to access your camera to record video. We need to access your camera to record video. We need to access your camera to record video."];
+    VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc... For calculating your heading, altitude, speed, distance home, etc... For calculating your heading, altitude, speed, distance home, etc..."];
+    VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library. To save your videos to your Photos library. To save your videos to your Photos library."];
     NSArray *permissions = @[camera, locationAlways, photos];
     
     VWWPermissionAppearance *appearance = [VWWPermissionAppearance new];
@@ -71,9 +71,9 @@
     appearance.notDeterminedTextColor = [UIColor magentaColor];
     
     [VWWPermissionsManager optionPermissions:permissions
-                                        title:@"We'll need some things from you before we get started."
+                                        title:@"We'll need some things from you before we get started. We'll need some things from you before we get started. We'll need some things from you before we get started. We'll need some things from you before we get started."
                            fromViewController:self
-                                  appearance:appearance
+                                  appearance:nil
                                  resultsBlock:^(NSArray *permissions) {
                                      [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
                                          NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);

@@ -1,6 +1,6 @@
 //
 //  VWWPermissionsViewController.m
-//  
+//
 //
 //  Created by Zakk Hoyt on 6/11/15.
 //
@@ -8,9 +8,14 @@
 
 #import "VWWPermissionsViewController.h"
 #import "VWWPermissionTableViewCell.h"
-#import "VWWPermissionsTableHeaderView.h"
+#import "VWWPermissionTitleTableViewCell.h"
 #import "VWWPermission.h"
 #import "VWWPermissionAppearance.h"
+
+typedef enum {
+    VWWPermissionsViewControllerSectionTitle = 0,
+    VWWPermissionsViewControllerSectionPermissions = 1,
+} VWWPermissionsViewControllerSection;
 
 @interface VWWPermissionsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -26,7 +31,7 @@
     [super viewDidLoad];
     
     self.tableView.backgroundColor = self.appearance.backgroundColor;
-//    self.view.tintColor = self.appearance.tintColor;
+    //    self.view.tintColor = self.appearance.tintColor;
     
     self.navigationController.navigationBar.tintColor = self.appearance.tintColor;
     [self.navigationController.navigationBar.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -44,7 +49,7 @@
     self.tableView.estimatedRowHeight = 76.0;
     NSBundle* bundle = [NSBundle bundleForClass:[VWWPermissionTableViewCell class]];
     [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTableViewCellIdentifier];
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTitleTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTitleTableViewCellIdentifier];
     [self willTransitionToTraitCollection:self.traitCollection withTransitionCoordinator:self.transitionCoordinator];
     
 }
@@ -98,42 +103,50 @@
     }]];
     
     [self presentViewController:ac animated:YES completion:NULL];
-
+    
 }
 
 #pragma mark UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    // First section is one cell, the titleText
+    // Second section is the permissions
+    return 2;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.permissions.count;
+    switch (section) {
+        case VWWPermissionsViewControllerSectionTitle:
+            return self.titleText == nil ? 0 : 1;
+            break;
+        case VWWPermissionsViewControllerSectionPermissions:
+        default:
+            return self.permissions.count; // + the title cell
+            break;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    VWWPermissionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VWWPermissionTableViewCellIdentifier];
-    if(cell == nil){
-        cell = [[VWWPermissionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:VWWPermissionTableViewCellIdentifier];
+    switch (indexPath.section) {
+        case VWWPermissionsViewControllerSectionTitle:{
+            VWWPermissionTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VWWPermissionTitleTableViewCellIdentifier];
+            cell.titleText = self.titleText;
+            cell.appearance = self.appearance;
+            return cell;
+        }
+            break;
+        case VWWPermissionsViewControllerSectionPermissions:
+        default:{
+            VWWPermissionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VWWPermissionTableViewCellIdentifier];
+            if(cell == nil){
+                cell = [[VWWPermissionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:VWWPermissionTableViewCellIdentifier];
+            }
+            cell.appearance = self.appearance;
+            cell.permission = self.permissions[indexPath.row];
+            return cell;
+            
+        }
+            break;
     }
-    cell.appearance = self.appearance;
-    cell.permission = self.permissions[indexPath.row];
-    return cell;
 }
-
-#pragma mark UITableViewDelegate
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-
-    NSBundle* bundle = [NSBundle bundleForClass:[VWWPermissionsTableHeaderView class]];
-    VWWPermissionsTableHeaderView *view = [[bundle loadNibNamed:@"VWWPermissionsTableHeaderView" owner:self options:nil]firstObject];
-    view.titleLabel.text = self.headerText;
-    view.backgroundColor = [UIColor clearColor];
-//    view.backgroundColor = self.appearance.backgroundColor;
-    return view;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 70.0;
-}
-
-
-
 
 @end
