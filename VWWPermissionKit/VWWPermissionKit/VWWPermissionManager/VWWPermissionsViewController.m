@@ -35,10 +35,7 @@ typedef enum {
     [super viewDidLoad];
     
     self.tableView.backgroundColor = self.appearance.backgroundColor;
-    
-    self.doneButton.tintColor = self.appearance.tintColor;
-    self.privacyButton.tintColor = self.appearance.tintColor;
-    
+
 //    // Set Title
 //    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
 //    NSString *prodName = [info objectForKey:(NSString*)kCFBundleNameKey];
@@ -51,10 +48,15 @@ typedef enum {
     [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTitleTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTitleTableViewCellIdentifier];
     [self willTransitionToTraitCollection:self.traitCollection withTransitionCoordinator:self.transitionCoordinator];
-    
-//    [[NSNotificationCenter defaultCenter] addObserverForName:UIContentSizeCategoryDidChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-//        [self.tableView reloadData];
-//    }];
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    UIColor *tintColor = self.appearance.tintColor;
+    self.doneButton.tintColor = tintColor;
+    self.privacyButton.tintColor = tintColor;
+    self.navigationController.navigationBar.tintColor = tintColor;
+    [self.view setNeedsDisplay];
 }
 
 -(void)dealloc{
@@ -83,6 +85,13 @@ typedef enum {
 }
 
 #pragma mark Public methods
+-(void)setAppearance:(VWWPermissionAppearance *)appearance{
+    _appearance = appearance;
+    self.doneButton.tintColor = _appearance.tintColor;
+    self.privacyButton.tintColor = _appearance.tintColor;
+    self.navigationController.navigationBar.tintColor = _appearance.tintColor;
+
+}
 -(void)setCloseButtonTitle:(NSString*)title{
     if(title == nil){
         [self.navigationItem setRightBarButtonItem:nil];

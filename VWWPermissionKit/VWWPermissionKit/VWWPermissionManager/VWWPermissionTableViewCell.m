@@ -47,11 +47,12 @@
         self.permissionButton.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
         self.permissionLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
         
-//        // On iOS8 and iPhone5s, Body size ranges from 14-23. Use this to scale the button height
-//        UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-//        CGFloat factor = font.pointSize - 14.0;
-//        factor *= 5;
-//        self.buttonHeightConstraint.constant = 30 + factor;
+        // On iOS8 and iPhone5s, "Body" dynamic text size ranges from 14-23. Use this to scale the button height
+        UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+        CGFloat factor = font.pointSize - 14.0;
+        factor *= 5;
+        const CGFloat kIBButtonHeight= 34.0; // Defined in xib file
+        self.buttonHeightConstraint.constant = kIBButtonHeight + factor;
     }];
 }
 

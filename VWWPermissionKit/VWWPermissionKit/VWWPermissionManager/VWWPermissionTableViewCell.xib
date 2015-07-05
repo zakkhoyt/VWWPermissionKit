@@ -24,6 +24,9 @@
                         <rect key="frame" x="8" y="33" width="584" height="34"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="r3U-Ov-lFR"/>
+                        </constraints>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <state key="normal" title="Permission Button">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,6 +49,7 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="buttonHeightConstraint" destination="r3U-Ov-lFR" id="1xN-8y-aoV"/>
                 <outlet property="permissionButton" destination="SRc-1Z-jbo" id="9Mn-5f-gd8"/>
                 <outlet property="permissionLabel" destination="cgm-Gk-kiM" id="2EC-fS-Z0P"/>
             </connections>

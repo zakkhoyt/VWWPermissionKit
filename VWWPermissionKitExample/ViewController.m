@@ -48,10 +48,20 @@
 //    //                                 }];
 //    
     
+    [[UIBarButtonItem appearance] setTintColor:[UIColor magentaColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor yellowColor]];
+    [[UILabel appearance] setTextColor:[UIColor greenColor]];
+    [[[UIButton appearance] titleLabel] setTextColor:[UIColor purpleColor]];
+    
+    
+    
+    
     VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"We need to access your camera to record video. We need to access your camera to record video. We need to access your camera to record video."];
     VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc... For calculating your heading, altitude, speed, distance home, etc... For calculating your heading, altitude, speed, distance home, etc..."];
     VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library. To save your videos to your Photos library. To save your videos to your Photos library."];
-    NSArray *permissions = @[camera, locationAlways, photos];
+    VWWCalendarsPermission *calendar = [VWWCalendarsPermission permissionWithLabelText:@"ad fasdf asd fas dfasdfasdf asdfasdfljad adlldjads faldfjaljfksad slf adfl aldf asdfj "];
+    VWWRemindersPermission *reminders = [VWWRemindersPermission permissionWithLabelText:@"ad fasdf asd fas dfasdfasdf asdfasdfljad adlldjads faldfjaljfksad slf adfl aldf asdfj "];
+    NSArray *permissions = @[camera, locationAlways, photos, calendar, reminders];
     
     VWWPermissionAppearance *appearance = [VWWPermissionAppearance new];
     
