@@ -10,7 +10,6 @@
 #import "VWWPermissionTableViewCell.h"
 #import "VWWPermissionTitleTableViewCell.h"
 #import "VWWPermission.h"
-#import "VWWPermissionAppearance.h"
 
 typedef enum {
     VWWPermissionsViewControllerSectionTitle = 0,
@@ -34,8 +33,6 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = self.appearance.backgroundColor;
-
 //    // Set Title
 //    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
 //    NSString *prodName = [info objectForKey:(NSString*)kCFBundleNameKey];
@@ -48,15 +45,6 @@ typedef enum {
     [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTableViewCellIdentifier];
     [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTitleTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTitleTableViewCellIdentifier];
     [self willTransitionToTraitCollection:self.traitCollection withTransitionCoordinator:self.transitionCoordinator];
-}
-
--(void)viewDidLayoutSubviews{
-    [super viewDidLayoutSubviews];
-    UIColor *tintColor = self.appearance.tintColor;
-    self.doneButton.tintColor = tintColor;
-    self.privacyButton.tintColor = tintColor;
-    self.navigationController.navigationBar.tintColor = tintColor;
-    [self.view setNeedsDisplay];
 }
 
 -(void)dealloc{
@@ -85,13 +73,7 @@ typedef enum {
 }
 
 #pragma mark Public methods
--(void)setAppearance:(VWWPermissionAppearance *)appearance{
-    _appearance = appearance;
-    self.doneButton.tintColor = _appearance.tintColor;
-    self.privacyButton.tintColor = _appearance.tintColor;
-    self.navigationController.navigationBar.tintColor = _appearance.tintColor;
 
-}
 -(void)setCloseButtonTitle:(NSString*)title{
     if(title == nil){
         [self.navigationItem setRightBarButtonItem:nil];
@@ -145,7 +127,6 @@ typedef enum {
         case VWWPermissionsViewControllerSectionTitle:{
             VWWPermissionTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VWWPermissionTitleTableViewCellIdentifier];
             cell.titleText = self.titleText;
-            cell.appearance = self.appearance;
             return cell;
         }
             break;
@@ -155,7 +136,6 @@ typedef enum {
             if(cell == nil){
                 cell = [[VWWPermissionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:VWWPermissionTableViewCellIdentifier];
             }
-            cell.appearance = self.appearance;
             cell.permission = self.permissions[indexPath.row];
             return cell;
             
