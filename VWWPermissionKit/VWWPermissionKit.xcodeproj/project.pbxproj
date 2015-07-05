@@ -53,8 +53,6 @@
 		CF1C50C61B2CDE8A006BE053 /* VWWRemindersPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */; };
 		CF1C50C71B2CDE8A006BE053 /* VWWRemindersPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */; };
 		CF1FAB641B47767C0079EDAC /* ABOUT.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF1FAB631B47767C0079EDAC /* ABOUT.txt */; };
-		CF1FAB671B4776CA0079EDAC /* VWWPermissionAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1FAB651B4776CA0079EDAC /* VWWPermissionAppearance.h */; };
-		CF1FAB681B4776CA0079EDAC /* VWWPermissionAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1FAB661B4776CA0079EDAC /* VWWPermissionAppearance.m */; };
 		CF1FAB6C1B4799120079EDAC /* VWWPermissionTitleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1FAB691B4799120079EDAC /* VWWPermissionTitleTableViewCell.h */; };
 		CF1FAB6D1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1FAB6A1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m */; };
 		CF1FAB6E1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1FAB6B1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib */; };
@@ -110,8 +108,6 @@
 		CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRemindersPermission.h; sourceTree = "<group>"; };
 		CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRemindersPermission.m; sourceTree = "<group>"; };
 		CF1FAB631B47767C0079EDAC /* ABOUT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ABOUT.txt; sourceTree = "<group>"; };
-		CF1FAB651B4776CA0079EDAC /* VWWPermissionAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionAppearance.h; sourceTree = "<group>"; };
-		CF1FAB661B4776CA0079EDAC /* VWWPermissionAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionAppearance.m; sourceTree = "<group>"; };
 		CF1FAB691B4799120079EDAC /* VWWPermissionTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionTitleTableViewCell.h; sourceTree = "<group>"; };
 		CF1FAB6A1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionTitleTableViewCell.m; sourceTree = "<group>"; };
 		CF1FAB6B1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWPermissionTitleTableViewCell.xib; sourceTree = "<group>"; };
@@ -163,8 +159,6 @@
 				CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */,
 				CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */,
 				CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */,
-				CF1FAB651B4776CA0079EDAC /* VWWPermissionAppearance.h */,
-				CF1FAB661B4776CA0079EDAC /* VWWPermissionAppearance.m */,
 				CF7DD7CC1B2FCDB000149232 /* UserInterface */,
 				CF7DD7CB1B2FCD8800149232 /* Permissions */,
 			);
@@ -258,7 +252,6 @@
 				CF1C50A81B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h in Headers */,
 				CF1C50A61B2CDE8A006BE053 /* VWWContactsPermission.h in Headers */,
 				CF1C50AA1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h in Headers */,
-				CF1FAB671B4776CA0079EDAC /* VWWPermissionAppearance.h in Headers */,
 				CF1C50A21B2CDE8A006BE053 /* VWWCalendarsPermission.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +334,6 @@
 				CFD5DED31B2D34CC00AB1C56 /* README.md in Sources */,
 				CF1FAB6D1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m in Sources */,
 				CF1C50A31B2CDE8A006BE053 /* VWWCalendarsPermission.m in Sources */,
-				CF1FAB681B4776CA0079EDAC /* VWWPermissionAppearance.m in Sources */,
 				CF1C50B71B2CDE8A006BE053 /* VWWPermission.m in Sources */,
 				CF1C50A71B2CDE8A006BE053 /* VWWContactsPermission.m in Sources */,
 				CF1C50B51B2CDE8A006BE053 /* VWWNotificationsPermission.m in Sources */,

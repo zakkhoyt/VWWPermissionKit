@@ -7,7 +7,6 @@
 //
 
 #import "VWWPermissionTitleTableViewCell.h"
-#import "VWWPermissionAppearance.h"
 
 @interface VWWPermissionTitleTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *titleTextLabel;
@@ -29,11 +28,6 @@
 
 -(void)setTitleText:(NSString *)titleText{
     self.titleTextLabel.text = titleText;
-}
-
--(void)setAppearance:(VWWPermissionAppearance *)appearance{
-    _appearance = appearance;
-    self.backgroundColor = self.appearance.backgroundColor;
 }
 
 @end

@@ -25,7 +25,6 @@
 //#import "VWWCoreBluetoothPermission.h"
 //#import "VWWHomePermission.h"
 
-#import "VWWPermissionAppearance.h"
 
 typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
 
@@ -35,24 +34,20 @@ typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
  @method     requirePermissions:title:fromViewController:resultsBlock:
  @abstract
  @discussion Display the permission sheet. User cannot exit the form until all permission requirements have been satisfied
- 
  @param      permissions         An array of VWW(xxx)Permission instances. VWWPhotosPermission for example.
  @param      title               The title to display at the top of the presentation window.
  @param      fromViewController  The presenting view controller
- @param      appearance          An instance of VWWPermissionAppearance. If not defined, defaults will be used.
  @param      resultsBlock        This block returns an array of VWW(xxx)Permission objects for inspection and is fired when the user taps close or all permissions are satisfied
  */
 +(void)requirePermissions:(NSArray*)permissions
                     title:(NSString*)title
        fromViewController:(UIViewController*)viewController
-               appearance:(VWWPermissionAppearance*)appearance
              resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock;
 
 /*!
  @method     optionPermissions:title:fromViewController:resultsBlock:
  @abstract
  @discussion Display the permission sheet but let the user close it without satisfying their respective required properties
- 
  @param      permissions         An array of VWW(xxx)Permission instances. VWWPhotosPermission for example.
  @param      title               The title to display at the top of the presentation window.
  @param      fromViewController  The presenting view controller
@@ -61,7 +56,6 @@ typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
 +(void)optionPermissions:(NSArray*)permissions
                    title:(NSString*)title
       fromViewController:(UIViewController*)viewController
-              appearance:(VWWPermissionAppearance*)appearance
             resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock;
 
 
@@ -70,10 +64,8 @@ typedef void (^VWWPermissionsManagerResultsBlock)(NSArray *permissions);
  @method     readPermissions:resultsBlock:
  @abstract
  @discussion Read the permission status of each permission type
- 
  @param      permissions         An array of VWW(xxx)Permission instances. VWWPhotosPermission for example.
- @param      resultsBlock        This block returns an array of VWW(xxx)Permission objects for inspection.
-                                 This block is fired after all permission values have been read.
+ @param      resultsBlock        This block returns an array of VWW(xxx)Permission objects for inspection and is fired after all permission values have been read.
 */
 +(void)readPermissions:(NSArray*)permissions resultsBlock:(VWWPermissionsManagerResultsBlock)resultsBlock;
 
