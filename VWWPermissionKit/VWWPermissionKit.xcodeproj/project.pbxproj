@@ -39,9 +39,6 @@
 		CF1C50B81B2CDE8A006BE053 /* VWWPermissionNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */; };
 		CF1C50B91B2CDE8A006BE053 /* VWWPermissionsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */; };
 		CF1C50BA1B2CDE8A006BE053 /* VWWPermissionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */; };
-		CF1C50BB1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */; };
-		CF1C50BC1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */; };
-		CF1C50BD1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */; };
 		CF1C50BE1B2CDE8A006BE053 /* VWWPermissionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50921B2CDE8A006BE053 /* VWWPermissionsViewController.h */; };
 		CF1C50BF1B2CDE8A006BE053 /* VWWPermissionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50931B2CDE8A006BE053 /* VWWPermissionsViewController.m */; };
 		CF1C50C01B2CDE8A006BE053 /* VWWPermissionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1C50941B2CDE8A006BE053 /* VWWPermissionsViewController.xib */; };
@@ -94,9 +91,6 @@
 		CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionNotifications.h; sourceTree = "<group>"; };
 		CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionsManager.h; sourceTree = "<group>"; };
 		CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionsManager.m; sourceTree = "<group>"; };
-		CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionsTableHeaderView.h; sourceTree = "<group>"; };
-		CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionsTableHeaderView.m; sourceTree = "<group>"; };
-		CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWPermissionsTableHeaderView.xib; sourceTree = "<group>"; };
 		CF1C50921B2CDE8A006BE053 /* VWWPermissionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionsViewController.h; sourceTree = "<group>"; };
 		CF1C50931B2CDE8A006BE053 /* VWWPermissionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionsViewController.m; sourceTree = "<group>"; };
 		CF1C50941B2CDE8A006BE053 /* VWWPermissionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWPermissionsViewController.xib; sourceTree = "<group>"; };
@@ -207,9 +201,6 @@
 		CF7DD7CC1B2FCDB000149232 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */,
-				CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */,
-				CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */,
 				CF1C50921B2CDE8A006BE053 /* VWWPermissionsViewController.h */,
 				CF1C50931B2CDE8A006BE053 /* VWWPermissionsViewController.m */,
 				CF1C50941B2CDE8A006BE053 /* VWWPermissionsViewController.xib */,
@@ -239,7 +230,6 @@
 				CF1C50B91B2CDE8A006BE053 /* VWWPermissionsManager.h in Headers */,
 				CF1C50A01B2CDE8A006BE053 /* VWWCoreBluetoothPermission.h in Headers */,
 				CF1C509C1B2CDE8A006BE053 /* VWWAccountsPermission.h in Headers */,
-				CF1C50BB1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h in Headers */,
 				CF1C50AE1B2CDE8A006BE053 /* VWWHealthPermission.h in Headers */,
 				CF1C50A41B2CDE8A006BE053 /* VWWCameraPermission.h in Headers */,
 				CF1C50C11B2CDE8A006BE053 /* VWWPermissionTableViewCell.h in Headers */,
@@ -316,7 +306,6 @@
 				CF1C50C31B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib in Resources */,
 				CF1C50C01B2CDE8A006BE053 /* VWWPermissionsViewController.xib in Resources */,
 				CF1FAB641B47767C0079EDAC /* ABOUT.txt in Resources */,
-				CF1C50BD1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib in Resources */,
 				CF1FAB6E1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,7 +327,6 @@
 				CF1C50A71B2CDE8A006BE053 /* VWWContactsPermission.m in Sources */,
 				CF1C50B51B2CDE8A006BE053 /* VWWNotificationsPermission.m in Sources */,
 				CF1C50C51B2CDE8A006BE053 /* VWWPhotosPermission.m in Sources */,
-				CF1C50BC1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m in Sources */,
 				CF1C50A51B2CDE8A006BE053 /* VWWCameraPermission.m in Sources */,
 				CF1C50BA1B2CDE8A006BE053 /* VWWPermissionsManager.m in Sources */,
 				CF1C50AB1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m in Sources */,
