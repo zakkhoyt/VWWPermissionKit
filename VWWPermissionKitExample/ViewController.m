@@ -13,7 +13,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self setupAppearance];
+//    [self setupAppearance];
     [self showPermissions];
 }
 
@@ -26,16 +26,18 @@
 }
 
 -(void)showPermissions{
-    VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"This app lets your record videos, so we need to access your camera"];
-    VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"We can save recorded videos to your Photos library."];
-    VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc... This is a bunch of nonsense text to show that labels will grow with the size of the defined text. This text that you are reading right now. Period."];
-
+    
     NSSet *shareTypes = [NSSet setWithObjects:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodAlcoholContent],
                          [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierRespiratoryRate],
                          [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate],
                          nil];
     NSSet *readTypes = shareTypes;
+    
     VWWHealthPermission *health = [VWWHealthPermission permissionWithLabelText:@"This app will analyize how drunk you've been and how your body likes it." shareTypes:shareTypes readTypes:readTypes];
+    VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"This app lets your record videos, so we need to access your camera"];
+    VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"We can save recorded videos to your Photos library."];
+    VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc... This is a bunch of nonsense text to show that labels will grow with the size of the defined text. This text that you are reading right now. Period."];
+
 
     NSArray *permissions = @[health, camera, locationAlways, photos];
     
@@ -47,6 +49,10 @@
                                          NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
                                      }];
                                  }];
+    
+    
+
 }
+
 
 @end
