@@ -49,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C69188BC1B4453D600D7EFD6 /* VWWPermissionKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = VWWPermissionKitExample.entitlements; sourceTree = "<group>"; };
 		CF1F28BD1B2FC3960052F881 /* VWWPermissionKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VWWPermissionKit.xcodeproj; path = VWWPermissionKit/VWWPermissionKit.xcodeproj; sourceTree = "<group>"; };
 		CFD5DDFF1B2CE80300AB1C56 /* VWWPermissionKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VWWPermissionKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD5DE031B2CE80300AB1C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		CFD5DE011B2CE80300AB1C56 /* VWWPermissionKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				C69188BC1B4453D600D7EFD6 /* VWWPermissionKitExample.entitlements */,
 				CFD5DE061B2CE80300AB1C56 /* AppDelegate.h */,
 				CFD5DE071B2CE80300AB1C56 /* AppDelegate.m */,
 				CFD5DE091B2CE80300AB1C56 /* ViewController.h */,
@@ -156,6 +158,15 @@
 				TargetAttributes = {
 					CFD5DDFE1B2CE80300AB1C56 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = F2M6E998ZE;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -333,6 +344,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -342,6 +355,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -349,6 +363,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -358,6 +374,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -19,7 +19,6 @@
     return [[super alloc] initWithType:VWWRemindersPermissionType labelText:labelText];
 }
 
-
 -(void)updatePermissionStatus{
     EKAuthorizationStatus status = [EKEventStore authorizationStatusForEntityType:EKEntityTypeReminder];
     if(status == EKAuthorizationStatusNotDetermined){
@@ -41,6 +40,6 @@
     [self.eventStore requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError * __nullable error) {
         completionBlock(granted);
     }];
-    
 }
+
 @end

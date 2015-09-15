@@ -22,17 +22,21 @@
 
 
 -(void)updatePermissionStatus{
-    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-    if(status == kCLAuthorizationStatusAuthorizedWhenInUse){
-        self.status = VWWPermissionStatusAuthorized;
-    } else if(status == kCLAuthorizationStatusAuthorizedAlways){
-        self.status = VWWPermissionStatusDenied;
-    } else if(status == kCLAuthorizationStatusNotDetermined) {
-        self.status = VWWPermissionStatusNotDetermined;
-    } else if(status == kCLAuthorizationStatusDenied) {
-        self.status = VWWPermissionStatusDenied;
-    } else if(status == kCLAuthorizationStatusRestricted) {
-        self.status = VWWPermissionStatusRestricted;
+    if([CLLocationManager significantLocationChangeMonitoringAvailable] == NO){
+        self.status = VWWPermissionStatusServiceNotAvailable;
+    } else {        
+        CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+        if(status == kCLAuthorizationStatusAuthorizedWhenInUse){
+            self.status = VWWPermissionStatusAuthorized;
+        } else if(status == kCLAuthorizationStatusAuthorizedAlways){
+            self.status = VWWPermissionStatusDenied;
+        } else if(status == kCLAuthorizationStatusNotDetermined) {
+            self.status = VWWPermissionStatusNotDetermined;
+        } else if(status == kCLAuthorizationStatusDenied) {
+            self.status = VWWPermissionStatusDenied;
+        } else if(status == kCLAuthorizationStatusRestricted) {
+            self.status = VWWPermissionStatusRestricted;
+        }
     }
 }
 

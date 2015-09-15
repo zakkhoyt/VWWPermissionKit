@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -34,7 +34,7 @@
                 </constraints>
             </view>
             <toolbarItems/>
-            <navigationItem key="navigationItem" title="Permission" id="hQG-vX-hqI">
+            <navigationItem key="navigationItem" id="hQG-vX-hqI">
                 <barButtonItem key="leftBarButtonItem" title="Privacy" id="Fbx-zf-c0m">
                     <connections>
                         <action selector="privacyBarButtonAction:" destination="VRw-OT-WWn" id="Bav-Jc-w8b"/>
@@ -50,6 +50,7 @@
             <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
             <connections>
                 <outlet property="doneButton" destination="7ay-2d-5JZ" id="q8M-Jc-Gac"/>
+                <outlet property="privacyButton" destination="Fbx-zf-c0m" id="xYp-7j-pAi"/>
                 <outlet property="tableView" destination="0p9-kl-2Re" id="ENN-JY-Wtb"/>
             </connections>
         </viewController>

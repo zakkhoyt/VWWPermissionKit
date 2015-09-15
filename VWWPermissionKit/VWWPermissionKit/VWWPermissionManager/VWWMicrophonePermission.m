@@ -19,32 +19,32 @@
     return [[super alloc] initWithType:VWWMicrophonePermissionType labelText:labelText];
 }
 
-
 -(void)updatePermissionStatus{
-    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
-    //    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
-    //    AVAudioSessionRecordPermission status = [AVAudioSession sharedInstance].recordPermission;
-    if(status == AVAuthorizationStatusNotDetermined){
-        self.status = VWWPermissionStatusNotDetermined;
-    } else if(status == AVAuthorizationStatusAuthorized){
-        self.status = VWWPermissionStatusAuthorized;
-    } else if(status == AVAuthorizationStatusDenied) {
-        self.status = VWWPermissionStatusDenied;
-    } else if(status == AVAuthorizationStatusRestricted) {
-        self.status = VWWPermissionStatusRestricted;
+    // Check for availablity
+    NSArray *audioDevices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeAudio];
+    if(audioDevices.count == 0){
+        self.status = VWWPermissionStatusServiceNotAvailable;
+    } else {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+        if(status == AVAuthorizationStatusNotDetermined){
+            self.status = VWWPermissionStatusNotDetermined;
+        } else if(status == AVAuthorizationStatusAuthorized){
+            self.status = VWWPermissionStatusAuthorized;
+        } else if(status == AVAuthorizationStatusDenied) {
+            self.status = VWWPermissionStatusDenied;
+        } else if(status == AVAuthorizationStatusRestricted) {
+            self.status = VWWPermissionStatusRestricted;
+        }
     }
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{
-    //    AVAudioSession *session = [AVAudioSession sharedInstance];
     if(self.audioSession == nil){
         self.audioSession = [[AVAudioSession alloc]init];
     }
-    //    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
     [self.audioSession requestRecordPermission:^(BOOL granted) {
         completionBlock();
     }];
-    
 }
 
 @end

@@ -1,6 +1,6 @@
 //
 //  VWWPermissionsViewController.m
-//  
+//
 //
 //  Created by Zakk Hoyt on 6/11/15.
 //
@@ -8,49 +8,59 @@
 
 #import "VWWPermissionsViewController.h"
 #import "VWWPermissionTableViewCell.h"
-#import "VWWPermissionsTableHeaderView.h"
+#import "VWWPermissionTitleTableViewCell.h"
 #import "VWWPermission.h"
+
+typedef enum {
+    VWWPermissionsViewControllerSectionTitle = 0,
+    VWWPermissionsViewControllerSectionPermissions = 1,
+} VWWPermissionsViewControllerSection;
 
 @interface VWWPermissionsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *privacyButton;
 @property (nonatomic, strong) VWWPermissionsViewControllerEmptyBlock completionBlock;
-
 @end
+
+@interface VWWPermissionsViewController (UITableView) <UITableViewDataSource, UITableViewDelegate>
+@end
+
 
 @implementation VWWPermissionsViewController
 
 #pragma mark Private methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
-    NSString *prodName = [info objectForKey:(NSString*)kCFBundleNameKey];
-    self.title = prodName;
-    self.navigationController.title = prodName;
+    
+//    // Set Title
+//    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+//    NSString *prodName = [info objectForKey:(NSString*)kCFBundleNameKey];
+//    self.title = prodName;
+//    self.navigationController.title = prodName;
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 76.0;
     NSBundle* bundle = [NSBundle bundleForClass:[VWWPermissionTableViewCell class]];
     [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTableViewCellIdentifier];
-    
+    [self.tableView registerNib:[UINib nibWithNibName:@"VWWPermissionTitleTableViewCell" bundle:bundle] forCellReuseIdentifier:VWWPermissionTitleTableViewCellIdentifier];
     [self willTransitionToTraitCollection:self.traitCollection withTransitionCoordinator:self.transitionCoordinator];
-    
+}
+
+-(void)dealloc{
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
     [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
-    
-    if(newCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact){
-        [UIApplication sharedApplication].statusBarHidden = YES;
-    } else {
-        [UIApplication sharedApplication].statusBarHidden = NO;
-    }
+    [UIApplication sharedApplication].statusBarHidden = newCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact ? YES : NO;
 }
 
 -(void)refresh{
     [self.tableView reloadData];
 }
 
+#pragma mark IBActions
 - (IBAction)privacyBarButtonAction:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
 }
@@ -63,6 +73,7 @@
 }
 
 #pragma mark Public methods
+
 -(void)setCloseButtonTitle:(NSString*)title{
     if(title == nil){
         [self.navigationItem setRightBarButtonItem:nil];
@@ -86,39 +97,51 @@
     }]];
     
     [self presentViewController:ac animated:YES completion:NULL];
-
+    
 }
 
-#pragma mark UITableViewDataSource
+@end
+
+@implementation VWWPermissionsViewController (UITableViewDataSource)
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    // First section is one cell, the titleText
+    // Second section is the permissions
+    return 2;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.permissions.count;
+    switch (section) {
+        case VWWPermissionsViewControllerSectionTitle:
+            return self.titleText == nil ? 0 : 1;
+            break;
+        case VWWPermissionsViewControllerSectionPermissions:
+        default:
+            return self.permissions.count; // + the title cell
+            break;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    VWWPermissionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VWWPermissionTableViewCellIdentifier];
-    if(cell == nil){
-        cell = [[VWWPermissionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:VWWPermissionTableViewCellIdentifier];
+    switch (indexPath.section) {
+        case VWWPermissionsViewControllerSectionTitle:{
+            VWWPermissionTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VWWPermissionTitleTableViewCellIdentifier];
+            cell.titleText = self.titleText;
+            return cell;
+        }
+            break;
+        case VWWPermissionsViewControllerSectionPermissions:
+        default:{
+            VWWPermissionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:VWWPermissionTableViewCellIdentifier];
+            if(cell == nil){
+                cell = [[VWWPermissionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:VWWPermissionTableViewCellIdentifier];
+            }
+            cell.permission = self.permissions[indexPath.row];
+            return cell;
+            
+        }
+            break;
     }
-    cell.permission = self.permissions[indexPath.row];
-    return cell;
 }
-
-#pragma mark UITableViewDelegate
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-
-    NSBundle* bundle = [NSBundle bundleForClass:[VWWPermissionsTableHeaderView class]];
-    VWWPermissionsTableHeaderView *view = [[bundle loadNibNamed:@"VWWPermissionsTableHeaderView" owner:self options:nil]firstObject];
-    view.titleLabel.text = self.headerText;
-    return view;
-}
-
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 70.0;
-}
-
-
-
 
 @end

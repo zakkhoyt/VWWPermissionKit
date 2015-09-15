@@ -25,19 +25,23 @@ Next create an array of VWWPermission types and display the permissions window. 
 
 ###ObjC
 ```
-VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"We need to access your camera to record video."];
-VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc..."];
-VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"To save your videos to your Photos library."];
-NSArray *permissions = @[camera, locationAlways, photos];
+VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"This app lets your record videos, so we need to access your camera"];
+VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"We can save recorded videos to your Photos library."];
+VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc... This is a bunch of nonsense text to show that labels will grow with the size of the defined text. This text that you are reading right now. Period."];
+VWWHealthPermission *health = [VWWHealthPermission permissionWithLabelText:@"This app will analyize how drunk you've been and how your body likes it."
+                                                                shareTypes:/* NSSet of your set of HKObjectTypes */
+                                                                 readTypes:/* NSSet of your set of HKObjectTypes */];
 
-[VWWPermissionsManager requirePermissions:permissions
-                                    title:@"We'll need some things from you before we get started."
-                       fromViewController:self
-                             resultsBlock:^(NSArray *permissions) {
-                                 [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
-                                     NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
-                                 }];
-                             }];
+NSArray *permissions = @[health, camera, locationAlways, photos];
+
+[VWWPermissionsManager optionPermissions:permissions
+                                   title:@"Welcome to the VWWPermissionKitExample app. Our app uses many of your device's sensors. We'll help you set up some permissions, then get started."
+                      fromViewController:self
+                            resultsBlock:^(NSArray *permissions) {
+                                [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
+                                    NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
+                                }];
+                            }];
 ```
 
 ###Swift
@@ -86,14 +90,7 @@ Tapping on the "Privacy" button will navigate the user to your iOS app's privacy
 
 
 ## Sample images ##
-![](http://i.imgur.com/ZT9rl3b.png)
-![](http://i.imgur.com/n8FSXnn.png)
-![](http://i.imgur.com/ir28YCI.png)
-![](http://i.imgur.com/CHBr4vO.png)
-![](http://i.imgur.com/SOjz5v0.png)
-![](http://i.imgur.com/tz6k6eL.png)
-![](http://i.imgur.com/2UjjAgu.png)
-![](http://i.imgur.com/T3G6Rkb.png)
+//![](http://i.imgur.com/T3G6Rkb.png)
 
 
 ## Adding the cocoa framework to your iOS project ##
@@ -130,4 +127,15 @@ pod 'VWWPermissionKit', '~> 1.0.3'
 ## YSK ##
 - Not all permissions types are supported in the iOS Simulator
 - iOS 9b1 does not detect changes to permission status from iOS Privacy Settings without restarting the app. I expect this will be fixed in the near future. 
+
+## What's new in this version? ##
+- Support for HealhKit
+- Support for CoreMotion
+- Updated UI for a cleaner look
+- Adherence to +appearance protocol
+- Warns about missing entries for your Info.plist
+- Unsupported services are displayed as such
+- Support for dynamic font sizes
+
+
 

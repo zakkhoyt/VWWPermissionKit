@@ -15,7 +15,7 @@ typedef void (^VWWPermissionsViewControllerEmptyBlock)();
 
 @interface VWWPermissionsViewController : UIViewController
 @property (nonatomic, strong) NSArray *permissions;
-@property (nonatomic, strong) NSString *headerText;
+@property (nonatomic, strong) NSString *titleText;
 -(void)refresh;
 -(void)setCloseButtonTitle:(NSString*)title;
 -(void)setCompletionBlock:(VWWPermissionsViewControllerEmptyBlock)completionBlock;

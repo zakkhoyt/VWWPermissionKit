@@ -39,9 +39,6 @@
 		CF1C50B81B2CDE8A006BE053 /* VWWPermissionNotifications.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */; };
 		CF1C50B91B2CDE8A006BE053 /* VWWPermissionsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */; };
 		CF1C50BA1B2CDE8A006BE053 /* VWWPermissionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */; };
-		CF1C50BB1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */; };
-		CF1C50BC1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */; };
-		CF1C50BD1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */; };
 		CF1C50BE1B2CDE8A006BE053 /* VWWPermissionsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50921B2CDE8A006BE053 /* VWWPermissionsViewController.h */; };
 		CF1C50BF1B2CDE8A006BE053 /* VWWPermissionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50931B2CDE8A006BE053 /* VWWPermissionsViewController.m */; };
 		CF1C50C01B2CDE8A006BE053 /* VWWPermissionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1C50941B2CDE8A006BE053 /* VWWPermissionsViewController.xib */; };
@@ -52,6 +49,10 @@
 		CF1C50C51B2CDE8A006BE053 /* VWWPhotosPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */; };
 		CF1C50C61B2CDE8A006BE053 /* VWWRemindersPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */; };
 		CF1C50C71B2CDE8A006BE053 /* VWWRemindersPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */; };
+		CF1FAB641B47767C0079EDAC /* ABOUT.txt in Resources */ = {isa = PBXBuildFile; fileRef = CF1FAB631B47767C0079EDAC /* ABOUT.txt */; };
+		CF1FAB6C1B4799120079EDAC /* VWWPermissionTitleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1FAB691B4799120079EDAC /* VWWPermissionTitleTableViewCell.h */; };
+		CF1FAB6D1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1FAB6A1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m */; };
+		CF1FAB6E1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1FAB6B1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib */; };
 		CFD5DED31B2D34CC00AB1C56 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CFD5DED21B2D34CC00AB1C56 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -90,9 +91,6 @@
 		CF1C508C1B2CDE8A006BE053 /* VWWPermissionNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionNotifications.h; sourceTree = "<group>"; };
 		CF1C508D1B2CDE8A006BE053 /* VWWPermissionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionsManager.h; sourceTree = "<group>"; };
 		CF1C508E1B2CDE8A006BE053 /* VWWPermissionsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionsManager.m; sourceTree = "<group>"; };
-		CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionsTableHeaderView.h; sourceTree = "<group>"; };
-		CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionsTableHeaderView.m; sourceTree = "<group>"; };
-		CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWPermissionsTableHeaderView.xib; sourceTree = "<group>"; };
 		CF1C50921B2CDE8A006BE053 /* VWWPermissionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionsViewController.h; sourceTree = "<group>"; };
 		CF1C50931B2CDE8A006BE053 /* VWWPermissionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionsViewController.m; sourceTree = "<group>"; };
 		CF1C50941B2CDE8A006BE053 /* VWWPermissionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWPermissionsViewController.xib; sourceTree = "<group>"; };
@@ -103,6 +101,10 @@
 		CF1C50991B2CDE8A006BE053 /* VWWPhotosPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPhotosPermission.m; sourceTree = "<group>"; };
 		CF1C509A1B2CDE8A006BE053 /* VWWRemindersPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRemindersPermission.h; sourceTree = "<group>"; };
 		CF1C509B1B2CDE8A006BE053 /* VWWRemindersPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRemindersPermission.m; sourceTree = "<group>"; };
+		CF1FAB631B47767C0079EDAC /* ABOUT.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ABOUT.txt; sourceTree = "<group>"; };
+		CF1FAB691B4799120079EDAC /* VWWPermissionTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWPermissionTitleTableViewCell.h; sourceTree = "<group>"; };
+		CF1FAB6A1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWPermissionTitleTableViewCell.m; sourceTree = "<group>"; };
+		CF1FAB6B1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWPermissionTitleTableViewCell.xib; sourceTree = "<group>"; };
 		CFD5DED21B2D34CC00AB1C56 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CFD5DED21B2D34CC00AB1C56 /* README.md */,
+				CF1FAB631B47767C0079EDAC /* ABOUT.txt */,
 				CF1C506F1B2CDE8A006BE053 /* VWWPermissionManager */,
 				CF1C50581B2CDE64006BE053 /* VWWPermissionKit.h */,
 				CF1C505A1B2CDE64006BE053 /* Info.plist */,
@@ -198,15 +201,15 @@
 		CF7DD7CC1B2FCDB000149232 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
-				CF1C508F1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h */,
-				CF1C50901B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m */,
-				CF1C50911B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib */,
 				CF1C50921B2CDE8A006BE053 /* VWWPermissionsViewController.h */,
 				CF1C50931B2CDE8A006BE053 /* VWWPermissionsViewController.m */,
 				CF1C50941B2CDE8A006BE053 /* VWWPermissionsViewController.xib */,
 				CF1C50951B2CDE8A006BE053 /* VWWPermissionTableViewCell.h */,
 				CF1C50961B2CDE8A006BE053 /* VWWPermissionTableViewCell.m */,
 				CF1C50971B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib */,
+				CF1FAB691B4799120079EDAC /* VWWPermissionTitleTableViewCell.h */,
+				CF1FAB6A1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m */,
+				CF1FAB6B1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib */,
 			);
 			name = UserInterface;
 			sourceTree = "<group>";
@@ -221,12 +224,12 @@
 				CF1C50B61B2CDE8A006BE053 /* VWWPermission.h in Headers */,
 				CF1C50B21B2CDE8A006BE053 /* VWWMicrophonePermission.h in Headers */,
 				CF1C50C61B2CDE8A006BE053 /* VWWRemindersPermission.h in Headers */,
+				CF1FAB6C1B4799120079EDAC /* VWWPermissionTitleTableViewCell.h in Headers */,
 				CF1C509E1B2CDE8A006BE053 /* VWWAssetLibraryPermission.h in Headers */,
 				CF1C50AC1B2CDE8A006BE053 /* VWWCoreMotionPermission.h in Headers */,
 				CF1C50B91B2CDE8A006BE053 /* VWWPermissionsManager.h in Headers */,
 				CF1C50A01B2CDE8A006BE053 /* VWWCoreBluetoothPermission.h in Headers */,
 				CF1C509C1B2CDE8A006BE053 /* VWWAccountsPermission.h in Headers */,
-				CF1C50BB1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.h in Headers */,
 				CF1C50AE1B2CDE8A006BE053 /* VWWHealthPermission.h in Headers */,
 				CF1C50A41B2CDE8A006BE053 /* VWWCameraPermission.h in Headers */,
 				CF1C50C11B2CDE8A006BE053 /* VWWPermissionTableViewCell.h in Headers */,
@@ -302,7 +305,8 @@
 			files = (
 				CF1C50C31B2CDE8A006BE053 /* VWWPermissionTableViewCell.xib in Resources */,
 				CF1C50C01B2CDE8A006BE053 /* VWWPermissionsViewController.xib in Resources */,
-				CF1C50BD1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.xib in Resources */,
+				CF1FAB641B47767C0079EDAC /* ABOUT.txt in Resources */,
+				CF1FAB6E1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,12 +321,12 @@
 				CF1C50C21B2CDE8A006BE053 /* VWWPermissionTableViewCell.m in Sources */,
 				CF1C50B31B2CDE8A006BE053 /* VWWMicrophonePermission.m in Sources */,
 				CFD5DED31B2D34CC00AB1C56 /* README.md in Sources */,
+				CF1FAB6D1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m in Sources */,
 				CF1C50A31B2CDE8A006BE053 /* VWWCalendarsPermission.m in Sources */,
 				CF1C50B71B2CDE8A006BE053 /* VWWPermission.m in Sources */,
 				CF1C50A71B2CDE8A006BE053 /* VWWContactsPermission.m in Sources */,
 				CF1C50B51B2CDE8A006BE053 /* VWWNotificationsPermission.m in Sources */,
 				CF1C50C51B2CDE8A006BE053 /* VWWPhotosPermission.m in Sources */,
-				CF1C50BC1B2CDE8A006BE053 /* VWWPermissionsTableHeaderView.m in Sources */,
 				CF1C50A51B2CDE8A006BE053 /* VWWCameraPermission.m in Sources */,
 				CF1C50BA1B2CDE8A006BE053 /* VWWPermissionsManager.m in Sources */,
 				CF1C50AB1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m in Sources */,
