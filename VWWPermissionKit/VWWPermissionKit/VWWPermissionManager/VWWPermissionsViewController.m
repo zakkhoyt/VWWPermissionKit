@@ -33,12 +33,7 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    // Set Title
-//    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
-//    NSString *prodName = [info objectForKey:(NSString*)kCFBundleNameKey];
-//    self.title = prodName;
-//    self.navigationController.title = prodName;
-    
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 76.0;
     NSBundle* bundle = [NSBundle bundleForClass:[VWWPermissionTableViewCell class]];
@@ -47,9 +42,6 @@ typedef enum {
     [self willTransitionToTraitCollection:self.traitCollection withTransitionCoordinator:self.transitionCoordinator];
 }
 
--(void)dealloc{
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
 
 -(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
     [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
