@@ -28,11 +28,9 @@ Next create an array of VWWPermission types and display the permissions window. 
 VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"This app lets your record videos, so we need to access your camera"];
 VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"We can save recorded videos to your Photos library."];
 VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc... This is a bunch of nonsense text to show that labels will grow with the size of the defined text. This text that you are reading right now. Period."];
-VWWHealthPermission *health = [VWWHealthPermission permissionWithLabelText:@"This app will analyize how drunk you've been and how your body likes it."
-                                                                shareTypes:/* NSSet of your set of HKObjectTypes */
-                                                                 readTypes:/* NSSet of your set of HKObjectTypes */];
+*/];
 
-NSArray *permissions = @[health, camera, locationAlways, photos];
+NSArray *permissions = @[camera, locationAlways, photos];
 
 [VWWPermissionsManager optionPermissions:permissions
                                    title:@"Welcome to the VWWPermissionKitExample app. Our app uses many of your device's sensors. We'll help you set up some permissions, then get started."
@@ -56,9 +54,6 @@ VWWPermissionsManager.requirePermissions(permissions, title: "Swift Test", fromV
 }
 
 ```
-
-
-
 
 Alternatively, there is a permissions readonly function which shows no GUI. It simply reads each permission type and returns with the benefit that all permissions share the same datatype. 
 
@@ -103,7 +98,7 @@ Finally you'll need to tell XCode where to find the proper headers. Go to the Bu
 ## CocoaPods integration
 Add this to your Podfile:
 ```
-pod 'VWWPermissionKit', '~> 1.0.3'
+pod 'VWWPermissionKit', '~> 1.1.2'
 ```
 
 ## Functional Permission classes ##
@@ -112,6 +107,8 @@ pod 'VWWPermissionKit', '~> 1.0.3'
 - **VWWCalendarsPermission**: EventKit framework
 - **VWWCoreLocationAlwaysPermission**: CoreLocation framework
 - **VWWCoreLocationWhenInUsePermission**: CoreLocatoin framework
+- **VWWCoreMotionPermission**: CoreMotion framework
+- **VWWHealthPermission**: HealthKit framework
 - **VWWMicrophonePermission**: AVFoundation framework
 - **VWWNotificationsPermission**: UIApplication (remote, user, and local)
 - **VWWRemindersPermission**: EventKit framework
@@ -120,13 +117,11 @@ pod 'VWWPermissionKit', '~> 1.0.3'
 ## In-Development Permission classes ##
 - **VWWAccountsPermission**: Accounts framework
 - **VWWBluetoothPermission**: CoreBluetooth framework
-- **VWWCoreMotionPermission**: CoreMotion framework
-- **VWWHealthPermission**: HealthKit framework
 - **VWWHomePermission**: HomeKit framework
 
 ## YSK ##
 - Not all permissions types are supported in the iOS Simulator
-- iOS 9b1 does not detect changes to permission status from iOS Privacy Settings without restarting the app. I expect this will be fixed in the near future. 
+- iOS 9 (beta) does not detect changes to permission status from iOS Privacy Settings without restarting the app. I expect this will be fixed in the near future. 
 
 ## What's new in this version? ##
 - Support for HealhKit
