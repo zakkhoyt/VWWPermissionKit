@@ -1,10 +1,15 @@
 ## VWWPermissionKit
 
-[![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-iOS-00ff00.svg)
 [![](https://img.shields.io/badge/License-MIT-00ff00.svg)](https://img.shields.io/badge/License-MIT-00ff00.svg)
 [![](https://img.shields.io/badge/Pod-1.1.2-0000ff.svg)](https://img.shields.io/badge/Pod-1.0.3-0000ff.svg)
-[![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-iOS-00ff00.svg)
 
+[![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-AssetLibrary-00ff00.svg)
+[![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-Camera-00ff00.svg)
+[![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-Contacts-CoreLocation-00ff00.svg)
+[![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-iOS-00ff00.svg)
+[![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-iOS-00ff00.svg)
+[![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-iOS-00ff00.svg)
+[![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-iOS-00ff00.svg)
 [![](https://img.shields.io/badge/Permission-iOS-00ff00.svg)](https://img.shields.io/badge/Permission-iOS-00ff00.svg)
 
 
