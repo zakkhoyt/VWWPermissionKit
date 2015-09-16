@@ -3,8 +3,6 @@
 [![](https://img.shields.io/badge/License-MIT-00ff00.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/Pod-1.1.2-0000ff.svg)](https://github.com/zakkhoyt)
 
-
-
 [![](https://img.shields.io/badge/iOS-AssetLibrary-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Camera-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Calendar-0000ff.svg)](https://github.com/zakkhoyt)
@@ -16,8 +14,6 @@
 [![](https://img.shields.io/badge/iOS-Microphone-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Reminders-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Photos-0000ff.svg)](https://github.com/zakkhoyt)
-
-
 
 We've all been there. You get started on your latest and greatest app when you have to add logic to prompt the user for permissions before your app can access any of these resources. Many users will deny access unless you convince them that your app can be trusted. If they deny access, you must then try to convince them to go to iOS Privacy Settings, find your app, enable those permissions, switch back to your app, read permissions again, etc...
 
