@@ -124,7 +124,7 @@ pod 'VWWPermissionKit', '~> 1.1.2'
 - iOS 9 (beta) does not detect changes to permission status from iOS Privacy Settings without restarting the app. I expect this will be fixed in the near future. 
 
 ## What's new in this version? ##
-- Support for HealhKit
+- Support for HealthKit
 - Support for CoreMotion
 - Updated UI for a cleaner look
 - Adherence to +appearance protocol
