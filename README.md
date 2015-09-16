@@ -6,9 +6,16 @@
 
 
 [![](https://img.shields.io/badge/iOS-AssetLibrary-0000ff.svg)](https://github.com/zakkhoyt)
-[![](https://img.shields.io/badge/iOS-AssetLibrary-0000ff.svg)](https://github.com/zakkhoyt)
-[![](https://img.shields.io/badge/iOS-AssetLibrary-0000ff.svg)](https://github.com/zakkhoyt)
-[![](https://img.shields.io/badge/iOS-AssetLibrary-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-Camera-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-Calendar-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-Contacts-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-CoreLocation-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-CoreMotion-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-HealthKit-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-Notifications-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-Microphone-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-Reminders-0000ff.svg)](https://github.com/zakkhoyt)
+[![](https://img.shields.io/badge/iOS-Photos-0000ff.svg)](https://github.com/zakkhoyt)
 
 
 
