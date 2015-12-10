@@ -14,7 +14,7 @@
 #import "VWWCoreLocationAlwaysPermission.h"
 #import "VWWCoreLocationWhenInUsePermission.h"
 #import "VWWCoreMotionPermission.h"
-#import "VWWHealthPermission.h"
+//#import "VWWHealthPermission.h"
 #import "VWWNotificationsPermission.h"
 #import "VWWMicrophonePermission.h"
 #import "VWWRemindersPermission.h"

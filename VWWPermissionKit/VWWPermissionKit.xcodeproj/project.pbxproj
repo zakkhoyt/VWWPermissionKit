@@ -26,10 +26,6 @@
 		CF1C50AB1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C507F1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m */; };
 		CF1C50AC1B2CDE8A006BE053 /* VWWCoreMotionPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50801B2CDE8A006BE053 /* VWWCoreMotionPermission.h */; };
 		CF1C50AD1B2CDE8A006BE053 /* VWWCoreMotionPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50811B2CDE8A006BE053 /* VWWCoreMotionPermission.m */; };
-		CF1C50AE1B2CDE8A006BE053 /* VWWHealthPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50821B2CDE8A006BE053 /* VWWHealthPermission.h */; };
-		CF1C50AF1B2CDE8A006BE053 /* VWWHealthPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50831B2CDE8A006BE053 /* VWWHealthPermission.m */; };
-		CF1C50B01B2CDE8A006BE053 /* VWWHomePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50841B2CDE8A006BE053 /* VWWHomePermission.h */; };
-		CF1C50B11B2CDE8A006BE053 /* VWWHomePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50851B2CDE8A006BE053 /* VWWHomePermission.m */; };
 		CF1C50B21B2CDE8A006BE053 /* VWWMicrophonePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50861B2CDE8A006BE053 /* VWWMicrophonePermission.h */; };
 		CF1C50B31B2CDE8A006BE053 /* VWWMicrophonePermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50871B2CDE8A006BE053 /* VWWMicrophonePermission.m */; };
 		CF1C50B41B2CDE8A006BE053 /* VWWNotificationsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50881B2CDE8A006BE053 /* VWWNotificationsPermission.h */; };
@@ -230,7 +226,6 @@
 				CF1C50B91B2CDE8A006BE053 /* VWWPermissionsManager.h in Headers */,
 				CF1C50A01B2CDE8A006BE053 /* VWWCoreBluetoothPermission.h in Headers */,
 				CF1C509C1B2CDE8A006BE053 /* VWWAccountsPermission.h in Headers */,
-				CF1C50AE1B2CDE8A006BE053 /* VWWHealthPermission.h in Headers */,
 				CF1C50A41B2CDE8A006BE053 /* VWWCameraPermission.h in Headers */,
 				CF1C50C11B2CDE8A006BE053 /* VWWPermissionTableViewCell.h in Headers */,
 				CF1C50B41B2CDE8A006BE053 /* VWWNotificationsPermission.h in Headers */,
@@ -238,7 +233,6 @@
 				CF1C50591B2CDE64006BE053 /* VWWPermissionKit.h in Headers */,
 				CF1C50BE1B2CDE8A006BE053 /* VWWPermissionsViewController.h in Headers */,
 				CF1C50C41B2CDE8A006BE053 /* VWWPhotosPermission.h in Headers */,
-				CF1C50B01B2CDE8A006BE053 /* VWWHomePermission.h in Headers */,
 				CF1C50A81B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h in Headers */,
 				CF1C50A61B2CDE8A006BE053 /* VWWContactsPermission.h in Headers */,
 				CF1C50AA1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h in Headers */,
@@ -332,12 +326,10 @@
 				CF1C50AB1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m in Sources */,
 				CF1C50AD1B2CDE8A006BE053 /* VWWCoreMotionPermission.m in Sources */,
 				CF1C50C71B2CDE8A006BE053 /* VWWRemindersPermission.m in Sources */,
-				CF1C50B11B2CDE8A006BE053 /* VWWHomePermission.m in Sources */,
 				CF1C50BF1B2CDE8A006BE053 /* VWWPermissionsViewController.m in Sources */,
 				CF1C50A11B2CDE8A006BE053 /* VWWCoreBluetoothPermission.m in Sources */,
 				CF1C509D1B2CDE8A006BE053 /* VWWAccountsPermission.m in Sources */,
 				CF1C50A91B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.m in Sources */,
-				CF1C50AF1B2CDE8A006BE053 /* VWWHealthPermission.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
