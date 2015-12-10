@@ -132,7 +132,6 @@ pod 'VWWPermissionKit', :git => 'https://github.com/zakkhoyt/VWWPermissionKit', 
 - Not all permissions types are supported in the iOS Simulator
 
 ## What's new in this version? ##
-- Support for HealthKit
 - Support for CoreMotion
 - Updated UI for a cleaner look
 - Adherence to +appearance protocol
