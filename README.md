@@ -19,7 +19,8 @@
 
 
 
-#### YSK that Apple is currently not approving apps which use this framework if the app doesn't use HealthKit or HomeKit. I am and looking at ways to implement a fix with minimal impact on the existing API. This issue is #1 priority. Pull requests are welcome. You can still develop your app using this framework the mean time. ####
+#### YSK 
+Apple is currently not approving apps which use this framework if the app doesn't use HealthKit and HomeKit. I am and looking at ways to implement a fix with minimal impact on the existing API. This issue is #1 priority. Pull requests are welcome. You can still develop your app using this framework the mean time. 
 
 We've all been there. You get started on your latest and greatest app when you have to add logic to prompt the user for permissions before your app can access any of these resources. Many users will deny access unless you convince them that your app can be trusted. If they deny access, you must then try to convince them to go to iOS Privacy Settings, find your app, enable those permissions, switch back to your app, read permissions again, etc...
 
