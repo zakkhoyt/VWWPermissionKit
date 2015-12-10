@@ -9,7 +9,6 @@
 [![](https://img.shields.io/badge/iOS-Contacts-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-CoreLocation-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-CoreMotion-0000ff.svg)](https://github.com/zakkhoyt)
-[![](https://img.shields.io/badge/iOS-HealthKit-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Notifications-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Microphone-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Reminders-0000ff.svg)](https://github.com/zakkhoyt)
@@ -108,7 +107,7 @@ Finally you'll need to tell XCode where to find the proper headers. Go to the Bu
 ## CocoaPods integration
 Add this to your Podfile:
 ```
-pod 'VWWPermissionKit', '~> 1.1.2'
+pod 'VWWPermissionKit', :git => 'https://github.com/zakkhoyt/VWWPermissionKit', :branch => 'approval'
 ```
 
 ## Functional Permission classes ##
@@ -118,7 +117,6 @@ pod 'VWWPermissionKit', '~> 1.1.2'
 - **VWWCoreLocationAlwaysPermission**: CoreLocation framework
 - **VWWCoreLocationWhenInUsePermission**: CoreLocatoin framework
 - **VWWCoreMotionPermission**: CoreMotion framework
-- **VWWHealthPermission**: HealthKit framework
 - **VWWMicrophonePermission**: AVFoundation framework
 - **VWWNotificationsPermission**: UIApplication (remote, user, and local)
 - **VWWRemindersPermission**: EventKit framework
@@ -127,11 +125,11 @@ pod 'VWWPermissionKit', '~> 1.1.2'
 ## In-Development Permission classes ##
 - **VWWAccountsPermission**: Accounts framework
 - **VWWBluetoothPermission**: CoreBluetooth framework
+- **VWWHealthPermission**: HealthKit framework
 - **VWWHomePermission**: HomeKit framework
 
 ## YSK ##
 - Not all permissions types are supported in the iOS Simulator
-- iOS 9 (beta) does not detect changes to permission status from iOS Privacy Settings without restarting the app. I expect this will be fixed in the near future. 
 
 ## What's new in this version? ##
 - Support for HealthKit
