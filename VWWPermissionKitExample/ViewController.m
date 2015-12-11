@@ -13,7 +13,7 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-//    [self setupAppearance];
+    //    [self setupAppearance];
     [self showPermissions];
 }
 
@@ -26,21 +26,21 @@
 }
 
 -(void)showPermissions{
-
-    VWWCameraPermission *camera = [VWWCameraPermission permissionWithLabelText:@"This app lets your record videos, so we need to access your camera"];
+    VWWContactsPermission *contacts = [VWWContactsPermission permissionWithLabelText:@"The app will merge duplicate contacts."];
     VWWPhotosPermission *photos = [VWWPhotosPermission permissionWithLabelText:@"We can save recorded videos to your Photos library."];
-    VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, etc... This is a bunch of nonsense text to show that labels will grow with the size of the defined text. This text that you are reading right now. Period."];
+    VWWCoreLocationAlwaysPermission *locationAlways = [VWWCoreLocationAlwaysPermission permissionWithLabelText:@"For calculating your heading, altitude, speed, distance home, and more."];
+    
+    NSArray *permissions = @[contacts, locationAlways, photos];
 
-    NSArray *permissions = @[camera, locationAlways, photos];
     
     [VWWPermissionsManager optionPermissions:permissions
-                                        title:@"Welcome to the VWWPermissionKitExample app. Our app uses many of your device's sensors. We'll help you set up some permissions, then get started."
-                           fromViewController:self
-                                 resultsBlock:^(NSArray *permissions) {
-                                     [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
-                                         NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
-                                     }];
-                                 }];
+                                       title:@"Welcome! To get the most out of this Fancy App, we will need your permission to use some things. Let's get started."
+                          fromViewController:self
+                                resultsBlock:^(NSArray *permissions) {
+                                    [permissions enumerateObjectsUsingBlock:^(VWWPermission *permission, NSUInteger idx, BOOL *stop) {
+                                        NSLog(@"%@ - %@", permission.type, [permission stringForStatus]);
+                                    }];
+                                }];
 }
 
 @end
