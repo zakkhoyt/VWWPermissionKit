@@ -110,7 +110,7 @@ Finally you'll need to tell XCode where to find the proper headers. Go to the Bu
 To import this framework with CocoaPods just add this line to your podfile
 
 ```
-pod 'VWWPermissionKit', '~> 1.3'
+pod 'VWWPermissionKit', '~> 1.3.0'
 ```
 
 ## Functional Permission classes ##
