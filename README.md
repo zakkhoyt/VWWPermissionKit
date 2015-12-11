@@ -17,11 +17,6 @@
 [![](https://img.shields.io/badge/iOS-Reminders-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Photos-0000ff.svg)](https://github.com/zakkhoyt)
 
-
-
-#### YSK 
-Apple is currently not approving apps which use this framework if the app doesn't use HealthKit and HomeKit. I am and looking at ways to implement a fix with minimal impact on the existing API. This issue is #1 priority. Pull requests are welcome. You can still develop your app using this framework the mean time. 
-
 We've all been there. You get started on your latest and greatest app when you have to add logic to prompt the user for permissions before your app can access any of these resources. Many users will deny access unless you convince them that your app can be trusted. If they deny access, you must then try to convince them to go to iOS Privacy Settings, find your app, enable those permissions, switch back to your app, read permissions again, etc...
 
 Another difficulty: The permissions from Apple's frameworks use many different classes, and they don't share the same data type regarding status. PhotoKit uses PHAuthorizationStatus, EventKit uses EKAuthorizationStatus, Core Location uses CLAuthorizationStatus, and so on.
@@ -114,7 +109,13 @@ Next tell XCode to embed VWWPermissionKit into your app. Go to your app's target
 Finally you'll need to tell XCode where to find the proper headers. Go to the Build Settings tab. Type "header " in the search bar. The go to the section "Search Paths" and add an the VWWPermissionKit file path to "Header Search Paths" (recursive: YES)
 
 ## CocoaPods integration
-Add this to your Podfile:
+
+#### YSK 
+Apple is currently not approving apps which use this VWWPermissionKit unless the app uses HealthKit and HomeKit. I am and looking at ways to implement a fix with minimal impact on the existing API. This issue is #1 priority. Pull requests are welcome. Until I can fix and publish this issue with Healthkit included, I've created a branch which dropped support for Health/Home and should be approved by Apple. Use it in your podfile like this:
+
+pod 'VWWPermissionKit', :git => 'https://github.com/zakkhoyt/VWWPermissionKit', :branch => 'approval'
+
+You can continue to use the published verion to develop your applications. 
 ```
 pod 'VWWPermissionKit', '~> 1.1.2'
 ```
