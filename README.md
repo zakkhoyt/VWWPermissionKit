@@ -3,13 +3,11 @@
 [![](https://img.shields.io/badge/License-MIT-00ff00.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/Pod-1.1.2-0000ff.svg)](https://github.com/zakkhoyt)
 
-[![](https://img.shields.io/badge/iOS-AssetLibrary-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Camera-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Calendar-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Contacts-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-CoreLocation-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-CoreMotion-0000ff.svg)](https://github.com/zakkhoyt)
-[![](https://img.shields.io/badge/iOS-HealthKit-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Notifications-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Microphone-0000ff.svg)](https://github.com/zakkhoyt)
 [![](https://img.shields.io/badge/iOS-Reminders-0000ff.svg)](https://github.com/zakkhoyt)
@@ -108,7 +106,7 @@ Finally you'll need to tell XCode where to find the proper headers. Go to the Bu
 ## CocoaPods integration
 Add this to your Podfile:
 ```
-pod 'VWWPermissionKit', '~> 1.1.2'
+pod 'VWWPermissionKit', '~> 1.3'
 ```
 
 ## Functional Permission classes ##
@@ -118,7 +116,6 @@ pod 'VWWPermissionKit', '~> 1.1.2'
 - **VWWCoreLocationAlwaysPermission**: CoreLocation framework
 - **VWWCoreLocationWhenInUsePermission**: CoreLocatoin framework
 - **VWWCoreMotionPermission**: CoreMotion framework
-- **VWWHealthPermission**: HealthKit framework
 - **VWWMicrophonePermission**: AVFoundation framework
 - **VWWNotificationsPermission**: UIApplication (remote, user, and local)
 - **VWWRemindersPermission**: EventKit framework
@@ -127,6 +124,8 @@ pod 'VWWPermissionKit', '~> 1.1.2'
 ## In-Development Permission classes ##
 - **VWWAccountsPermission**: Accounts framework
 - **VWWBluetoothPermission**: CoreBluetooth framework
+- **VWWCloudKitPermission**: CloudKit framework
+- **VWWHealthPermission**: HealthKit framework
 - **VWWHomePermission**: HomeKit framework
 
 ## YSK ##
@@ -134,7 +133,8 @@ pod 'VWWPermissionKit', '~> 1.1.2'
 - iOS 9 (beta) does not detect changes to permission status from iOS Privacy Settings without restarting the app. I expect this will be fixed in the near future. 
 
 ## What's new in this version? ##
-- Support for HealthKit
+- Removed ALAssetsLibrary as it's deperecated (Use the new Photos API)
+- Replaced AddressBook API with Contacts new Contacts API
 - Support for CoreMotion
 - Updated UI for a cleaner look
 - Adherence to +appearance protocol
