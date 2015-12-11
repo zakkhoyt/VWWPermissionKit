@@ -107,13 +107,8 @@ Finally you'll need to tell XCode where to find the proper headers. Go to the Bu
 ## CocoaPods integration
 
 #### YSK 
-Apple is currently not approving apps which use this VWWPermissionKit unless the app uses HealthKit and HomeKit. I am and looking at ways to implement a fix with minimal impact on the existing API. This issue is #1 priority. Pull requests are welcome. Until I can fix and publish this issue with Healthkit included, I've created a branch which dropped support for Health/Home and should be approved by Apple. Use it in your podfile like this:
+To import this framework with CocoaPods just add this line to your podfile
 
-```
-pod 'VWWPermissionKit', :git => 'https://github.com/zakkhoyt/VWWPermissionKit', :branch => 'approval'
-```
-
-You can continue to use the published verion to develop your applications. 
 ```
 pod 'VWWPermissionKit', '~> 1.3'
 ```
