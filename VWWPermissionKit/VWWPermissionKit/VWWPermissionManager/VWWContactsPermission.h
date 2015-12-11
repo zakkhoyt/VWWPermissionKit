@@ -9,7 +9,7 @@
 #import "VWWPermission.h"
 
 // NSCalendarsUsageDescription
-static NSString *VWWContactsPermissionTypeCalendars = @"Contacts";
+static NSString *VWWContactsPermissionTypeContacts = @"Contacts";
 
 @interface VWWContactsPermission : VWWPermission
 

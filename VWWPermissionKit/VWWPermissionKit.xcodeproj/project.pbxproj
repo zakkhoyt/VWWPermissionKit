@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C68764FD1C1A678A00A3FC4E /* VWWContactsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C507A1B2CDE8A006BE053 /* VWWContactsPermission.h */; };
+		C68764FE1C1A678A00A3FC4E /* VWWContactsPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C507B1B2CDE8A006BE053 /* VWWContactsPermission.m */; };
 		CF1C50591B2CDE64006BE053 /* VWWPermissionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50581B2CDE64006BE053 /* VWWPermissionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CF1C509C1B2CDE8A006BE053 /* VWWAccountsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50701B2CDE8A006BE053 /* VWWAccountsPermission.h */; };
 		CF1C509D1B2CDE8A006BE053 /* VWWAccountsPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50711B2CDE8A006BE053 /* VWWAccountsPermission.m */; };
-		CF1C509E1B2CDE8A006BE053 /* VWWAssetLibraryPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50721B2CDE8A006BE053 /* VWWAssetLibraryPermission.h */; };
-		CF1C509F1B2CDE8A006BE053 /* VWWAssetLibraryPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50731B2CDE8A006BE053 /* VWWAssetLibraryPermission.m */; };
 		CF1C50A01B2CDE8A006BE053 /* VWWCoreBluetoothPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50741B2CDE8A006BE053 /* VWWCoreBluetoothPermission.h */; };
 		CF1C50A11B2CDE8A006BE053 /* VWWCoreBluetoothPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50751B2CDE8A006BE053 /* VWWCoreBluetoothPermission.m */; };
 		CF1C50A21B2CDE8A006BE053 /* VWWCalendarsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50761B2CDE8A006BE053 /* VWWCalendarsPermission.h */; };
 		CF1C50A31B2CDE8A006BE053 /* VWWCalendarsPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50771B2CDE8A006BE053 /* VWWCalendarsPermission.m */; };
 		CF1C50A41B2CDE8A006BE053 /* VWWCameraPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C50781B2CDE8A006BE053 /* VWWCameraPermission.h */; };
 		CF1C50A51B2CDE8A006BE053 /* VWWCameraPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C50791B2CDE8A006BE053 /* VWWCameraPermission.m */; };
-		CF1C50A61B2CDE8A006BE053 /* VWWContactsPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C507A1B2CDE8A006BE053 /* VWWContactsPermission.h */; };
-		CF1C50A71B2CDE8A006BE053 /* VWWContactsPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C507B1B2CDE8A006BE053 /* VWWContactsPermission.m */; };
 		CF1C50A81B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C507C1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h */; };
 		CF1C50A91B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C507D1B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.m */; };
 		CF1C50AA1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1C507E1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h */; };
@@ -49,7 +47,6 @@
 		CF1FAB6C1B4799120079EDAC /* VWWPermissionTitleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1FAB691B4799120079EDAC /* VWWPermissionTitleTableViewCell.h */; };
 		CF1FAB6D1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1FAB6A1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m */; };
 		CF1FAB6E1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1FAB6B1B4799120079EDAC /* VWWPermissionTitleTableViewCell.xib */; };
-		CFD5DED31B2D34CC00AB1C56 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CFD5DED21B2D34CC00AB1C56 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -217,11 +214,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68764FD1C1A678A00A3FC4E /* VWWContactsPermission.h in Headers */,
 				CF1C50B61B2CDE8A006BE053 /* VWWPermission.h in Headers */,
 				CF1C50B21B2CDE8A006BE053 /* VWWMicrophonePermission.h in Headers */,
 				CF1C50C61B2CDE8A006BE053 /* VWWRemindersPermission.h in Headers */,
 				CF1FAB6C1B4799120079EDAC /* VWWPermissionTitleTableViewCell.h in Headers */,
-				CF1C509E1B2CDE8A006BE053 /* VWWAssetLibraryPermission.h in Headers */,
 				CF1C50AC1B2CDE8A006BE053 /* VWWCoreMotionPermission.h in Headers */,
 				CF1C50B91B2CDE8A006BE053 /* VWWPermissionsManager.h in Headers */,
 				CF1C50A01B2CDE8A006BE053 /* VWWCoreBluetoothPermission.h in Headers */,
@@ -234,7 +231,6 @@
 				CF1C50BE1B2CDE8A006BE053 /* VWWPermissionsViewController.h in Headers */,
 				CF1C50C41B2CDE8A006BE053 /* VWWPhotosPermission.h in Headers */,
 				CF1C50A81B2CDE8A006BE053 /* VWWCoreLocationAlwaysPermission.h in Headers */,
-				CF1C50A61B2CDE8A006BE053 /* VWWContactsPermission.h in Headers */,
 				CF1C50AA1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.h in Headers */,
 				CF1C50A21B2CDE8A006BE053 /* VWWCalendarsPermission.h in Headers */,
 			);
@@ -311,14 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF1C509F1B2CDE8A006BE053 /* VWWAssetLibraryPermission.m in Sources */,
 				CF1C50C21B2CDE8A006BE053 /* VWWPermissionTableViewCell.m in Sources */,
 				CF1C50B31B2CDE8A006BE053 /* VWWMicrophonePermission.m in Sources */,
-				CFD5DED31B2D34CC00AB1C56 /* README.md in Sources */,
+				C68764FE1C1A678A00A3FC4E /* VWWContactsPermission.m in Sources */,
 				CF1FAB6D1B4799120079EDAC /* VWWPermissionTitleTableViewCell.m in Sources */,
 				CF1C50A31B2CDE8A006BE053 /* VWWCalendarsPermission.m in Sources */,
 				CF1C50B71B2CDE8A006BE053 /* VWWPermission.m in Sources */,
-				CF1C50A71B2CDE8A006BE053 /* VWWContactsPermission.m in Sources */,
 				CF1C50B51B2CDE8A006BE053 /* VWWNotificationsPermission.m in Sources */,
 				CF1C50C51B2CDE8A006BE053 /* VWWPhotosPermission.m in Sources */,
 				CF1C50A51B2CDE8A006BE053 /* VWWCameraPermission.m in Sources */,

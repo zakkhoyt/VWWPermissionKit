@@ -7,38 +7,43 @@
 //
 
 #import "VWWContactsPermission.h"
-@import AddressBook;
+
+@import Contacts;
 
 @interface VWWContactsPermission ()
-
+@property (nonatomic, strong)  CNContactStore *contactStore;
 @end
 
 @implementation VWWContactsPermission
 
 +(instancetype)permissionWithLabelText:(NSString*)labelText{
-    return [[super alloc] initWithType:VWWContactsPermissionTypeCalendars labelText:labelText];
+    return [[super alloc] initWithType:VWWContactsPermissionTypeContacts labelText:labelText];
 }
 
 -(void)updatePermissionStatus{
-    ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
-    if(status == kABAuthorizationStatusNotDetermined){
+    CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
+    
+    if(status == CNAuthorizationStatusNotDetermined){
         self.status = VWWPermissionStatusNotDetermined;
-    } else if(status == kABAuthorizationStatusAuthorized){
+    } else if(status == CNAuthorizationStatusAuthorized){
         self.status = VWWPermissionStatusAuthorized;
-    } else if(status == kABAuthorizationStatusDenied){
+    } else if(status == CNAuthorizationStatusDenied){
         self.status = VWWPermissionStatusDenied;
-    } else if(status == kABAuthorizationStatusRestricted){
+    } else if(status == CNAuthorizationStatusRestricted){
         self.status = VWWPermissionStatusRestricted;
     }
+
 }
 
 -(void)presentSystemPromtWithCompletionBlock:(VWWPermissionEmptyBlock)completionBlock{
-    CFErrorRef abError = NULL;
-    ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, &abError);
-    ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
-        completionBlock();
+    if(self.contactStore == nil) {
+        self.contactStore = [[CNContactStore alloc]init];
+    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.contactStore requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            completionBlock();
+        }];
     });
-    
 }
 
 @end
