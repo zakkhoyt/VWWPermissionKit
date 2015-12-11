@@ -55,8 +55,6 @@
 		CF1C505A1B2CDE64006BE053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF1C50701B2CDE8A006BE053 /* VWWAccountsPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWAccountsPermission.h; sourceTree = "<group>"; };
 		CF1C50711B2CDE8A006BE053 /* VWWAccountsPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWAccountsPermission.m; sourceTree = "<group>"; };
-		CF1C50721B2CDE8A006BE053 /* VWWAssetLibraryPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWAssetLibraryPermission.h; sourceTree = "<group>"; };
-		CF1C50731B2CDE8A006BE053 /* VWWAssetLibraryPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWAssetLibraryPermission.m; sourceTree = "<group>"; };
 		CF1C50741B2CDE8A006BE053 /* VWWCoreBluetoothPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWCoreBluetoothPermission.h; sourceTree = "<group>"; };
 		CF1C50751B2CDE8A006BE053 /* VWWCoreBluetoothPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWCoreBluetoothPermission.m; sourceTree = "<group>"; };
 		CF1C50761B2CDE8A006BE053 /* VWWCalendarsPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWCalendarsPermission.h; sourceTree = "<group>"; };
@@ -71,10 +69,6 @@
 		CF1C507F1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWCoreLocationWhenInUsePermission.m; sourceTree = "<group>"; };
 		CF1C50801B2CDE8A006BE053 /* VWWCoreMotionPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWCoreMotionPermission.h; sourceTree = "<group>"; };
 		CF1C50811B2CDE8A006BE053 /* VWWCoreMotionPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWCoreMotionPermission.m; sourceTree = "<group>"; };
-		CF1C50821B2CDE8A006BE053 /* VWWHealthPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHealthPermission.h; sourceTree = "<group>"; };
-		CF1C50831B2CDE8A006BE053 /* VWWHealthPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHealthPermission.m; sourceTree = "<group>"; };
-		CF1C50841B2CDE8A006BE053 /* VWWHomePermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHomePermission.h; sourceTree = "<group>"; };
-		CF1C50851B2CDE8A006BE053 /* VWWHomePermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHomePermission.m; sourceTree = "<group>"; };
 		CF1C50861B2CDE8A006BE053 /* VWWMicrophonePermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWMicrophonePermission.h; sourceTree = "<group>"; };
 		CF1C50871B2CDE8A006BE053 /* VWWMicrophonePermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWMicrophonePermission.m; sourceTree = "<group>"; };
 		CF1C50881B2CDE8A006BE053 /* VWWNotificationsPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWNotificationsPermission.h; sourceTree = "<group>"; };
@@ -157,8 +151,6 @@
 			children = (
 				CF1C50701B2CDE8A006BE053 /* VWWAccountsPermission.h */,
 				CF1C50711B2CDE8A006BE053 /* VWWAccountsPermission.m */,
-				CF1C50721B2CDE8A006BE053 /* VWWAssetLibraryPermission.h */,
-				CF1C50731B2CDE8A006BE053 /* VWWAssetLibraryPermission.m */,
 				CF1C50761B2CDE8A006BE053 /* VWWCalendarsPermission.h */,
 				CF1C50771B2CDE8A006BE053 /* VWWCalendarsPermission.m */,
 				CF1C50781B2CDE8A006BE053 /* VWWCameraPermission.h */,
@@ -173,10 +165,6 @@
 				CF1C507F1B2CDE8A006BE053 /* VWWCoreLocationWhenInUsePermission.m */,
 				CF1C50801B2CDE8A006BE053 /* VWWCoreMotionPermission.h */,
 				CF1C50811B2CDE8A006BE053 /* VWWCoreMotionPermission.m */,
-				CF1C50821B2CDE8A006BE053 /* VWWHealthPermission.h */,
-				CF1C50831B2CDE8A006BE053 /* VWWHealthPermission.m */,
-				CF1C50841B2CDE8A006BE053 /* VWWHomePermission.h */,
-				CF1C50851B2CDE8A006BE053 /* VWWHomePermission.m */,
 				CF1C50861B2CDE8A006BE053 /* VWWMicrophonePermission.h */,
 				CF1C50871B2CDE8A006BE053 /* VWWMicrophonePermission.m */,
 				CF1C50881B2CDE8A006BE053 /* VWWNotificationsPermission.h */,
