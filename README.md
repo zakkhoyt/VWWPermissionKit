@@ -96,7 +96,7 @@ Tapping on the "Privacy" button will navigate the user to your iOS app's privacy
 
 ![](http://i.imgur.com/HWw9OXN.gif)
 
-
+<img src="http://i.imgur.com/HWw9OXN.gif" width="160">
 
 ## Adding the cocoa framework to your iOS project ##
 To add VWWPermissionKit to your application, drag the VWWPermissionKit.xcodeproj project file into your application's project. XCode will add the VWWPermissionKit project and source files.
