@@ -95,7 +95,7 @@ Tapping on the "Privacy" button will navigate the user to your iOS app's privacy
 ## Sample images ##
 
 ![](http://i.imgur.com/HWw9OXN.gif)
-![](http://i.imgur.com/6iUWNql.gif)
+
 
 
 ## Adding the cocoa framework to your iOS project ##
