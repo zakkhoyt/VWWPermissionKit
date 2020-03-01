@@ -9,14 +9,14 @@
 
 
 #import "VWWCameraPermission.h"
-#import "VWWCalendarsPermission.h"
-#import "VWWContactsPermission.h"
-#import "VWWCoreLocationAlwaysPermission.h"
-#import "VWWCoreLocationWhenInUsePermission.h"
-#import "VWWCoreMotionPermission.h"
-#import "VWWNotificationsPermission.h"
-#import "VWWMicrophonePermission.h"
-#import "VWWRemindersPermission.h"
+//#import "VWWCalendarsPermission.h"
+//#import "VWWContactsPermission.h"
+//#import "VWWCoreLocationAlwaysPermission.h"
+//#import "VWWCoreLocationWhenInUsePermission.h"
+//#import "VWWCoreMotionPermission.h"
+//#import "VWWNotificationsPermission.h"
+//#import "VWWMicrophonePermission.h"
+//#import "VWWRemindersPermission.h"
 #import "VWWPhotosPermission.h"
 
 // *** Deprecated:
