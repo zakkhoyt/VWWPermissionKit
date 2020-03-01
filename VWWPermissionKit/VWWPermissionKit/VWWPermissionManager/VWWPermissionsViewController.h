@@ -11,7 +11,7 @@
 
 static NSString *VWWPermissionsViewControllerIdentifier = @"VWWPermissionsViewController";
 
-typedef void (^VWWPermissionsViewControllerEmptyBlock)();
+typedef void (^VWWPermissionsViewControllerEmptyBlock)(void);
 
 @interface VWWPermissionsViewController : UIViewController
 @property (nonatomic, strong) NSArray *permissions;

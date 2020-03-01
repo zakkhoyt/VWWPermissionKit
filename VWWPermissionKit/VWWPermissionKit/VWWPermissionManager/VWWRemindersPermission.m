@@ -38,7 +38,8 @@
     }
     
     [self.eventStore requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError * __nullable error) {
-        completionBlock(granted);
+        //completionBlock(granted);
+        completionBlock();
     }];
 }
 

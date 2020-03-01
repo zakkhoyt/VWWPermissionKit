@@ -16,6 +16,7 @@
 @implementation VWWPermissionTitleTableViewCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     [[NSNotificationCenter defaultCenter] addObserverForName:UIContentSizeCategoryDidChangeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
         self.titleTextLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     }];

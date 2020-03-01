@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,18 +15,18 @@
                 <viewControllerLayoutGuide type="bottom" id="3fE-ZG-PL7"/>
             </layoutGuides>
             <view key="view" contentMode="scaleToFill" id="Y2s-mI-Axb">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="87" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0p9-kl-2Re">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <connections>
                             <outlet property="dataSource" destination="VRw-OT-WWn" id="VvC-7Z-P1h"/>
                             <outlet property="delegate" destination="VRw-OT-WWn" id="aWV-Rf-yoC"/>
                         </connections>
                     </tableView>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="0p9-kl-2Re" secondAttribute="trailing" id="PSc-RP-SG0"/>
                     <constraint firstItem="0p9-kl-2Re" firstAttribute="top" secondItem="Y2s-mI-Axb" secondAttribute="top" id="bMf-WH-1cu"/>
@@ -52,6 +54,7 @@
                 <outlet property="privacyButton" destination="Fbx-zf-c0m" id="xYp-7j-pAi"/>
                 <outlet property="tableView" destination="0p9-kl-2Re" id="ENN-JY-Wtb"/>
             </connections>
+            <point key="canvasLocation" x="34" y="54"/>
         </viewController>
     </objects>
 </document>

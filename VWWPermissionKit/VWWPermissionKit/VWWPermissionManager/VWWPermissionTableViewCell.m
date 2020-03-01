@@ -28,6 +28,7 @@
 
 #pragma mark Private methods
 - (void)awakeFromNib {
+    [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 
     UIColor *tintColor = [[UIButton appearance]tintColor];
@@ -74,35 +75,39 @@
     self.permissionButton.titleLabel.font = font;
     switch (self.permission.status) {
         case VWWPermissionStatusAuthorized:{
-            [self.permissionButton setBackgroundColor:[UIColor greenColor]];
+            [self.permissionButton setBackgroundColor:[UIColor systemGreenColor]];
             [self.permissionButton setTitleColor:tintColor forState:UIControlStateNormal];
             NSString *buttonTitle = [[NSString stringWithFormat:@"%@ allowed", self.permission.type] uppercaseString];
             [self.permissionButton setTitle:buttonTitle forState:UIControlStateNormal];
         }
             break;
         case VWWPermissionStatusDenied:{
-            [self.permissionButton setBackgroundColor:[UIColor redColor]];
+            [self.permissionButton setBackgroundColor:[UIColor systemRedColor]];
             [self.permissionButton setTitleColor:tintColor forState:UIControlStateNormal];
             NSString *buttonTitle = [[NSString stringWithFormat:@"%@ denied", self.permission.type] uppercaseString];
             [self.permissionButton setTitle:buttonTitle forState:UIControlStateNormal];
         }
             break;
         case VWWPermissionStatusRestricted:{
-            [self.permissionButton setBackgroundColor:[UIColor redColor]];
+            [self.permissionButton setBackgroundColor:[UIColor systemRedColor]];
             [self.permissionButton setTitleColor:tintColor forState:UIControlStateNormal];
             NSString *buttonTitle = [[NSString stringWithFormat:@"%@ restricted", self.permission.type] uppercaseString];
             [self.permissionButton setTitle:buttonTitle forState:UIControlStateNormal];
         }
             break;
         case VWWPermissionStatusUninitialized:{
-            [self.permissionButton setBackgroundColor:[UIColor orangeColor]];
+            [self.permissionButton setBackgroundColor:[UIColor systemOrangeColor]];
             [self.permissionButton setTitleColor:tintColor forState:UIControlStateNormal];
             NSString *buttonTitle = [[NSString stringWithFormat:@"%@ ???", self.permission.type] uppercaseString];
             [self.permissionButton setTitle:buttonTitle forState:UIControlStateNormal];
         }
             break;
         case VWWPermissionStatusNotDetermined:{
-            [self.permissionButton setBackgroundColor:[UIColor whiteColor]];
+            if (@available(iOS 13.0, *)) {
+                [self.permissionButton setBackgroundColor:[UIColor systemBackgroundColor]];
+            } else {
+                [self.permissionButton setBackgroundColor:[UIColor whiteColor]];
+            }
             [self.permissionButton setTitleColor:tintColor forState:UIControlStateNormal];
             NSString *buttonTitle = [[NSString stringWithFormat:@"allow %@", self.permission.type] uppercaseString];
             [self.permissionButton setTitle:buttonTitle forState:UIControlStateNormal];

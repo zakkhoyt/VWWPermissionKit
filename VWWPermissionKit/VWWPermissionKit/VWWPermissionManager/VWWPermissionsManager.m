@@ -10,7 +10,7 @@
 #import "VWWPermissionsViewController.h"
 #import "VWWPermissionNotifications.h"
 
-typedef void (^VWWPermissionsManagerEmptyBlock)();
+typedef void (^VWWPermissionsManagerEmptyBlock)(void);
 
 @interface VWWPermissionsManager ()
 @property (nonatomic, strong) NSArray *permissions;

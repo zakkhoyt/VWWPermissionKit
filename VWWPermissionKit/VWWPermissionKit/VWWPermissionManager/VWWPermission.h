@@ -17,7 +17,7 @@ typedef enum {
     VWWPermissionStatusServiceNotAvailable = 0xFF
 } VWWPermissionStatus;
 
-typedef void (^VWWPermissionEmptyBlock)();
+typedef void (^VWWPermissionEmptyBlock)(void);
 
 @protocol VWWPermissionProtocol <NSObject>
 @required
