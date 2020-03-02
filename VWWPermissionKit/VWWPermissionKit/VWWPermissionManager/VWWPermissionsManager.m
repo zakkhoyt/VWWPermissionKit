@@ -126,6 +126,8 @@ typedef void (^VWWPermissionsManagerEmptyBlock)(void);
         }
     }];
     UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:self.permissionsViewController];
+    nc.modalPresentationStyle = UIModalPresentationFullScreen;
+    //nc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     [viewController presentViewController:nc animated:YES completion:NULL];
 }
 
